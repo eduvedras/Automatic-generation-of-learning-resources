@@ -1,6 +1,7 @@
 from pandas import read_csv
 import random
 import pandas as pd
+from dslabs_functions import get_variable_types
 
 def getnewindex(already_used,min,max):
     ind = random.randint(min, max)
@@ -9,13 +10,21 @@ def getnewindex(already_used,min,max):
     already_used.append(ind)
     return ind
 
-iris_data = read_csv('Iris.csv', index_col='Id', sep=',', decimal='.')
+file_tag = 'Iris'
+target = 'Species'
+
+data = read_csv('datasets/' + file_tag + '.csv', index_col='Id', sep=',', decimal='.')
 
 templates = read_csv('Templates.csv', sep=';')
 
 questions_data = pd.DataFrame(columns=['Question', 'Charts'])
 
 special_cases = ['The number of [1] is [2] than the number of [3] for the presented tree.','The [1] for the presented tree is [2] than its [3].']
+
+variables_types: dict[str, list] = get_variable_types(data)
+
+if target not in variables_types["binary"]:
+    templates = templates.loc[templates["Template"] != 'The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.']
 
 for index, row in templates.iterrows():
     j=0
@@ -31,12 +40,12 @@ for index, row in templates.iterrows():
             
             if len(current_options) == 2 and current_options[1] == '<class>':
                 special_cases.append(new_row['Question'])
-                current_options = list(iris_data.columns)
+                current_options = list(data.columns)
             elif current_options[0] == '<variables>':
                 special_cases.append(new_row['Question'])
-                current_options = list(iris_data.drop('Species', axis=1).columns)
+                current_options = list(data.drop(target, axis=1).columns)
                 
-            if len(current_options) > 10:
+            if len(current_options) > 10 and isinstance(current_options[0], int):
                 i=0
                 already_used = []
                 tmp_templates = []
@@ -78,4 +87,4 @@ for index, row in templates.iterrows():
         new_row = current_templates.pop()
         questions_data.loc[len(questions_data)] = new_row
 
-questions_data.to_csv('Questions.csv', sep=';', index=False)
+questions_data.to_csv(file_tag + '_questions.csv', sep=';', index=False)
