@@ -10,12 +10,14 @@ def getnewindex(already_used,min,max):
     already_used.append(ind)
     return ind
 
-file_tag = 'Iris'
-target = 'Species'
+file_tag = 'Breast_Cancer'
+target = 'diagnosis'
 
-data = read_csv('datasets/' + file_tag + '.csv', index_col='Id', sep=',', decimal='.')
+data = read_csv('datasets/' + file_tag + '.csv', index_col='id', sep=',', decimal='.')
 
 templates = read_csv('Templates.csv', sep=';')
+
+print(templates['Space4'].unique())
 
 questions_data = pd.DataFrame(columns=['Question', 'Charts'])
 
@@ -87,4 +89,4 @@ for index, row in templates.iterrows():
         new_row = current_templates.pop()
         questions_data.loc[len(questions_data)] = new_row
 
-questions_data.to_csv(file_tag + '_questions.csv', sep=';', index=False)
+questions_data.to_csv('Questions/' + file_tag + '_questions.csv', sep=';', index=False)

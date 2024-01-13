@@ -1,8 +1,8 @@
 from pandas import read_csv
 import pandas as pd
 
-file_tag = 'Iris'
-questions = read_csv(file_tag + '_questions.csv', sep=';')
+file_tag = 'Breast_Cancer'
+questions = read_csv('Questions/' + file_tag + '_questions.csv', sep=';')
 
 descriptions = read_csv('descriptions.csv', sep=';')
 
@@ -59,4 +59,4 @@ for index, row in questions.iterrows():
     new_row = {'Question': row['Question'], 'Charts_id': charts}
     questions_answer_data.loc[len(questions_answer_data)] = new_row
 
-questions_answer_data.to_csv(file_tag + '_Questions_Chart.csv', sep=';', index=False)
+questions_answer_data.to_csv('Questions_Chart/' + file_tag + '_Questions_Chart.csv', sep=';', index=False)

@@ -1,12 +1,13 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca
 
-file_tag = "Iris"
+file_tag = "Breast_Cancer"
 train_filename = f'data/{file_tag}_train.csv'
 test_filename = f'data/{file_tag}_test.csv'
-target = 'Species'
+target = 'diagnosis'
+positive_class = 'M'
 
-data = read_csv("datasets/" + file_tag + ".csv",sep=',', decimal='.')
+data = read_csv("datasets/" + file_tag + ".csv",index_col='id',sep=',', decimal='.')
 
 templates = read_csv('Templates.csv', sep=';')
 
@@ -296,6 +297,8 @@ savefig(f"images/{file_tag}_overfitting_decision_tree.png")
 if target in variables_types["binary"]:
     y_tst_values_r: list[float] = []
     y_trn_values_r: list[float] = []
+    y_tst_values: list[float] = []
+    y_trn_values: list[float] = []
     for d in depths:
         clf = DecisionTreeClassifier(max_depth=d, criterion=crit, min_impurity_decrease=0)
         clf.fit(trnX, trnY)
@@ -303,8 +306,8 @@ if target in variables_types["binary"]:
         prd_trn_Y: array = clf.predict(trnX)
         y_tst_values.append(CLASS_EVAL_METRICS[acc_metric](tstY, prd_tst_Y))
         y_trn_values.append(CLASS_EVAL_METRICS[acc_metric](trnY, prd_trn_Y))
-        y_tst_values_r.append(CLASS_EVAL_METRICS['recall'](tstY, prd_tst_Y))
-        y_trn_values_r.append(CLASS_EVAL_METRICS['recall'](trnY, prd_trn_Y))
+        y_tst_values_r.append(CLASS_EVAL_METRICS['recall'](tstY, prd_tst_Y,pos_label=positive_class))
+        y_trn_values_r.append(CLASS_EVAL_METRICS['recall'](trnY, prd_trn_Y,pos_label=positive_class))
 
     figure()
     plot_multiline_chart(

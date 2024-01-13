@@ -2,18 +2,18 @@ from numpy import array, ndarray
 from pandas import read_csv, DataFrame
 import numpy as np
 
-file_tag = "Wine"
-target = "Class"
-data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
+file_tag = "Breast_Cancer"
+target = "diagnosis"
+data = read_csv("datasets/" + file_tag + ".csv", index_col='id', sep=',', decimal='.')
 labels: list = list(data[target].unique())
 labels.sort()
 print(f"Labels={labels}")
 
 values: dict[str, list[int]] = {
     "Original": [
-        len(data[data[target] == '1']),
-        len(data[data[target] == '2']),
-        len(data[data[target] == '3']),
+        len(data[data[target] == 'M']),
+        len(data[data[target] == 'B']),
+        #len(data[data[target] == '3']),
     ]
 }
 

@@ -43,3 +43,13 @@ new_row = {'Dataset': 'Wine', 'Description': {'Records':len(wine),'Variables': g
 result.loc[len(result)] = new_row
 
 result.to_csv('descriptions.csv', sep=';', index=False)
+
+# Breast Cancer
+target = 'diagnosis'
+
+breast_cancer = read_csv('datasets/Breast_Cancer.csv', index_col='id', sep=',', decimal='.')
+
+new_row = {'Dataset': 'Breast_Cancer', 'Description': {'Records':len(breast_cancer),'Variables': get_variables_description(breast_cancer),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False) 
