@@ -12,9 +12,25 @@ def getnewindex(already_used,min,max):
     return ind
 
 file_tag = 'Breast_Cancer'
-target = 'Species'
+target = 'diagnosis'
 
-data = read_csv('datasets/' + file_tag + '.csv', sep=',', decimal='.')
+data = read_csv('datasets/' + file_tag + '.csv',index_col='id', sep=',', decimal='.')
+
+aux_lst = list(data.columns)
+symbolic_vars = []
+
+variables_types: dict[str, list] = get_variable_types(data)
+
+def to_str(x):
+    if type(x) != float:
+        return str(x)
+    return x
+
+for var in aux_lst:
+    if var not in variables_types["numeric"]:
+        data[var] = data[var].apply(to_str)
+        symbolic_vars.append(var)
+        
 
 templates = read_csv('Templates.csv', sep=';')
 
@@ -22,8 +38,6 @@ questions_data = pd.DataFrame(columns=['Question', 'Charts'])
 
 special_cases = ['The number of [1] is [2] than the number of [3] for the presented tree.','The [1] for the presented tree is [2] than its [3].']
 case_4 = 'Variables [1] and [2] are redundant, but we can’t say the same for the pair [3] and [4].'
-
-variables_types: dict[str, list] = get_variable_types(data)
 
 def get_combinations(lst): # creating a user-defined method
     combination = [] # empty list 
@@ -77,9 +91,12 @@ for index, row in templates.iterrows():
                 if len(current_options) == 2 and current_options[1] == '<class>':
                     special_cases.append(new_row['Question'])
                     current_options = list(data.columns)
-                elif current_options[0] == '<variables>':
+                elif current_options[0] == '<all_variables>':
                     special_cases.append(new_row['Question'])
                     current_options = list(data.drop(target, axis=1).columns)
+                elif current_options[0] == '<variables>':
+                    special_cases.append(new_row['Question'])
+                    current_options = list(data.drop(symbolic_vars, axis=1).columns)
                     
                 if len(current_options) > 10 and isinstance(current_options[0], int):
                     i=0

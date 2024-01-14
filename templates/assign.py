@@ -26,6 +26,9 @@ for index, row in questions.iterrows():
             charts.append(f'{file_tag}_scatter-plots')
         if chart == 'Histograms':
             charts.append(f'{file_tag}_histograms_numeric')
+        if chart == 'All_Histograms':
+            charts.append(f'{file_tag}_histograms_numeric')
+            charts.append(f'{file_tag}_histograms_symbolic')
         if chart == 'Boxplots':
             charts.append(f'{file_tag}_boxplots')
         if chart == 'Single boxplots':

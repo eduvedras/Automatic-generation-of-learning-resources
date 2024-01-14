@@ -1,13 +1,13 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca
 
-file_tag = "Breast_Cancer"
+file_tag = "Wine"
 train_filename = f'data/{file_tag}_train.csv'
 test_filename = f'data/{file_tag}_test.csv'
-target = 'diagnosis'
-positive_class = 'M'
+target = 'Class'
+positive_class = 1
 
-data = read_csv("datasets/" + file_tag + ".csv",index_col='id',sep=',', decimal='.')
+data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
 
 templates = read_csv('Templates.csv', sep=';')
 
@@ -30,6 +30,19 @@ show()
 variables_types: dict[str, list] = get_variable_types(data)
 numeric: list[str] = variables_types["numeric"]
 corr_mtx: data = data[numeric].corr().abs()
+
+aux_lst = list(data.columns)
+symbolic_vars = []
+
+def to_str(x):
+    if type(x) != float:
+        return str(x)
+    return x
+
+for var in aux_lst:
+    if var not in variables_types["numeric"]:
+        data[var] = data[var].apply(to_str)
+        symbolic_vars.append(var)
 
 figure()
 heatmap(
@@ -73,6 +86,8 @@ else:
 from dslabs_functions import plot_bar_chart
 
 symbolic: list[str] = variables_types["symbolic"] + variables_types["binary"]
+if target in symbolic:
+    symbolic.remove(target)
 if [] != symbolic:
     rows, cols = define_grid(len(symbolic))
     fig, axs = subplots(
@@ -130,8 +145,11 @@ plot_bar_chart(
     xlabel="variables",
     ylabel="nr missing values",
 )
-savefig(f"images/{file_tag}_mv.png")
+savefig(f"images/{file_tag}_mv.png", bbox_inches='tight')
 show()
+
+#Drop values
+data = data.dropna()
 
 # Scatter plots
 
@@ -179,10 +197,15 @@ from pandas import Series, Index
 from matplotlib.axes import Axes
 from dslabs_functions import plot_bar_chart
 
-target_data: Series = data.pop(target)
-index: Index = data.index
+aux_data = data.copy()
+if target in symbolic_vars:
+    symbolic_vars.remove(target)
+aux_data = aux_data.drop(symbolic_vars, axis=1)
+
+target_data: Series = aux_data.pop(target)
+index: Index = aux_data.index
 pca = PCA()
-pca.fit(data)
+pca.fit(aux_data)
 
 xvalues: list[str] = [f"PC{i+1}" for i in range(len(pca.components_))]
 figure()

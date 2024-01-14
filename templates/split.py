@@ -1,18 +1,40 @@
 from numpy import array, ndarray
 from pandas import read_csv, DataFrame
 import numpy as np
+from dslabs_functions import get_variable_types
 
-file_tag = "Breast_Cancer"
-target = "diagnosis"
-data = read_csv("datasets/" + file_tag + ".csv", index_col='id', sep=',', decimal='.')
+file_tag = "Titanic"
+target = "Survived"
+data = read_csv("datasets/" + file_tag + ".csv", index_col='PassengerId', sep=',', decimal='.')
 labels: list = list(data[target].unique())
 labels.sort()
 print(f"Labels={labels}")
 
+data = data.dropna()
+
+aux_lst = list(data.columns)
+symbolic_vars = []
+
+variables_types: dict[str, list] = get_variable_types(data)
+
+def to_str(x):
+    if type(x) != float:
+        return str(x)
+    return x
+
+for var in aux_lst:
+    if var not in variables_types["numeric"]:
+        data[var] = data[var].apply(to_str)
+        symbolic_vars.append(var)
+        
+symbolic_vars.remove(target)
+
+data = data.drop(symbolic_vars, axis=1)
+
 values: dict[str, list[int]] = {
     "Original": [
-        len(data[data[target] == 'M']),
-        len(data[data[target] == 'B']),
+        len(data[data[target] == '1']),
+        len(data[data[target] == '0']),
         #len(data[data[target] == '3']),
     ]
 }
