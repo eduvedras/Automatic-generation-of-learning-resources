@@ -11,10 +11,10 @@ def getnewindex(already_used,min,max):
     already_used.append(ind)
     return ind
 
-file_tag = 'Breast_Cancer'
-target = 'diagnosis'
+file_tag = 'WineQT'
+target = 'quality'
 
-data = read_csv('datasets/' + file_tag + '.csv',index_col='id', sep=',', decimal='.')
+data = read_csv('datasets/' + file_tag + '.csv',index_col='Id', sep=',', decimal='.')
 
 aux_lst = list(data.columns)
 symbolic_vars = []

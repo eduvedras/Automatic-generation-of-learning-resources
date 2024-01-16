@@ -63,3 +63,33 @@ new_row = {'Dataset': 'Titanic', 'Description': {'Records':len(titanic),'Variabl
 result.loc[len(result)] = new_row
 
 result.to_csv('descriptions.csv', sep=';', index=False)
+
+# Heart
+target = 'target'
+
+heart = read_csv('datasets/heart.csv', sep = ',', decimal='.')
+
+new_row = {'Dataset': 'heart', 'Description': {'Records':len(heart),'Variables': get_variables_description(heart),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)
+
+# Diabetes
+target = 'Outcome'
+
+diabetes = read_csv('datasets/diabetes.csv', sep = ',', decimal='.')
+
+new_row = {'Dataset': 'diabetes', 'Description': {'Records':len(diabetes),'Variables': get_variables_description(diabetes),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)
+
+# WineQT
+target = 'quality'
+
+wineQT = read_csv('datasets/WineQT.csv', index_col='Id', sep = ',', decimal='.')
+
+new_row = {'Dataset': 'WineQT', 'Description': {'Records':len(wineQT),'Variables': get_variables_description(wineQT),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)

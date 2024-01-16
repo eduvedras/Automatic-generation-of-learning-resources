@@ -1,7 +1,7 @@
 from pandas import read_csv
 import pandas as pd
 
-file_tag = 'Breast_Cancer'
+file_tag = 'WineQT'
 questions = read_csv('Questions/' + file_tag + '_questions.csv', sep=';')
 
 descriptions = read_csv('descriptions.csv', sep=';')
