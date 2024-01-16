@@ -93,3 +93,23 @@ new_row = {'Dataset': 'WineQT', 'Description': {'Records':len(wineQT),'Variables
 result.loc[len(result)] = new_row
 
 result.to_csv('descriptions.csv', sep=';', index=False)
+
+# Adult
+target = 'income'
+
+adult = read_csv('datasets/adult.csv', sep = ',', decimal='.', na_values='?')
+
+new_row = {'Dataset': 'adult', 'Description': {'Records':len(adult),'Variables': get_variables_description(adult),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)
+
+# Churn_Modelling
+target = 'Exited'
+
+churn_modelling = read_csv('datasets/Churn_Modelling.csv', index_col='CustomerId', sep = ',', decimal='.')
+
+new_row = {'Dataset': 'Churn_Modelling', 'Description': {'Records':len(churn_modelling),'Variables': get_variables_description(churn_modelling),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)

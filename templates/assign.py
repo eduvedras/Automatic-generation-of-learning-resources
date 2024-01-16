@@ -1,7 +1,7 @@
 from pandas import read_csv
 import pandas as pd
 
-file_tag = 'WineQT'
+file_tag = 'Churn_Modelling'
 questions = read_csv('Questions/' + file_tag + '_questions.csv', sep=';')
 
 descriptions = read_csv('descriptions.csv', sep=';')
