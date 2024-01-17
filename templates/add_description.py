@@ -113,3 +113,23 @@ new_row = {'Dataset': 'Churn_Modelling', 'Description': {'Records':len(churn_mod
 result.loc[len(result)] = new_row
 
 result.to_csv('descriptions.csv', sep=';', index=False)
+
+# BankNoteAuthentication
+target = 'class'
+
+bank_note_authentication = read_csv('datasets/BankNoteAuthentication.csv', sep = ',', decimal='.')
+
+new_row = {'Dataset': 'BankNoteAuthentication', 'Description': {'Records':len(bank_note_authentication),'Variables': get_variables_description(bank_note_authentication),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)
+
+# Vehicle
+target = 'target'
+
+vehicle = read_csv('datasets/vehicle.csv', sep = ',', decimal='.')
+
+new_row = {'Dataset': 'vehicle', 'Description': {'Records':len(vehicle),'Variables': get_variables_description(vehicle),'Class': target}}
+result.loc[len(result)] = new_row
+
+result.to_csv('descriptions.csv', sep=';', index=False)

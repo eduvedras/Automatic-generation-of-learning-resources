@@ -11,10 +11,10 @@ def getnewindex(already_used,min,max):
     already_used.append(ind)
     return ind
 
-file_tag = 'Churn_Modelling'
-target = 'Exited'
+file_tag = 'vehicle'
+target = 'target'
 
-data = read_csv('datasets/' + file_tag + '.csv',index_col='CustomerId', sep=',', decimal='.')
+data = read_csv('datasets/' + file_tag + '.csv', sep=',', decimal='.')
 
 aux_lst = list(data.columns)
 symbolic_vars = []
