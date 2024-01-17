@@ -1,13 +1,13 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca
 
-file_tag = "vehicle"
+file_tag = "adult1"
 train_filename = f'data/{file_tag}_train.csv'
 test_filename = f'data/{file_tag}_test.csv'
-target = 'target'
-positive_class = 1
+target = 'income'
+positive_class = '>50K'
 
-data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
+data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.', na_values='?')
 
 templates = read_csv('Templates.csv', sep=';')
 

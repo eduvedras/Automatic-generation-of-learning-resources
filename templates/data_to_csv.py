@@ -8,9 +8,9 @@ dataset.columns = ["Class","Alcohol", "Malic acid", "Ash", "Alcalinity of ash", 
 
 dataset.to_csv('Wine.csv', sep=',', index=False)'''
 
-data = pd.read_csv('datasets/Churn_Modelling.csv', sep=',', decimal='.')
+data = pd.read_csv('datasets/adult.csv', sep=',', decimal='.')
 
-data = data.drop(['Surname'], axis=1)
+data = data.drop(['native-country'], axis=1)
 
-data.to_csv('datasets/Churn_Modelling1.csv', sep=',', index=False)
+data.to_csv('datasets/adult1.csv', sep=',', index=False)
 

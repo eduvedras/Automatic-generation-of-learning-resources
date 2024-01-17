@@ -3,9 +3,9 @@ from pandas import read_csv, DataFrame
 import numpy as np
 from dslabs_functions import get_variable_types
 
-file_tag = "vehicle"
-target = "target"
-data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
+file_tag = "adult1"
+target = "income"
+data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.', na_values='?')
 labels: list = list(data[target].unique())
 labels.sort()
 print(f"Labels={labels}")
@@ -34,11 +34,13 @@ data = data.drop(symbolic_vars, axis=1)
 
 values: dict[str, list[int]] = {
     "Original": [
-        len(data[data[target] == '1']),
+        #len(data[data[target] == '1']),
         #len(data[data[target] == '0']),
-        len(data[data[target] == '2']),
-        len(data[data[target] == '3']),
-        len(data[data[target] == '4']),
+        #len(data[data[target] == '2']),
+        #len(data[data[target] == '3']),
+        #len(data[data[target] == '4']),
+        len(data[data[target] == '<=50K']),
+        len(data[data[target] == '>50K']),
     ]
 }
 
