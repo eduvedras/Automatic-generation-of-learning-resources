@@ -11,10 +11,13 @@ def getnewindex(already_used,min,max):
     already_used.append(ind)
     return ind
 
-file_tag = 'vehicle'
-target = 'target'
+file_tag = 'WineQT'
+target = 'quality'
+ConditionA = 'density<=1.0'
+ConditionB = 'chlorides<=0.08'
+neighbors = ['154','27','172','447']
 
-data = read_csv('datasets/' + file_tag + '.csv', sep=',', decimal='.')
+data = read_csv('datasets/' + file_tag + '.csv', index_col='Id',sep=',', decimal='.')
 
 aux_lst = list(data.columns)
 symbolic_vars = []
@@ -61,6 +64,10 @@ if target not in variables_types["binary"]:
 for index, row in templates.iterrows():
     j=0
     new_row = {'Question': row['Template'], 'Charts': row['Charts']}
+    if 'Considering that A=True' in new_row['Question']:
+        new_row['Question'] = row['Template'].replace('ConditionA', ConditionA)
+        new_row['Question'] = new_row['Question'].replace('ConditionB', ConditionB)
+        
     current_templates = []
     if case_4 == new_row['Question']:
         current_options = list(data.drop(target, axis=1).columns)
@@ -82,9 +89,14 @@ for index, row in templates.iterrows():
     else:
         while j < 4:
             j+=1
+            special_var = False
             if type(row['Space'+str(j)]) != float:
                 row['Space'+str(j)] = row['Space'+str(j)][1:-1]
-                current_options = row['Space'+str(j)].split(',')
+                if 'Considering that A=True' in row['Template'] and j == 1:
+                    current_options = row['Space'+str(j)].split('/')
+                else:
+                    current_options = row['Space'+str(j)].split(',')
+                    
                 if '..' in current_options[0]:
                     current_options = list(range(int(current_options[0].split('..')[0]), int(current_options[0].split('..')[1])+1))
                 
@@ -97,6 +109,14 @@ for index, row in templates.iterrows():
                 elif current_options[0] == '<variables>':
                     special_cases.append(new_row['Question'])
                     current_options = list(data.drop(symbolic_vars, axis=1).columns)
+                elif current_options[0] == '<target-values>':
+                    special_var = True
+                    special_cases.append(new_row['Question'])
+                    current_options = list(data[target].unique())
+                    current_options = [str(x) for x in current_options]
+                elif current_options[0] == '<neighbors>':
+                    special_cases.append(new_row['Question'])
+                    current_options = neighbors
                     
                 if len(current_options) > 10 and isinstance(current_options[0], int):
                     i=0
@@ -127,7 +147,7 @@ for index, row in templates.iterrows():
                         else:
                             for template in current_templates:
                                 aux_tmp = template.copy()
-                                if new_row['Question'] not in special_cases or current_options[i] not in aux_tmp['Question']:
+                                if new_row['Question'] not in special_cases or current_options[i] not in aux_tmp['Question'] or special_var == True:
                                     aux_tmp['Question'] = aux_tmp['Question'].replace('[' + str(j) + ']', str(current_options[i]))      
                                     tmp_templates.append(aux_tmp)
                         i += 1

@@ -1,13 +1,13 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca
 
-file_tag = "adult1"
+file_tag = "WineQT"
 train_filename = f'data/{file_tag}_train.csv'
 test_filename = f'data/{file_tag}_test.csv'
-target = 'income'
-positive_class = '>50K'
+target = 'quality'
+positive_class = 1
 
-data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.', na_values='?')
+data = read_csv("datasets/" + file_tag + ".csv", index_col='Id',sep=',', decimal='.')
 
 templates = read_csv('Templates.csv', sep=';')
 
@@ -266,30 +266,60 @@ def trees_study(
 
 eval_metric = 'accuracy'
 
+from sklearn.tree import plot_tree
+import itertools
+
+combinations = [] # empty list 
+lst = numeric
+if target in lst:
+    lst.remove(target)
+combinations.extend(itertools.combinations(lst, 2))
+for comb in combinations:
+    train = read_csv(train_filename, index_col=None)
+    test = read_csv(test_filename, index_col=None)
+    aux_lst = lst.copy()
+    aux_lst.remove(comb[0])
+    aux_lst.remove(comb[1])
+    
+    train = train.drop(aux_lst, axis=1)
+    test = test.drop(aux_lst, axis=1)
+    print(comb)
+    print(train.columns.tolist())
+    print(test.columns.tolist())
+    print("sup")
+    labels = list(train[target].unique())
+    labels.sort()
+    trnY = train.pop(target).to_list()
+    trnX = train.values
+
+    tstY = test.pop(target).to_list()
+    tstX = test.values
+    
+    best_model, params = trees_study(trnX, trnY, tstX, tstY, d_max=2, metric=eval_metric)
+    
+    tree_filename: str = f"images/{file_tag}_decision_tree_{comb[0]}_{comb[1]}"
+    max_depth2show = 2
+    st_labels: list[str] = [str(value) for value in labels]
+
+    figure(figsize=(14, 6))
+    plot_tree(
+        best_model,
+        max_depth=max_depth2show,
+        feature_names=train.columns.tolist(),
+        class_names=st_labels,
+        filled=False,
+        rounded=True,
+        impurity=False,
+        precision=2,
+    )
+    savefig(tree_filename + ".png")
+'''
+#Best decision tree
 trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(train_filename, test_filename, target)
 print(f'Train#={len(trnX)} Test#={len(tstX)}')
 print(f'Labels={labels}')
 
 best_model, params = trees_study(trnX, trnY, tstX, tstY, d_max=25, metric=eval_metric)
-
-from sklearn.tree import plot_tree
-
-tree_filename: str = f"images/{file_tag}_decision_tree"
-max_depth2show = 3
-st_labels: list[str] = [str(value) for value in labels]
-
-figure(figsize=(14, 6))
-plot_tree(
-    best_model,
-    max_depth=max_depth2show,
-    feature_names=vars,
-    class_names=st_labels,
-    filled=False,
-    rounded=True,
-    impurity=False,
-    precision=2,
-)
-savefig(tree_filename + ".png")
 
 crit: Literal["entropy", "gini"] = params["params"][0]
 d_max = 25
@@ -771,3 +801,4 @@ plot_multiline_chart(
 )
 savefig(f"images/{file_tag}_overfitting_mlp.png")
 
+'''

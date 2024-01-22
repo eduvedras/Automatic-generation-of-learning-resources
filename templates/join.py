@@ -17,8 +17,8 @@ for filename in os.scandir(directory):
             #Nothing to do
         if filename.name == 'BankNoteAuthentication_Questions_Chart.csv':
             for index, row in dataset.iterrows():
-                if 'overfitting' in row['Charts_id'] or '_mv' in row['Charts_id']:
-                    dataset = dataset.drop(index) #Podemos deixar DT e dt_acc_rec caso não haja o suficiente
+                if '_mv' in row['Charts_id']:
+                    dataset = dataset.drop(index)
         
         if filename.name == 'BreastCancer_Questions_Chart.csv':
             for index, row in dataset.iterrows():
@@ -54,7 +54,7 @@ for filename in os.scandir(directory):
                     
         if filename.name == 'Wine_Questions_Chart.csv':
             for index, row in dataset.iterrows():
-                if 'overfitting_gb' in row['Charts_id'] or 'overfitting_rf' in row['Charts_id'] or '_mv' in row['Charts_id']:
+                if '_mv' in row['Charts_id']:
                     dataset = dataset.drop(index)
         
         if filename.name == 'WineQT_Questions_Chart.csv':

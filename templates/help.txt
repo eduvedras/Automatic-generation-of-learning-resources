@@ -1,0 +1,81 @@
+#adult
+file_tag = 'adult'
+target = 'income'
+ConditionA = 'hours-per-week<=41.5'
+ConditionB = 'capital-loss<=1820.5'
+neighbors = ['21974','541','9274','434']
+
+#BankNoteAuthentication
+file_tag = 'BankNoteAuthentication'
+target = 'class'
+ConditionA = 'skewness<=5.16'
+ConditionB = 'curtosis<=0.19'
+neighbors = ['214','436','179','131']
+
+#Breast_Cancer
+file_tag = 'Breast_Cancer'
+target = 'diagnosis'
+ConditionA = 'perimeter_mean<=90.47'
+ConditionB = 'texture_worst<=27.89'
+neighbors = ['184','50','20','144']
+index_col = 'id'
+
+#Churn_Modelling
+file_tag = 'Churn_Modelling'
+target = 'Exited'
+ConditionA = 'Age<=42.5'
+ConditionB = 'NumOfProducts<=2.5'
+neighbors = ['4831','114','1931','124']
+index_col = 'CustomerId'
+
+#diabetes
+file_tag = 'diabetes'
+target = 'Outcome'
+ConditionA = 'BMI<=29.85'
+ConditionB = 'Age<=27.5'
+neighbors = ['111','98','167','161']
+
+#heart
+file_tag = 'heart'
+target = 'target'
+ConditionA = 'slope<=1.5'
+ConditionB = 'restecg<=0.5'
+neighbors = ['202','181','137','197']
+
+#Iris
+file_tag = 'Iris'
+target = 'Species'
+ConditionA = 'PetalWidthCm<=0.7'
+ConditionB = 'PetalWidthCm<=1.75'
+neighbors = ['35','38','32']
+index_col = 'Id'
+
+#Titanic
+file_tag = 'Titanic'
+target = 'Survived'
+ConditionA = 'PClass<=2.5'
+ConditionB = 'Parch<=0.5'
+neighbors = ['181','72','188','57']
+index_col = 'PassengerId'
+
+#vehicle
+file_tag = 'vehicle'
+target = 'target'
+ConditionA = 'LENGTHRECTANGULAR<=165.5'
+ConditionB = 'PR AXIS ASPECT RATIO<=67.5'
+neighbors = ['435','74','30','53']
+
+#Wine
+file_tag = 'Wine'
+target = 'Class'
+ConditionA = 'Total phenols<=2.36'
+ConditionB = 'Proanthocyanins<=1.58'
+neighbors = ['49','12','2','60']
+
+#WineQT
+file_tag = 'WineQT'
+target = 'quality'
+ConditionA = 'density<=1.0'
+ConditionB = 'chlorides<=0.08'
+neighbors = ['154','27','172','447']
+index_col = 'Id'
