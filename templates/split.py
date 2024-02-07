@@ -3,9 +3,9 @@ from pandas import read_csv, DataFrame
 import numpy as np
 from dslabs_functions import get_variable_types
 
-file_tag = "adult1"
-target = "income"
-data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.', na_values='?')
+file_tag = "OriginalDataset"
+target = "Question"
+data = read_csv("datasets/" + file_tag + ".csv", sep=';')
 labels: list = list(data[target].unique())
 labels.sort()
 print(f"Labels={labels}")

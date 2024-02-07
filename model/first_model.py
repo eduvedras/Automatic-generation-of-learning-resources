@@ -1,6 +1,21 @@
 from datasets import load_dataset
 import pandas as pd
+from pandas import read_csv
+  
+data = read_csv('OriginalDataset.csv', sep=';',index_col="Id")
 
-imagenette = load_dataset('frgfm/imagenette', 'full_size', split='train[:10%]', trust_remote_code=True)
+from transformers import CLIPTokenizerFast, CLIPProcessor, CLIPModel
+import torch
 
-imagenette.to_csv('sup.csv', sep=',', index=False)
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model_id = 'openai/clip-vit-base-patch32'
+
+model = CLIPModel.from_pretrained(model_id).to(device)
+tokenizer = CLIPTokenizerFast.from_pretrained(model_id)
+processor = CLIPProcessor.from_pretrained(model_id)
+
+prompt = "a dog in the snow"
+
+#tokenize the prompt
+inputs = tokenizer(prompt, return_tensors="pt").to(device)
+print(inputs)
