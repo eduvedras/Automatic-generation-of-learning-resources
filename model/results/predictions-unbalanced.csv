@@ -1,0 +1,17 @@
+Image,Prediction
+Titanic_decision_tree.png,the number of true negatives reported in the same tree is 35.
+Titanic_overfitting_mlp.png,we are able to identify the existence of overfitting for mlp models trained longer than 936 episodes.
+Titanic_overfitting_gb.png,we are able to identify the existence of overfitting for gradient boosting models with more than 54 estimators.
+Titanic_overfitting_rf.png,"results for random forests identified as 10, may be explained by its estimators being in underfitting."
+Titanic_overfitting_knn.png,knn with more than 4 neighbours is in overfitting.
+Titanic_overfitting_decision_tree.png,the decision tree is in overfitting for depths above 4.
+Titanic_overfitting_dt_acc_rec.png,the chart reporting the recall for different trees shows that the model enters in overfitting for models with depth higher than 7.
+Titanic_pca.png,using the first 2 principal components would imply an error between 10 and 25 %.
+Titanic_correlation_heatmap.png,"variables age and thal are redundant, but we can ’ t say the same for the pair age and thal."
+Titanic_boxplots.png,"it is clear that variable age shows some outliers, but we can ’ t be sure of the same for variable age."
+Titanic_histograms.png,"considering the common semantics for age and age variables, dummification if applied would increase the risk of facing the curse of dimensionality."
+Titanic_mv.png,balancing this dataset by smote would most probably be preferable over undersampling.
+Titanic_class_histogram.png,balancing this dataset would be mandatory to improve the results.
+Titanic_nr_records_nr_variables.png,"given the number of records and that some variables are date, we might be facing the curse of dimensionality."
+Titanic_scatter-plots.png,balancing this dataset by smote would be riskier than oversampling by oversampling by smote.
+Titanic_histograms_numeric.png,"it is clear that variable age shows some outliers, but we can ’ t be sure of the same for variable age."

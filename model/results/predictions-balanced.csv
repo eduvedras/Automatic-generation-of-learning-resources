@@ -1,0 +1,17 @@
+Image,Prediction
+Titanic_decision_tree.png,the variable petallengthcm seems to be one of the four most relevant features.
+Titanic_overfitting_mlp.png,we are able to identify the existence of overfitting for mlp models trained longer than 788 episodes.
+Titanic_overfitting_gb.png,we are able to identify the existence of overfitting for gradient boosting models with more than 69 estimators.
+Titanic_overfitting_rf.png,"results for random forests identified as 10, may be explained by its estimators being in underfitting."
+Titanic_overfitting_knn.png,knn with more than 4 neighbours is in overfitting.
+Titanic_overfitting_decision_tree.png,the chart reporting the recall for different trees shows that the model enters in overfitting for models with depth higher than 6.
+Titanic_overfitting_dt_acc_rec.png,the chart reporting the recall for different trees shows that the model enters in overfitting for models with depth higher than 6.
+Titanic_pca.png,using the first 3 principal components would imply an error between 15 and 30 %.
+Titanic_correlation_heatmap.png,the variable age can be discarded without risking losing information.
+Titanic_boxplots.png,variable sepalwidthcm shows a high number of outlier values.
+Titanic_histograms.png,variable age shows some outlier values.
+Titanic_mv.png,discarding variables capital - gain and race would be better than discarding all the records with missing values for those variables.
+Titanic_class_histogram.png,balancing this dataset would be mandatory to improve the results.
+Titanic_nr_records_nr_variables.png,"given the number of records and that some variables are binary, we might be facing the curse of dimensionality."
+Titanic_scatter-plots.png,variable age shows some outlier values.
+Titanic_histograms_numeric.png,variable petallengthcm shows some outlier values.
