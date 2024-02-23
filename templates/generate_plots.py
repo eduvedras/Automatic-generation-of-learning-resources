@@ -1,21 +1,80 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca
 
-file_tag = "WineQT"
-train_filename = f'data/{file_tag}_train.csv'
-test_filename = f'data/{file_tag}_test.csv'
-target = 'quality'
-positive_class = 1
-
-data = read_csv("datasets/" + file_tag + ".csv", index_col='Id',sep=',', decimal='.')
-
-templates = read_csv('Templates.csv', sep=';')
-
 from matplotlib.pyplot import figure, savefig, show, subplots
 from dslabs_functions import plot_bar_chart, get_variable_types, set_chart_labels, define_grid, HEIGHT, plot_multi_scatters_chart
 from seaborn import heatmap
-from numpy import ndarray
+from numpy import array, ndarray
 from matplotlib.figure import Figure
+
+file_tag = "smoking_drinking"
+target = "DRK_YN"
+positive_class = "Y"
+
+data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
+
+values: dict[str, list[int]] = {
+    "Original": [
+        len(data[data[target] == 'Y']),
+        len(data[data[target] == 'N']),
+    ]
+}
+
+labels: list = list(data[target].unique())
+labels.sort()
+print(f"Labels={labels}")
+
+data = data.dropna()
+
+aux_lst = list(data.columns)
+symbolic_vars = []
+
+variables_types: dict[str, list] = get_variable_types(data)
+
+def to_str(x):
+    if type(x) != float:
+        return str(x)
+    return x
+
+for var in aux_lst:
+    if var not in variables_types["numeric"]:
+        data[var] = data[var].apply(to_str)
+        symbolic_vars.append(var)
+
+if target in symbolic_vars:
+    symbolic_vars.remove(target)
+
+data = data.drop(symbolic_vars, axis=1)
+
+y: array = data.pop(target).to_list()
+X: ndarray = data.values
+
+from pandas import concat
+from matplotlib.pyplot import figure, show
+from sklearn.model_selection import train_test_split
+from dslabs_functions import plot_multibar_chart
+
+
+trnX, tstX, trnY, tstY = train_test_split(X, y, train_size=0.7, stratify=y)
+
+train: DataFrame = concat(
+    [DataFrame(trnX, columns=data.columns), DataFrame(trnY, columns=[target])], axis=1
+)
+train.to_csv(f"data/{file_tag}_train.csv", index=False)
+
+test: DataFrame = concat(
+    [DataFrame(tstX, columns=data.columns), DataFrame(tstY, columns=[target])], axis=1
+)
+test.to_csv(f"data/{file_tag}_test.csv", index=False)
+
+
+#file_tag = "WineQT"
+train_filename = f'data/{file_tag}_train.csv'
+test_filename = f'data/{file_tag}_test.csv'
+#target = 'quality'
+#positive_class = 1
+
+data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
 
 # Plot nr of records vs nr of variables
 figure(figsize=(4, 2))
@@ -96,8 +155,16 @@ if [] != symbolic:
     i, j = 0, 0
     for n in range(len(symbolic)):
         counts: Series = data[symbolic[n]].value_counts()
+        
+        n_as_values = []
+        for val in counts.index.to_list():
+            if type(val) == float:
+                n_as_values.append(str(int(val)))
+            else:
+                n_as_values.append(val)
+        
         plot_bar_chart(
-            counts.index.to_list(),
+            n_as_values,
             counts.to_list(),
             ax=axs[i, j],
             title="Histogram for %s" % symbolic[n],
@@ -152,7 +219,7 @@ show()
 data = data.dropna()
 
 # Scatter plots
-
+'''
 vars: list = data.columns.to_list()
 if [] != vars:
 
@@ -168,7 +235,7 @@ if [] != vars:
     savefig(f"images/{file_tag}_scatter-plots.png")
     show()
 else:
-    print("Sparsity class: there are no variables.")
+    print("Sparsity class: there are no variables.")'''
     
 
 # Boxplots
@@ -268,7 +335,7 @@ eval_metric = 'accuracy'
 
 from sklearn.tree import plot_tree
 import itertools
-
+'''
 combinations = [] # empty list 
 lst = numeric
 if target in lst:
@@ -800,5 +867,3 @@ plot_multiline_chart(
     percentage=True,
 )
 savefig(f"images/{file_tag}_overfitting_mlp.png")
-
-'''

@@ -71,7 +71,7 @@ def define_grid(nr_vars, vars_per_row: int = NR_COLUMNS) -> tuple[int, int]:
 
 
 def set_chart_labels(ax: Axes, title: str = "", xlabel: str = "", ylabel: str = "") -> Axes:
-    ax.set_title(title)
+    ax.set_title(title,fontsize=13)
     ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
     return ax
