@@ -7,16 +7,16 @@ from seaborn import heatmap
 from numpy import array, ndarray
 from matplotlib.figure import Figure
 
-file_tag = "smoking_drinking"
-target = "DRK_YN"
-positive_class = "Y"
+file_tag = "car_insurance"
+target = "is_claim"
+positive_class = 1
 
 data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
 
 values: dict[str, list[int]] = {
     "Original": [
-        len(data[data[target] == 'Y']),
-        len(data[data[target] == 'N']),
+        len(data[data[target] == 1]),
+        len(data[data[target] == 0]),
     ]
 }
 
@@ -167,7 +167,7 @@ if [] != symbolic:
             n_as_values,
             counts.to_list(),
             ax=axs[i, j],
-            title="Histogram for %s" % symbolic[n],
+            title="Bar chart for %s" % symbolic[n],
             xlabel=symbolic[n],
             ylabel="nr records",
             percentage=False,
@@ -219,6 +219,7 @@ show()
 data = data.dropna()
 
 # Scatter plots
+
 '''
 vars: list = data.columns.to_list()
 if [] != vars:
@@ -263,6 +264,7 @@ from sklearn.decomposition import PCA
 from pandas import Series, Index
 from matplotlib.axes import Axes
 from dslabs_functions import plot_bar_chart
+import itertools
 
 aux_data = data.copy()
 if target in symbolic_vars:
@@ -270,6 +272,19 @@ if target in symbolic_vars:
 aux_data = aux_data.drop(symbolic_vars, axis=1)
 
 target_data: Series = aux_data.pop(target)
+'''
+combinations = [] # empty list 
+lst = numeric
+if target in lst:
+    lst.remove(target)
+combinations.extend(itertools.combinations(lst, 4))
+
+for comb in combinations:
+    aux_data = data.copy()
+    aux_data = aux_data.drop(symbolic_vars, axis=1)
+    aux_data.pop(target)
+    aux_data = aux_data.drop(list(comb), axis=1)
+    '''
 index: Index = aux_data.index
 pca = PCA()
 pca.fit(aux_data)
@@ -334,8 +349,8 @@ def trees_study(
 eval_metric = 'accuracy'
 
 from sklearn.tree import plot_tree
-import itertools
-'''
+
+
 combinations = [] # empty list 
 lst = numeric
 if target in lst:
@@ -350,10 +365,7 @@ for comb in combinations:
     
     train = train.drop(aux_lst, axis=1)
     test = test.drop(aux_lst, axis=1)
-    print(comb)
-    print(train.columns.tolist())
-    print(test.columns.tolist())
-    print("sup")
+    
     labels = list(train[target].unique())
     labels.sort()
     trnY = train.pop(target).to_list()
@@ -380,7 +392,7 @@ for comb in combinations:
         precision=2,
     )
     savefig(tree_filename + ".png")
-'''
+
 #Best decision tree
 trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(train_filename, test_filename, target)
 print(f'Train#={len(trnX)} Test#={len(tstX)}')

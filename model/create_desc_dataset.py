@@ -39,10 +39,13 @@ directory = '/home/eduvedras/tese/templates/datasets'
 variable_types = {}
 
 classes = {'adult': ['income'],'BankNoteAuthentication': ['class'],
-           'Breast_Cancer': ['diagnosis','id'], 'Churn_Modelling': ['Exited','CustomerId'],
-           'diabetes':['Outcome'], 'heart': ['target'], 'Iris': ['Species','Id'],
-           'Titanic': ['Survived','PassengerId'], 'Wine': ['Class'], 'WineQT': ['quality','Id'],
-           'vehicle': ['target']}
+           'Breast_Cancer': ['diagnosis'], 'Churn_Modelling': ['Exited'],
+           'diabetes':['Outcome'], 'heart': ['target'], 'Iris': ['Species'],
+           'Titanic': ['Survived'], 'Wine': ['Class'], 'WineQT': ['quality'],
+           'vehicle': ['target'], 'apple_quality': ['Quality'], 'loan_data': ['Loan_Status'],
+           'credit_customers': ['class'], 'smoking_drinking': ['DRK_YN'], 'sky_survey': ['class'],
+           'weatherAUS': ['RainTomorrow'], 'Dry_Bean_Dataset': ['Class'],'abalone': ['Sex'],
+           'car_insurance': ['is_claim']}
 
 vars = {}
 for filename in os.scandir(directory):
@@ -51,15 +54,20 @@ for filename in os.scandir(directory):
         file_tag = filename.name[:-4]
         variable_types[file_tag] = get_variable_types(dataset)
         
-        all_vars = []
-        for c in dataset.columns:
-            if c not in classes[file_tag]:
-                all_vars.append(c)
+        #all_vars = []
+        #for c in dataset.columns:
+        #   if c not in classes[file_tag]:
+        #       all_vars.append(c)
                 
         numeric_vars = []
         for c in variable_types[file_tag]['numeric']:
             if c not in classes[file_tag]:
                 numeric_vars.append(c)
+                
+        symbolic_vars = []
+        for c in variable_types[file_tag]['symbolic']:
+            if c not in classes[file_tag]:
+                symbolic_vars.append(c)
         
         mv = []
         for var in dataset.columns:
@@ -69,7 +77,7 @@ for filename in os.scandir(directory):
                 
         vars[file_tag] = {'target': classes[file_tag][0], 
                           'numeric_vars': numeric_vars, 
-                          'all_vars': all_vars,
+                          'symbolic_vars': symbolic_vars,
                           'missing_values': mv}
 
 
@@ -79,7 +87,7 @@ for filename in os.scandir(directory):
         for image in images:
             new_row = {'Chart': file_tag + image, 'description': ''}
             if 'overfitting_decision_tree' in image:
-                new_row['description'] = 'A chart showing the overfitting of a decision tree where the y-axis represents the accuracy and the x-axis represents the max depth ranging from 2 to 25.'
+                new_row['description'] = 'A multi-line chart showing the overfitting of a decision tree where the y-axis represents the accuracy and the x-axis represents the max depth ranging from 2 to 25.'
             elif 'decision_tree' in image:
                 first_var = ''
                 second_var = ''
@@ -113,6 +121,33 @@ for filename in os.scandir(directory):
                 if file_tag == 'WineQT':
                     first_var = 'density'
                     second_var = 'chlorides'
+                if file_tag == 'apple_quality':
+                    first_var = 'Juiciness'
+                    second_var = 'Crunchiness'
+                if file_tag == 'loan_data':
+                    first_var = 'Loan_Amount_Term'
+                    second_var = 'ApplicantIncome'
+                if file_tag == 'credit_customers':
+                    first_var = 'existing_credits'
+                    second_var = 'residence_since'
+                if file_tag == 'smoking_drinking':
+                    first_var = 'SMK_stat_type_cd'
+                    second_var = 'gamma_GTP'
+                if file_tag == 'sky_survey':
+                    first_var = 'dec'
+                    second_var = 'mjd'
+                if file_tag == 'weatherAUS':
+                    first_var = 'Rainfall'
+                    second_var = 'Pressure3pm'
+                if file_tag == 'Dry_Bean_Dataset':
+                    first_var = 'Area'
+                    second_var = 'AspectRation'
+                if file_tag == 'abalone':
+                    first_var = 'Height'
+                    second_var = 'Diameter'
+                if file_tag == 'car_insurance':
+                    first_var = 'displacement'
+                    second_var = 'height'
                 if file_tag == 'Iris':
                     new_row['description'] = f'An image showing a decision tree with depth = 2 where the first and second decisions are made with variable PetalWidthCm.'
                 else:
@@ -149,6 +184,26 @@ for filename in os.scandir(directory):
                     n_pc = 11
                 if file_tag == 'WineQT':
                     n_pc = 11
+                if file_tag == 'apple_quality':
+                    n_pc = 7
+                if file_tag == 'loan_data':
+                    n_pc = 4
+                if file_tag == 'credit_customers':
+                    n_pc = 6
+                if file_tag == 'smoking_drinking':
+                    n_pc = 20
+                if file_tag == 'sky_survey':
+                    n_pc = 8
+                if file_tag == 'weatherAUS':
+                    n_pc = 16
+                if file_tag == 'Dry_Bean_Dataset':
+                    n_pc = 16
+                if file_tag == 'abalone':
+                    n_pc = 8
+                if file_tag == 'car_insurance':
+                    n_pc = 9
+                if file_tag == 'Iris':
+                    n_pc = 4
                 new_row['description'] = f'A bar chart showing the explained variance ratio of {n_pc} principal components.'
             elif 'correlation_heatmap' in image:
                 new_row['description'] = f'A heatmap showing the correlation between the variables of the dataset. The variables are {vars[file_tag]["numeric_vars"]}.'
@@ -156,17 +211,17 @@ for filename in os.scandir(directory):
                 new_row['description'] = f'A set of boxplots of the variables {vars[file_tag]["numeric_vars"]}.'
             elif 'histograms_numeric' in image:
                 new_row['description'] = f'A set of histograms of the variables {vars[file_tag]["numeric_vars"]}.'
-            elif 'histograms' in image:
-                new_row['description'] = f'A set of histograms and bar charts of the variables {vars[file_tag]["all_vars"]}.'
+            elif 'histograms_symbolic' in image:
+                new_row['description'] = f'A set of bar charts of the variables {vars[file_tag]["symbolic_vars"]}.'
             elif 'mv' in image:
                 new_row['description'] = f'A bar chart showing the number of missing values per variable of the dataset. The variables that have missing values are: {vars[file_tag]["missing_values"]}.'
             elif 'class_histogram' in image:
                 new_row['description'] = f'A bar chart showing the distribution of the target variable {vars[file_tag]["target"]}.'
             elif 'nr_records_nr_variables' in image:
                 new_row['description'] = f'A bar chart showing the number of records and variables of the dataset.'
-            elif 'scatter-plots' in image:
-                new_row['description'] = f'A set of scatter plots of the variables {vars[file_tag]["all_vars"]}.'
+            #elif 'scatter-plots' in image:
+            #    new_row['description'] = f'A set of scatter plots of the variables {vars[file_tag]["symbolic_vars"]}.'
             new_data.loc[len(new_data)] = new_row
 
-new_data.to_csv('desc_dataset.csv', index=False)
+new_data.to_csv('desc_dataset.csv', sep =";", index=False)
     

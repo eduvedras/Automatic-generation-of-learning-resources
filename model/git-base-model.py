@@ -18,7 +18,7 @@ def print_summary(result):
 
 torch.cuda.empty_cache()
 
-dataset = load_dataset('eduvedras/VQG-Small',trust_remote_code=True)
+dataset = load_dataset('eduvedras/Image_Description',trust_remote_code=True)
 
 #dataset = dataset["train"].train_test_split(test_size=0.1)
 train_ds = dataset["train"]
@@ -26,13 +26,13 @@ train_ds = dataset["train"]
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-model_id = "microsoft/git-base"
+model_id = "microsoft/git-large-r-textcaps"
 processor = AutoProcessor.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(model_id).to(device)
 
 def transforms(example_batch):
     images = [x for x in example_batch["Chart"]]
-    captions = [x for x in example_batch["Question"]]
+    captions = [x for x in example_batch["Description"]]
     inputs = processor(images=images, text=captions, padding="max_length")
     inputs.update({"labels": inputs["input_ids"]})
     return inputs
@@ -45,9 +45,9 @@ from transformers import TrainingArguments, Trainer
 model_name = model_id.split("/")[1]
 
 training_args = TrainingArguments(
-    output_dir=f"{model_name}-vqg-small",
+    output_dir=f"{model_name}-description-large-textcaps",
     learning_rate=5e-5,
-    num_train_epochs=5,
+    num_train_epochs=100,
     fp16=True,
     per_device_train_batch_size=4,
     #per_device_eval_batch_size=4,
