@@ -7,16 +7,22 @@ from seaborn import heatmap
 from numpy import array, ndarray
 from matplotlib.figure import Figure
 
-file_tag = "car_insurance"
-target = "is_claim"
-positive_class = 1
+file_tag = "ObesityDataSet"
+target = "NObeyesdad"
+positive_class = 'LOL'
 
 data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
 
 values: dict[str, list[int]] = {
     "Original": [
-        len(data[data[target] == 1]),
-        len(data[data[target] == 0]),
+        len(data[data[target] == 'Normal_Weight']),
+        len(data[data[target] == 'Overweight_Level_I']),
+        len(data[data[target] == 'Overweight_Level_II']),
+        len(data[data[target] == 'Obesity_Type_I']),
+        len(data[data[target] == 'Obesity_Type_II']),
+        len(data[data[target] == 'Obesity_Type_III']),
+        len(data[data[target] == 'Insufficient_Weight']),
+        
     ]
 }
 
@@ -115,7 +121,7 @@ heatmap(
 )
 savefig(f"images/{file_tag}_correlation_heatmap.png", bbox_inches='tight')
 show()
-
+from tqdm import tqdm
 # Numeric Histograms
 if [] != numeric:
     rows: int
@@ -127,7 +133,7 @@ if [] != numeric:
     i: int
     j: int
     i, j = 0, 0
-    for n in range(len(numeric)):
+    for n in tqdm(range(len(numeric))):
         set_chart_labels(
             axs[i, j],
             title=f"Histogram for {numeric[n]}",
@@ -150,7 +156,7 @@ if target in symbolic:
 if [] != symbolic:
     rows, cols = define_grid(len(symbolic))
     fig, axs = subplots(
-        rows, cols, figsize=(cols * HEIGHT, rows * HEIGHT), squeeze=False
+        rows, cols, figsize=(cols * HEIGHT + 3, rows * HEIGHT + 5), squeeze=False
     )
     i, j = 0, 0
     for n in range(len(symbolic)):
@@ -283,8 +289,8 @@ for comb in combinations:
     aux_data = data.copy()
     aux_data = aux_data.drop(symbolic_vars, axis=1)
     aux_data.pop(target)
-    aux_data = aux_data.drop(list(comb), axis=1)
-    '''
+    aux_data = aux_data.drop(list(comb), axis=1)'''
+    
 index: Index = aux_data.index
 pca = PCA()
 pca.fit(aux_data)
@@ -667,7 +673,7 @@ def gradient_boosting_study(
     values: dict = {}
     cols: int = len(max_depths)
     _, axs = subplots(1, cols, figsize=(cols * HEIGHT, HEIGHT), squeeze=False)
-    for i in range(len(max_depths)):
+    for i in tqdm(range(len(max_depths))):
         d: int = max_depths[i]
         values = {}
         for lr in learning_rates:

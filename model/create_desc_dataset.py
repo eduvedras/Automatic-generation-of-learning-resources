@@ -45,7 +45,10 @@ classes = {'adult': ['income'],'BankNoteAuthentication': ['class'],
            'vehicle': ['target'], 'apple_quality': ['Quality'], 'loan_data': ['Loan_Status'],
            'credit_customers': ['class'], 'smoking_drinking': ['DRK_YN'], 'sky_survey': ['class'],
            'weatherAUS': ['RainTomorrow'], 'Dry_Bean_Dataset': ['Class'],'abalone': ['Sex'],
-           'car_insurance': ['is_claim']}
+           'car_insurance': ['is_claim'], 'Covid_Data': ['CLASSIFICATION'],'customer_segmentation': ['Segmentation'],
+           'detect_dataset': ['Output'],'e-commerce': ['ReachedOnTime'], 'Employee': ['LeaveOrNot'],
+           'Hotel_Reservations': ['booking_status'], 'Liver_Patient': ['Selector'], 'maintenance': ['Machine_failure'],
+           'ObesityDataSet': ['NObeyesdad']}
 
 vars = {}
 for filename in os.scandir(directory):
@@ -148,6 +151,33 @@ for filename in os.scandir(directory):
                 if file_tag == 'car_insurance':
                     first_var = 'displacement'
                     second_var = 'height'
+                if file_tag == 'Covid_Data':
+                    first_var = 'CARDIOVASCULAR'
+                    second_var = 'ASHTMA'
+                if file_tag == 'customer_segmentation':
+                    first_var = 'Family_Size'
+                    second_var = 'Work_Experience'
+                if file_tag == 'detect_dataset':
+                    first_var = 'Ic'
+                    second_var = 'Vb'
+                if file_tag == 'e-commerce':
+                    first_var = 'Prior_purchases'
+                    second_var = 'Customer_care_calls'
+                if file_tag == 'Employee':
+                    first_var = 'JoiningYear'
+                    second_var = 'ExperienceInCurrentDomain'
+                if file_tag == 'Hotel_Reservations':
+                    first_var = 'lead_time'
+                    second_var = 'no_of_special_requests'
+                if file_tag == 'Liver_Patient':
+                    first_var = 'Alkphos'
+                    second_var = 'Sgot'
+                if file_tag == 'maintenance':
+                    first_var = 'Rotational speed [rpm]'
+                    second_var = 'Torque [Nm]'
+                if file_tag == 'ObesityDataSet':
+                    first_var = 'FAF'
+                    second_var = 'Height'
                 if file_tag == 'Iris':
                     new_row['description'] = f'An image showing a decision tree with depth = 2 where the first and second decisions are made with variable PetalWidthCm.'
                 else:
@@ -202,6 +232,24 @@ for filename in os.scandir(directory):
                     n_pc = 8
                 if file_tag == 'car_insurance':
                     n_pc = 9
+                if file_tag == 'Covid_Data':
+                    n_pc = 12
+                if file_tag == 'customer_segmentation':
+                    n_pc = 3
+                if file_tag == 'detect_dataset':
+                    n_pc = 6
+                if file_tag == 'e-commerce':
+                    n_pc = 6
+                if file_tag == 'Employee':
+                    n_pc = 4
+                if file_tag == 'Hotel_Reservations':
+                    n_pc = 9
+                if file_tag == 'Liver_Patient':
+                    n_pc = 9
+                if file_tag == 'maintenance':
+                    n_pc = 5
+                if file_tag == 'ObesityDataSet':
+                    n_pc = 8
                 if file_tag == 'Iris':
                     n_pc = 4
                 new_row['description'] = f'A bar chart showing the explained variance ratio of {n_pc} principal components.'
