@@ -20,7 +20,7 @@ def get_variable_types(df: DataFrame) -> dict[str, list]:
     return variable_types
 
 
-data = pd.read_csv('metadata.csv')
+data = pd.read_csv('metadata1.csv')
 
 new_data = pd.DataFrame(columns=['Chart', 'description'])
 
@@ -48,7 +48,8 @@ classes = {'adult': ['income'],'BankNoteAuthentication': ['class'],
            'car_insurance': ['is_claim'], 'Covid_Data': ['CLASSIFICATION'],'customer_segmentation': ['Segmentation'],
            'detect_dataset': ['Output'],'e-commerce': ['ReachedOnTime'], 'Employee': ['LeaveOrNot'],
            'Hotel_Reservations': ['booking_status'], 'Liver_Patient': ['Selector'], 'maintenance': ['Machine_failure'],
-           'ObesityDataSet': ['NObeyesdad']}
+           'ObesityDataSet': ['NObeyesdad'], 'phone': ['price_range'], 'Placement': ['status'],
+           'StressLevelDataset': ['stress_level'], 'urinalysis_tests': ['Diagnosis'], 'water_potability': ['Potability']}
 
 vars = {}
 for filename in os.scandir(directory):
@@ -69,6 +70,10 @@ for filename in os.scandir(directory):
                 
         symbolic_vars = []
         for c in variable_types[file_tag]['symbolic']:
+            if c not in classes[file_tag]:
+                symbolic_vars.append(c)
+        
+        for c in variable_types[file_tag]['binary']:
             if c not in classes[file_tag]:
                 symbolic_vars.append(c)
         
@@ -116,8 +121,8 @@ for filename in os.scandir(directory):
                     first_var = 'Pclass'
                     second_var = 'Parch'
                 if file_tag == 'vehicle':
-                    first_var = 'LENGTHRECTANGULAR'
-                    second_var = 'PR AXIS ASPECT RATIO'
+                    first_var = 'MAJORSKEWNESS'
+                    second_var = 'CIRCULARITY'
                 if file_tag == 'Wine':
                     first_var = 'Total phenols'
                     second_var = 'Proanthocyanins'
@@ -178,6 +183,21 @@ for filename in os.scandir(directory):
                 if file_tag == 'ObesityDataSet':
                     first_var = 'FAF'
                     second_var = 'Height'
+                if file_tag == 'phone':
+                    first_var = 'int_memory'
+                    second_var = 'mobile_wt'
+                if file_tag == 'Placement':
+                    first_var = 'ssc_p'
+                    second_var = 'hsc_p'
+                if file_tag == 'StressLevelDataset':
+                    first_var = 'basic_needs'
+                    second_var = 'bullying'
+                if file_tag == 'urinalysis_tests':
+                    first_var = 'Age'
+                    second_var = 'pH'
+                if file_tag == 'water_potability':
+                    first_var = 'Hardness'
+                    second_var = 'Chloramines'
                 if file_tag == 'Iris':
                     new_row['description'] = f'An image showing a decision tree with depth = 2 where the first and second decisions are made with variable PetalWidthCm.'
                 else:
@@ -209,7 +229,7 @@ for filename in os.scandir(directory):
                 if file_tag == 'Titanic':
                     n_pc = 5
                 if file_tag == 'vehicle':
-                    n_pc = 18
+                    n_pc = 11
                 if file_tag == 'Wine':
                     n_pc = 11
                 if file_tag == 'WineQT':
@@ -221,13 +241,13 @@ for filename in os.scandir(directory):
                 if file_tag == 'credit_customers':
                     n_pc = 6
                 if file_tag == 'smoking_drinking':
-                    n_pc = 20
+                    n_pc = 12
                 if file_tag == 'sky_survey':
                     n_pc = 8
                 if file_tag == 'weatherAUS':
-                    n_pc = 16
+                    n_pc = 7
                 if file_tag == 'Dry_Bean_Dataset':
-                    n_pc = 16
+                    n_pc = 9
                 if file_tag == 'abalone':
                     n_pc = 8
                 if file_tag == 'car_insurance':
@@ -250,6 +270,16 @@ for filename in os.scandir(directory):
                     n_pc = 5
                 if file_tag == 'ObesityDataSet':
                     n_pc = 8
+                if file_tag == 'phone':
+                    n_pc = 12
+                if file_tag == 'Placement':
+                    n_pc = 5
+                if file_tag == 'StressLevelDataset':
+                    n_pc = 10
+                if file_tag == 'urinalysis_tests':
+                    n_pc = 3
+                if file_tag == 'water_potability':
+                    n_pc = 7
                 if file_tag == 'Iris':
                     n_pc = 4
                 new_row['description'] = f'A bar chart showing the explained variance ratio of {n_pc} principal components.'
@@ -262,6 +292,8 @@ for filename in os.scandir(directory):
             elif 'histograms_symbolic' in image:
                 new_row['description'] = f'A set of bar charts of the variables {vars[file_tag]["symbolic_vars"]}.'
             elif 'mv' in image:
+                if len(vars[file_tag]["missing_values"]) == 0:
+                    continue
                 new_row['description'] = f'A bar chart showing the number of missing values per variable of the dataset. The variables that have missing values are: {vars[file_tag]["missing_values"]}.'
             elif 'class_histogram' in image:
                 new_row['description'] = f'A bar chart showing the distribution of the target variable {vars[file_tag]["target"]}.'
@@ -269,6 +301,8 @@ for filename in os.scandir(directory):
                 new_row['description'] = f'A bar chart showing the number of records and variables of the dataset.'
             #elif 'scatter-plots' in image:
             #    new_row['description'] = f'A set of scatter plots of the variables {vars[file_tag]["symbolic_vars"]}.'
+            if 'scatter-plots' in image:
+                continue
             new_data.loc[len(new_data)] = new_row
 
 new_data.to_csv('desc_dataset.csv', sep =";", index=False)

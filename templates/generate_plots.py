@@ -7,22 +7,16 @@ from seaborn import heatmap
 from numpy import array, ndarray
 from matplotlib.figure import Figure
 
-file_tag = "ObesityDataSet"
-target = "NObeyesdad"
-positive_class = 'LOL'
+file_tag = "WineQT"
+target = "quality"
+positive_class = 'Yes'
 
 data = read_csv("datasets/" + file_tag + ".csv", sep=',', decimal='.')
-
+'''
 values: dict[str, list[int]] = {
     "Original": [
-        len(data[data[target] == 'Normal_Weight']),
-        len(data[data[target] == 'Overweight_Level_I']),
-        len(data[data[target] == 'Overweight_Level_II']),
-        len(data[data[target] == 'Obesity_Type_I']),
-        len(data[data[target] == 'Obesity_Type_II']),
-        len(data[data[target] == 'Obesity_Type_III']),
-        len(data[data[target] == 'Insufficient_Weight']),
-        
+        len(data[data[target] == 'Yes']),
+        len(data[data[target] == 'No']),
     ]
 }
 
@@ -72,7 +66,7 @@ test: DataFrame = concat(
     [DataFrame(tstX, columns=data.columns), DataFrame(tstY, columns=[target])], axis=1
 )
 test.to_csv(f"data/{file_tag}_test.csv", index=False)
-
+'''
 
 #file_tag = "WineQT"
 train_filename = f'data/{file_tag}_train.csv'
@@ -124,6 +118,8 @@ show()
 from tqdm import tqdm
 # Numeric Histograms
 if [] != numeric:
+    if target in numeric:
+        numeric.remove(target)
     rows: int
     cols: int
     rows, cols = define_grid(len(numeric))
@@ -156,7 +152,7 @@ if target in symbolic:
 if [] != symbolic:
     rows, cols = define_grid(len(symbolic))
     fig, axs = subplots(
-        rows, cols, figsize=(cols * HEIGHT + 3, rows * HEIGHT + 5), squeeze=False
+        rows, cols, figsize=(cols * HEIGHT + 3, rows * HEIGHT + 4), squeeze=False
     )
     i, j = 0, 0
     for n in range(len(symbolic)):
@@ -283,7 +279,7 @@ combinations = [] # empty list
 lst = numeric
 if target in lst:
     lst.remove(target)
-combinations.extend(itertools.combinations(lst, 4))
+combinations.extend(itertools.combinations(lst, 9))
 
 for comb in combinations:
     aux_data = data.copy()
@@ -356,7 +352,7 @@ eval_metric = 'accuracy'
 
 from sklearn.tree import plot_tree
 
-
+'''
 combinations = [] # empty list 
 lst = numeric
 if target in lst:
@@ -397,8 +393,8 @@ for comb in combinations:
         impurity=False,
         precision=2,
     )
-    savefig(tree_filename + ".png")
-
+    savefig(tree_filename + ".png")'''
+'''
 #Best decision tree
 trnX, tstX, trnY, tstY, labels, vars = read_train_test_from_files(train_filename, test_filename, target)
 print(f'Train#={len(trnX)} Test#={len(tstX)}')
@@ -884,4 +880,4 @@ plot_multiline_chart(
     ylabel=str(eval_metric),
     percentage=True,
 )
-savefig(f"images/{file_tag}_overfitting_mlp.png")
+savefig(f"images/{file_tag}_overfitting_mlp.png")'''
