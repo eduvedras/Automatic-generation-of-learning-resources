@@ -84,6 +84,7 @@ for filename in os.scandir(directory):
                 mv.append(var)
                 
         vars[file_tag] = {'target': classes[file_tag][0], 
+                          'binary': classes[file_tag][0] in variable_types[file_tag]['binary'],
                           'numeric_vars': numeric_vars, 
                           'symbolic_vars': symbolic_vars,
                           'missing_values': mv}
@@ -211,6 +212,8 @@ for filename in os.scandir(directory):
             elif 'overfitting_knn' in image:
                 new_row['description'] = 'A multi-line chart showing the overfitting of k-nearest neighbors where the y-axis represents the accuracy and the x-axis represents the number of neighbors ranging from 1 to 23.'
             elif 'overfitting_dt_acc_rec' in image:
+                if vars[file_tag]['binary'] == False:
+                    continue
                 new_row['description'] = 'A multi-line chart showing the overfitting of decision tree where the y-axis represents the performance of both accuracy and recall and the x-axis represents the max depth ranging from 2 to 25.'
             elif 'pca' in image:
                 n_pc = 0
@@ -290,6 +293,8 @@ for filename in os.scandir(directory):
             elif 'histograms_numeric' in image:
                 new_row['description'] = f'A set of histograms of the variables {vars[file_tag]["numeric_vars"]}.'
             elif 'histograms_symbolic' in image:
+                if len(vars[file_tag]["symbolic_vars"]) == 0:
+                    continue
                 new_row['description'] = f'A set of bar charts of the variables {vars[file_tag]["symbolic_vars"]}.'
             elif 'mv' in image:
                 if len(vars[file_tag]["missing_values"]) == 0:
