@@ -1,0 +1,3 @@
+BLEU: {'bleu': 1.0, 'precisions': [1.0, 1.0, 1.0, 1.0], 'brevity_penalty': 1.0, 'length_ratio': 1.0, 'translation_length': 322, 'reference_length': 322}
+METEOR: {'meteor': 0.9998519300564392}
+ROUGE: {'rouge1': 1.0, 'rouge2': 1.0, 'rougeL': 1.0, 'rougeLsum': 1.0}

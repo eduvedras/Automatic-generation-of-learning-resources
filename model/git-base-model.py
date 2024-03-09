@@ -40,6 +40,17 @@ def transforms(example_batch):
 train_ds.set_transform(transforms)
 #test_ds.set_transform(transforms)
 
+
+rouge = load("rouge")
+
+def compute_metrics(eval_pred):
+    logits, labels = eval_pred
+    predicted = logits.argmax(-1)
+    decoded_labels = processor.batch_decode(labels, skip_special_tokens=True)
+    decoded_predictions = processor.batch_decode(predicted, skip_special_tokens=True)
+    rouge_score = rouge.compute(predictions=decoded_predictions, references=decoded_labels)
+    return {"rouge_score": rouge_score}
+
 from transformers import TrainingArguments, Trainer
 
 model_name = model_id.split("/")[1]

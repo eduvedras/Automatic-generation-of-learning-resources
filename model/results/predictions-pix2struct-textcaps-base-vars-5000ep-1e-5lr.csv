@@ -1,0 +1,8 @@
+Image,Prediction
+Titanic_decision_tree.png,"Pclass, Parch"
+Titanic_correlation_heatmap.png,"Pclass, Age, SibSp, Parch, Fare"
+Titanic_boxplots.png,"Pclass, Age, SibSp, Parch, Fare"
+Titanic_histograms_symbolic.png,"Embarked, Sex"
+Titanic_mv.png,"Area, Embedded"
+Titanic_class_histogram.png,Survived
+Titanic_histograms_numeric.png,"Pclass, Age, SibSp, Parch, Fare"

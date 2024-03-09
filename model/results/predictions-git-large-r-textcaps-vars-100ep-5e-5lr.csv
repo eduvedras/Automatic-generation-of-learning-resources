@@ -1,0 +1,8 @@
+Image,Prediction
+Titanic_decision_tree.png,"plac, patch"
+Titanic_correlation_heatmap.png,"class, age, height, height, weight, height, height, weight, height, weight, weight, height, weight, weight, weight, weight, weight, weight, weight,"
+Titanic_boxplots.png,"pregnancies, age, weight, waistline, waistline, minorvariance, minorvariance, minorvariance, minorvariance, gyration, gyration,"
+Titanic_histograms_symbolic.png,"sex, sex, sex, patient _ type, patient _ type, patient _ type, patient _ type, patient _ type, patient _ type, patient _ type, patient _ type,"
+Titanic_mv.png,"ag _ ratio, ratio, ratio, ratio, ratio, ratio, height, height, height, weight, height, weight, weight, weight, weight, weight, weight, weight,"
+Titanic_class_histogram.png,sun _ height
+Titanic_histograms_numeric.png,"pregnancies, gender, age, height, height, weight, height, height, weight, height, weight, height, weight, weight, weight, weight, weight, weight,"

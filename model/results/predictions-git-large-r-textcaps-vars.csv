@@ -1,0 +1,8 @@
+Image,Prediction
+Titanic_decision_tree.png,"pcc, panel _ class, patch _ se, branch _ se, branch _ se, branch _ se, area _ se, area _ se, area _ worst"
+Titanic_correlation_heatmap.png,"age, ssp, sbp, fap, fap, fare"
+Titanic_boxplots.png,"private _ age, age, width, width, width, num, num, num, num, num, num"
+Titanic_histograms_symbolic.png,"usmer, sex, patient _ type"
+Titanic_mv.png,"ag _ ratio, ag _ ratio, ag _ ratio, var _ ratio, var _ ratio, var _ ratio, var _ ratio, var _ ratio"
+Titanic_class_histogram.png,supplication
+Titanic_histograms_numeric.png,"preest _ age, age, crest, crest, crest, fence, leaf, crest, other _ product, loss _ amount, loss _ amount _ height, loss _ height"

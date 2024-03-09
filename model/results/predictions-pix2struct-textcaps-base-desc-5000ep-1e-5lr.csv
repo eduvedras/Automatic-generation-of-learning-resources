@@ -1,0 +1,16 @@
+Image,Prediction
+Titanic_decision_tree.png,An image showing a decision tree with depth = 2 where the first decision is made with variable Parch and the second with variable Parch.
+Titanic_overfitting_mlp.png,A multi-line chart showing the overfitting of a mlp where the y-axis represents the accuracy and the x-axis represents the number of iterations ranging from 100 to 1000.
+Titanic_overfitting_gb.png,A multi-line chart showing the overfitting of gradient boosting where the y-axis represents the accuracy and the x-axis represents the number of estimators ranging from 2 to 2002.
+Titanic_overfitting_rf.png,A multi-line chart showing the overfitting of random forest where the y-axis represents the accuracy and the x-axis represents the number of estimators ranging from 2 to 2002.
+Titanic_overfitting_knn.png,A multi-line chart showing the overfitting of k-nearest neighbors where the y-axis represents the accuracy and the x-axis represents the number of neighbors ranging from 1 to 23.
+Titanic_overfitting_decision_tree.png,A multi-line chart showing the overfitting of a decision tree where the y-axis represents the accuracy and the x-axis represents the max depth ranging from 2 to 25.
+Titanic_overfitting_dt_acc_rec.png,A multi-line chart showing the overfitting of decision tree where the y-axis represents the performance of both accuracy and recall and the x-axis represents the max depth ranging from 2 to 25.
+Titanic_pca.png,A bar chart showing the explained variance ratio of 6 principal components.
+Titanic_correlation_heatmap.png,"A heatmap showing the correlation between the variables of the dataset. The variables are ['Pclass', 'Age', 'SibSp', 'Parch', 'Fare']."
+Titanic_boxplots.png,"A set of boxplots of the variables ['Pclass', 'Age', 'SibSp', 'Parch', 'Fare']."
+Titanic_histograms_symbolic.png,"A set of bar charts of the variables ['Embarked', 'Sex', 'Temple']."
+Titanic_mv.png,"A bar chart showing the number of missing values per variable of the dataset. The variables that have missing values are: ['Age', 'Employed', 'Indirect']."
+Titanic_class_histogram.png,A bar chart showing the distribution of the target variable Survived.
+Titanic_nr_records_nr_variables.png,A bar chart showing the number of records and variables of the dataset.
+Titanic_histograms_numeric.png,"A set of histograms of the variables ['Pclass', 'Age', 'SibSp', 'Parch', 'Fare']."
