@@ -105,106 +105,106 @@ for filename in os.scandir(directory):
                 first_var = ''
                 second_var = ''
                 if file_tag == 'adult':
-                    first_var = 'hours-per-week'
-                    second_var = 'capital-loss'
+                    first_var = 'hours-per-week <= 41.5'
+                    second_var = 'capital-loss <= 1820.5'
                 if file_tag == 'BankNoteAuthentication':
-                    first_var = 'skewness'
-                    second_var = 'curtosis'
+                    first_var = 'skewness <= 5.16'
+                    second_var = 'curtosis <= 0.19'
                 if file_tag == 'Breast_Cancer':
-                    first_var = 'perimeter_mean'
-                    second_var = 'texture_worst'
+                    first_var = 'perimeter_mean <= 90.47'
+                    second_var = 'texture_worst <= 27.89'
                 if file_tag == 'Churn_Modelling':
-                    first_var = 'Age'
-                    second_var = 'NumOfProducts'
+                    first_var = 'Age <= 42.5'
+                    second_var = 'NumOfProducts <= 2.5'
                 if file_tag == 'diabetes':
-                    first_var = 'BMI'
-                    second_var = 'Age'
+                    first_var = 'BMI <= 29.85'
+                    second_var = 'Age <= 27.5'
                 if file_tag == 'heart':
-                    first_var = 'slope'
-                    second_var = 'restecg'
+                    first_var = 'slope <= 1.5'
+                    second_var = 'restecg <= 0.5'
                 if file_tag == 'Titanic':
-                    first_var = 'Pclass'
-                    second_var = 'Parch'
+                    first_var = 'Pclass <= 2.5'
+                    second_var = 'Parch <= 0.5'
                 if file_tag == 'vehicle':
-                    first_var = 'MAJORSKEWNESS'
-                    second_var = 'CIRCULARITY'
+                    first_var = 'MAJORSKEWNESS <= 74.5'
+                    second_var = 'CIRCULARITY <= 49.5'
                 if file_tag == 'Wine':
-                    first_var = 'Total phenols'
-                    second_var = 'Proanthocyanins'
+                    first_var = 'Total phenols <= 2.36'
+                    second_var = 'Proanthocyanins <= 1.58'
                 if file_tag == 'WineQT':
-                    first_var = 'density'
-                    second_var = 'chlorides'
+                    first_var = 'density <= 1.0'
+                    second_var = 'chlorides <= 0.08'
                 if file_tag == 'apple_quality':
-                    first_var = 'Juiciness'
-                    second_var = 'Crunchiness'
+                    first_var = 'Juiciness <= -0.3'
+                    second_var = 'Crunchiness <= 2.25'
                 if file_tag == 'loan_data':
-                    first_var = 'Loan_Amount_Term'
-                    second_var = 'ApplicantIncome'
+                    first_var = 'Loan_Amount_Term <= 420.0'
+                    second_var = 'ApplicantIncome <= 1519.0'
                 if file_tag == 'credit_customers':
-                    first_var = 'existing_credits'
-                    second_var = 'residence_since'
+                    first_var = 'existing_credits <= 1.5'
+                    second_var = 'residence_since <= 3.5'
                 if file_tag == 'smoking_drinking':
-                    first_var = 'SMK_stat_type_cd'
-                    second_var = 'gamma_GTP'
+                    first_var = 'SMK_stat_type_cd <= 1.5'
+                    second_var = 'gamma_GTP <= 35.5'
                 if file_tag == 'sky_survey':
-                    first_var = 'dec'
-                    second_var = 'mjd'
+                    first_var = 'dec <= 22.21'
+                    second_var = 'mjd <= 55090.5'
                 if file_tag == 'weatherAUS':
-                    first_var = 'Rainfall'
-                    second_var = 'Pressure3pm'
+                    first_var = 'Rainfall <= 0.1'
+                    second_var = 'Pressure3pm <= 1009.65'
                 if file_tag == 'Dry_Bean_Dataset':
-                    first_var = 'Area'
-                    second_var = 'AspectRation'
+                    first_var = 'Area <= 39172.5'
+                    second_var = 'AspectRation <= 1.86'
                 if file_tag == 'abalone':
-                    first_var = 'Height'
-                    second_var = 'Diameter'
+                    first_var = 'Height <= 0.13'
+                    second_var = 'Diameter <= 0.45'
                 if file_tag == 'car_insurance':
-                    first_var = 'displacement'
-                    second_var = 'height'
+                    first_var = 'displacement <= 1196.5'
+                    second_var = 'height <= 1519.0'
                 if file_tag == 'Covid_Data':
-                    first_var = 'CARDIOVASCULAR'
-                    second_var = 'ASHTMA'
+                    first_var = 'CARDIOVASCULAR <= 50.0'
+                    second_var = 'ASHTMA <= 1.5'
                 if file_tag == 'customer_segmentation':
-                    first_var = 'Family_Size'
-                    second_var = 'Work_Experience'
+                    first_var = 'Family_Size <= 2.5'
+                    second_var = 'Work_Experience <= 9.5'
                 if file_tag == 'detect_dataset':
-                    first_var = 'Ic'
-                    second_var = 'Vb'
+                    first_var = 'Ic <= 71.01'
+                    second_var = 'Vb <= -0.37'
                 if file_tag == 'e-commerce':
-                    first_var = 'Prior_purchases'
-                    second_var = 'Customer_care_calls'
+                    first_var = 'Prior_purchases <= 3.5'
+                    second_var = 'Customer_care_calls <= 4.5'
                 if file_tag == 'Employee':
-                    first_var = 'JoiningYear'
-                    second_var = 'ExperienceInCurrentDomain'
+                    first_var = 'JoiningYear <= 2017.5'
+                    second_var = 'ExperienceInCurrentDomain <= 3.5'
                 if file_tag == 'Hotel_Reservations':
-                    first_var = 'lead_time'
-                    second_var = 'no_of_special_requests'
+                    first_var = 'lead_time <= 151.5'
+                    second_var = 'no_of_special_requests <= 2.5'
                 if file_tag == 'Liver_Patient':
-                    first_var = 'Alkphos'
-                    second_var = 'Sgot'
+                    first_var = 'Alkphos <= 211.5'
+                    second_var = 'Sgot <= 26.5'
                 if file_tag == 'maintenance':
-                    first_var = 'Rotational speed [rpm]'
-                    second_var = 'Torque [Nm]'
+                    first_var = 'Rotational speed [rpm] <= 1381.5'
+                    second_var = 'Torque [Nm] <= 65.05'
                 if file_tag == 'ObesityDataSet':
-                    first_var = 'FAF'
-                    second_var = 'Height'
+                    first_var = 'FAF <= 2.0'
+                    second_var = 'Height <= 1.72'
                 if file_tag == 'phone':
-                    first_var = 'int_memory'
-                    second_var = 'mobile_wt'
+                    first_var = 'int_memory <= 30.5'
+                    second_var = 'mobile_wt <= 91.5'
                 if file_tag == 'Placement':
-                    first_var = 'ssc_p'
-                    second_var = 'hsc_p'
+                    first_var = 'ssc_p <= 60.09'
+                    second_var = 'hsc_p <= 70.24'
                 if file_tag == 'StressLevelDataset':
-                    first_var = 'basic_needs'
-                    second_var = 'bullying'
+                    first_var = 'basic_needs <= 3.5'
+                    second_var = 'bullying <= 1.5'
                 if file_tag == 'urinalysis_tests':
-                    first_var = 'Age'
-                    second_var = 'pH'
+                    first_var = 'Age <= 0.1'
+                    second_var = 'pH <= 5.5'
                 if file_tag == 'water_potability':
-                    first_var = 'Hardness'
-                    second_var = 'Chloramines'
+                    first_var = 'Hardness <= 278.29'
+                    second_var = 'Chloramines <= 6.7'
                 if file_tag == 'Iris':
-                    new_row['description'] = create_string(['PetalWidthCm', 'PetalWidthCm'])
+                    new_row['description'] = create_string(['PetalWidthCm <= 0.7', 'PetalWidthCm <= 1.75'])
                 else:
                     new_row['description'] = create_string([first_var,second_var])
             elif 'pca' in image:

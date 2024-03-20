@@ -1,7 +1,7 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca,figure, savefig, show, subplots
 
-data = read_csv("metadata2.csv", sep=',')
+data = read_csv("metadata1.csv", sep=',')
 
 templates = read_csv('Templates.csv', sep=';')
 lst = []
@@ -10,13 +10,16 @@ for index, row in templates.iterrows():
     first_str = row['Template'].split('[')[0]
     lst_str = row['Template'].split(']')[-1]
     lst.append([first_str,lst_str])
-    dic[first_str+"..."+lst_str] = []
+    if first_str == lst_str:
+        first_str = first_str[:int(len(first_str)/2)]
+        lst_str = lst_str[int(len(lst_str)/2):]
+    dic[first_str+"|"+lst_str] = []
 
 data_balanced = DataFrame(columns=['Chart','Question','Id'])
 
 def getkey(question):
     for key in dic:
-        if key.split('...')[0] in question and key.split('...')[1] in question:
+        if key.split('|')[0] in question and key.split('|')[1] in question:
             break
     return key
 
@@ -27,10 +30,12 @@ for index, row in data.iterrows():
 list_aux = []
 
 for key in dic:
-    list_aux.append(len(dic[key]))
+    if len(dic[key]) == 0:
+        print(key + "\n")
     
-list_aux.sort()
-print(list_aux)
+#list_aux.sort()
+#print(list_aux)
+#print(dic.keys())
 
 import random
 '''

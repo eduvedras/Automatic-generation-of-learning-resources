@@ -14,14 +14,13 @@ html_template = """
 <body> """
 
 answers_dataset = pd.DataFrame(columns=['QuestionId', 'Answer'])
-data = read_csv('OneImageDataset.csv', sep=';')
-i=0
+data = read_csv('qa_dataset.csv', sep=';')
+
 for index, row in data.iterrows():
-    answers_dataset.loc[len(answers_dataset)] = {'QuestionId': i, 'Answer':''}
+    answers_dataset.loc[len(answers_dataset)] = {'QuestionId': row['Id'], 'Answer':''}
     html_template += f"""
-    <img src="images/{row['Chart'][1:-1]}.png"> 
-    <p>{i}: {row['Question']}</p>"""
-    i+=1
+    <img src="images/{row['Chart']}" width="auto" height = "600"/> 
+    <p>{row['Id']}: {row['Question']}</p>"""
 
 html_template += """
 </body> 

@@ -98,7 +98,7 @@ for filename in os.scandir(directory):
             if 'overfitting_decision_tree' in image:
                 new_row['description'] = 'A multi-line chart showing the overfitting of a decision tree where the y-axis represents the accuracy and the x-axis represents the max depth ranging from 2 to 25.'
             elif 'decision_tree' in image:
-                new_row['description'] = 'An image showing a decision tree with depth = 2 where the first decision is made with variable [] and the second with variable [].'
+                new_row['description'] = 'An image showing a decision tree with depth = 2 where the first decision is made with the condition [] and the second with the condition [].'
             elif 'overfitting_mlp' in image:
                 new_row['description'] = 'A multi-line chart showing the overfitting of a mlp where the y-axis represents the accuracy and the x-axis represents the number of iterations ranging from 100 to 1000.'
             elif 'overfitting_gb' in image:
