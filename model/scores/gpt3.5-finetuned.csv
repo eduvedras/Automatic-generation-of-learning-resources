@@ -1,0 +1,95 @@
+QId;Score;Possible to answer;Original;Notes;Answer
+"0;";5;0;;class é N e ele pergunta 0;
+"1;";4;1;;;F
+"2;";3;1;;too easy;F
+"3;";3;1;;too easy;F
+"4;";5;1;;;T
+"5;";5;0;;fala de recall e chart é de accuracy;
+"6;";5;1;;;F
+"7;";5;1;;;T
+"8;";5;1;;;T
+"9;";4;1;;not mandatory but adequate;F
+"10;";5;1;;;F
+"11;";5;1;;;F
+"12;";5;1;1;double interesting;F
+"13;";5;1;;;F
+"14;";1;0;;chose 2nd variable instead of 1st;
+"15;";3;1;;too easy;F
+"16;";3;1;;too easy;F
+"17;";3;1;;too easy;F
+"18;";3;1;;too easy;F
+"19;";3;1;;;F
+"20;";3;1;;there are no differences;F
+"21;";5;1;;;T
+"22;";5;1;;dubious - too few variables;T
+"23;";5;1;;;F
+"24;";5;1;;not mandatory but adequate;F
+"25;";5;1;;;F
+"26;";5;1;;;T
+"27;";2;0;1;asks about Log Regression w/out any chart;
+"28;";5;1;;;F
+"29;";3;1;;;F
+"30;";5;1;;;F
+"31;";5;1;;;F
+"32;";5;1;;;F
+"33;";5;1;;;T
+"34;";5;1;;;T
+"35;";2;1;1;LDA not on the program;T
+"36;";4;1;;;F
+"37;";5;1;;;T
+"38;";4;1;;lots of instead of some;F
+"39;";5;1;1;;F
+"40;";4;1;;;F
+"41;";4;1;;should be 1502;F
+"42;";4;1;;;F
+"43;";5;1;;;T
+"44;";1;0;;accuracy instead of recall;F
+"45;";5;1;;;T
+"46;";5;1;;is 12;F
+"47;";5;1;;;F
+"48;";3;1;;it's binary;F
+"49;";3;1;;uniform;F
+"50;";5;1;;;F
+"51;";5;1;;;F
+"52;";5;1;;;F
+"53;";5;1;;;F
+"54;";5;1;;;T
+"55;";4;1;;it should be 1502;T
+"56;";5;1;;;T
+"57;";5;1;;it should be 7;F
+"58;";5;1;;;F
+"59;";5;1;1;;F
+"60;";5;1;;;F
+"61;";5;1;;;F
+"62;";5;1;;;F
+"63;";1;0;;doesn't make sense;
+"64;";1;1;;;F
+"65;";5;1;;;F
+"66;";2;0;1;J48;
+"67;";5;1;;"TP=Bad=571; FN=Fgood=64+734+28";T
+"68;";5;1;;;F
+"69;";3;1;;;F
+"70;";3;1;;;F
+"71;";5;1;;;T
+"72;";1;0;;"recall x accuracy; KNN x DT; no question";
+"73;";5;1;;;F
+"74;";5;1;;;T
+"75;";5;1;;;T
+"76;";5;1;;;F
+"77;";4;1;;;F
+"78;";5;1;;;F
+"79;";5;1;;;F
+"80;";5;1;;;T
+"81;";3;1;;;F
+"82;";3;1;;;F
+"83;";3;1;;;F
+"84;";5;1;;;F
+"85;";1;0;1;overfitting em vez de underspecified ;
+"86;";5;1;;;F
+"87;";5;1;;;T
+"88;";5;1;;;F
+"89;";5;1;;;F
+"90;";5;1;;;F
+"91;";5;1;;;T
+"92;";2;0;;wrong chart;
+"93;";5;1;;;T

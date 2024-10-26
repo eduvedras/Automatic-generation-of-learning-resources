@@ -1,0 +1,460 @@
+Id;Data;Chart
+0;{'FAF <= 2.0': {'samples': 1477, 'value': [190,201,245,208,227,203,203], 'class': 'Obesity_Type_I', 'True': {'Height <= 1.72': {'samples': 1210, 'value': [118,121,203,227,161,177], 'class': 'Obesity_Type_III', 'True': {'samples': 840, 'value': [102,95,155,46,186,132,124], 'class': 'Obesity_Type_III'}, 'False': {'samples': 370, 'value': [16,26,48,157,41,29,53], 'class': 'Obesity_Type_II'}}}, 'False': {'Height <= 1.72': {'samples': 267, 'value': [72,80,42,5,0,42,26], 'class': 'Normal_Weight', 'True': {'samples': 107, 'value': [21,48,11,1,0,6,20], 'class': 'Normal_Weight'}, 'False': {'samples': 160, 'value': [51,32,31,4,0,36,6], 'class': 'Insufficient_Weight'}}}}};ObesityDataSet_decision_tree.png
+1;no;ObesityDataSet_overfitting_mlp.png
+2;no;ObesityDataSet_overfitting_gb.png
+3;no overfitting,underfitting until 502,acc>0.8;ObesityDataSet_overfitting_rf.png
+4;no;ObesityDataSet_overfitting_knn.png
+5;no;ObesityDataSet_overfitting_decision_tree.png
+6;[0.94,0.05,0.00,0.00,0.00,0.00,0.00,0.00,0.00];ObesityDataSet_pca.png
+7;{8,[]};ObesityDataSet_correlation_heatmap.png
+8;[F,{Age:{Outliers:T,Balanced:F},Height:{Outliers:T,Balanced:T},Weight:{Outliers:T,Balanced:F},FCVC:{Outliers:T,Balanced:F},NCP:{Outliers:F,Balanced:F},CH2O:{Outliers:F,Balanced:T},FAF:{Outliers:F,Balanced:F},TUE:{Outliers:F,Balanced:F}}];ObesityDataSet_boxplots.png
+9;{CAEC:['Sometimes', 'Frequently', 'Always', 'no'],CALC:['no', 'Sometimes', 'Frequently', 'Always'],MTRANS:['Public_Transportation', 'Walking', 'Automobile', 'Motorbike', 'Bike'],Gender:['Female', 'Male'],family_history_with_overweight:['yes', 'no'],FAVC:['no', 'yes'],SMOKE:['no', 'yes'],SCC:['no', 'yes']};ObesityDataSet_histograms_symbolic.png
+10;[351,324,297,290,290,287,272];ObesityDataSet_class_histogram.png
+11;[2111,17];ObesityDataSet_nr_records_nr_variables.png
+12;{Age:{Outliers:T,Balanced:F,Ordinal:F},Height:{Outliers:F,Balanced:T,Ordinal:F},Weight:{Outliers:T,Balanced:F,Ordinal:F},FCVC:{Outliers:T,Balanced:F,Ordinal:F},NCP:{Outliers:T,Balanced:F,Ordinal:F},CH2O:{Outliers:T,Balanced:F,Ordinal:F},FAF:{Outliers:T,Balanced:F,Ordinal:F},TUE:{Outliers:T,Balanced:F,Ordinal:F}};ObesityDataSet_histograms_numeric.png
+13;{'Family_Size <= 2.5': {'samples': 1507, 'value': [484,315,267,441], 'class': 'A', 'True': {'Work_Experience <= 9.5': {'samples': 773, 'value': [234,189,145,205], 'class': 'A', 'True': {'samples': 249, 'value': [80,70,47,52], 'class': 'A'}, 'False': {'samples': 524, 'value': [154,119,98,153], 'class': 'A'}}}, 'False': {'Work_Experience <= 9.5': {'samples': 734, 'value': [250,126,122,236], 'class': 'A', 'True': {'samples': 723, 'value': [242,126,122,233], 'class': 'A'}, 'False': {'samples': 11, 'value': [8,0,0,3], 'class': 'A'}}}}};customer_segmentation_decision_tree.png
+14;no;customer_segmentation_overfitting_mlp.png
+15;overfitting after 502;customer_segmentation_overfitting_gb.png
+16;no underfitting,no overfitting,acc<0.8;customer_segmentation_overfitting_rf.png
+17;overfitting until 15;customer_segmentation_overfitting_knn.png
+18;overfitting after 3;customer_segmentation_overfitting_decision_tree.png
+19;[0.96,0.04,0.01];customer_segmentation_pca.png
+20;{3,[]};customer_segmentation_correlation_heatmap.png
+21;[F,{Age:{Outliers:F,Balanced:F},Work_Experience:{Outliers:F,Balanced:F},Family_Size:{Outliers:F,Balanced:F}}];customer_segmentation_boxplots.png
+22;{Profession:['Engineer', 'Healthcare', 'Executive', 'Marketing', 'Doctor', 'Artist', 'Lawyer', 'Entertainment', 'Homemaker'],Spending_Score:['Low', 'Average', 'High'],Var_1:['Cat_6', 'Cat_4', 'Cat_3', 'Cat_1', 'Cat_2', 'Cat_5', 'Cat_7'],Gender:['Female', 'Male'],Ever_Married:['Yes', 'No'],Graduated:['Yes', 'No']};customer_segmentation_histograms_symbolic.png
+23;{'Ever_Married': 50, 'Graduated': 24, 'Profession': 38, 'Work_Experience': 269, 'Family_Size': 113, 'Var_1': 32};customer_segmentation_mv.png
+24;[846,759,550,472];customer_segmentation_class_histogram.png
+25;[2627,10];customer_segmentation_nr_records_nr_variables.png
+26;{Age:{Outliers:T,Balanced:F,Ordinal:F},Work_Experience:{Outliers:T,Balanced:F,Ordinal:T},Family_Size:{Outliers:F,Balanced:F,Ordinal:T}};customer_segmentation_histograms_numeric.png
+27;{'Age <= 0.1': {'samples': 1004, 'value': [947,57], 'class': 'NEGATIVE', 'True': {'pH <= 5.5': {'samples': 26, 'value': [22,4], 'class': 'NEGATIVE', 'True': {'samples': 3, 'value': [2,1], 'class': 'NEGATIVE'}, 'False': {'samples': 23, 'value': [20,3], 'class': 'NEGATIVE'}}}, 'False': {'pH <= 5.5': {'samples': 978, 'value': [925,53], 'class': 'NEGATIVE', 'True': {'samples': 215, 'value': [210,5], 'class': 'NEGATIVE'}, 'False': {'samples': 763, 'value': [715,48], 'class': 'NEGATIVE'}}}}};urinalysis_tests_decision_tree.png
+28;no;urinalysis_tests_overfitting_mlp.png
+29;overfitting after 2;urinalysis_tests_overfitting_gb.png
+30;no underfitting,no overfitting,acc>0.8;urinalysis_tests_overfitting_rf.png
+31;no;urinalysis_tests_overfitting_knn.png
+32;overfitting after 6;urinalysis_tests_overfitting_decision_tree.png
+33;acc_rec;urinalysis_tests_overfitting_dt_acc_rec.png
+34;[1.00,0.00,0.00];urinalysis_tests_pca.png
+35;{3,[]};urinalysis_tests_correlation_heatmap.png
+36;[F,{Age:{Outliers:T,Balanced:F},pH:{Outliers:T,Balanced:F},Specific Gravity:{Outliers:T,Balanced:F}}];urinalysis_tests_boxplots.png
+37;{Color:['LIGHT YELLOW', 'DARK YELLOW', 'BROWN', 'YELLOW', 'AMBER', 'STRAW', 'RED', 'REDDISH', 'REDDISH YELLOW', 'LIGHT RED'],Transparency:['CLEAR', 'SLIGHTLY HAZY', 'CLOUDY', 'HAZY', 'TURBID'],Glucose:['NEGATIVE', '3+', '1+', 'TRACE', '4+', '2+'],Protein:['NEGATIVE', '1+', 'TRACE', '2+', '3+'],Epithelial Cells:['OCCASIONAL', 'RARE', 'PLENTY', 'MODERATE', 'FEW', 'NONE SEEN', 'LOADED'],Mucous Threads:['RARE', 'FEW', 'NONE SEEN', 'MODERATE', 'PLENTY', 'OCCASIONAL'],Amorphous Urates:['NONE SEEN', 'FEW', 'MODERATE', 'PLENTY', 'RARE', 'OCCASIONAL'],Bacteria:['OCCASIONAL', 'MODERATE', 'RARE', 'FEW', 'PLENTY', 'LOADED'],Gender:['FEMALE', 'MALE']};urinalysis_tests_histograms_symbolic.png
+38;{'Color': 1};urinalysis_tests_mv.png
+39;[1355,81];urinalysis_tests_class_histogram.png
+40;[1436,13];urinalysis_tests_nr_records_nr_variables.png
+41;{Age:{Outliers:F,Balanced:F,Ordinal:F},pH:{Outliers:T,Balanced:F,Ordinal:T},Specific Gravity:{Outliers:F,Balanced:F,Ordinal:T}};urinalysis_tests_histograms_numeric.png
+42;{'Ic <= 71.01': {'samples': 8400, 'value': [4553,3847], 'class': '0', 'True': {'Vb <= -0.37': {'samples': 7191, 'value': [4547,2644], 'class': '0', 'True': {'samples': 797, 'value': [1,796], 'class': '1'}, 'False': {'samples': 6394, 'value': [4546,1848], 'class': '0'}}}, 'False': {'Vb <= -0.37': {'samples': 1209, 'value': [6,1203], 'class': '1', 'True': {'samples': 3, 'value': [3,0], 'class': '0'}, 'False': {'samples': 1206, 'value': [3,1203], 'class': '1'}}}}};detect_dataset_decision_tree.png
+43;no;detect_dataset_overfitting_mlp.png
+44;no;detect_dataset_overfitting_gb.png
+45;no underfitting,no overfitting,acc>0.8;detect_dataset_overfitting_rf.png
+46;no;detect_dataset_overfitting_knn.png
+47;no;detect_dataset_overfitting_decision_tree.png
+48;acc_rec;detect_dataset_overfitting_dt_acc_rec.png
+49;[0.52,0.41,0.06,0.00,0.00,0.00];detect_dataset_pca.png
+50;{6,[]};detect_dataset_correlation_heatmap.png
+51;[F,{Ia:{Outliers:F,Balanced:T},Ib:{Outliers:F,Balanced:T},Ic:{Outliers:F,Balanced:T},Va:{Outliers:F,Balanced:T},Vb:{Outliers:F,Balanced:T},Vc:{Outliers:F,Balanced:T}}];detect_dataset_boxplots.png
+52;[6505,5496];detect_dataset_class_histogram.png
+53;[12001,7];detect_dataset_nr_records_nr_variables.png
+54;{Ia:{Outliers:T,Balanced:T,Ordinal:F},Ib:{Outliers:T,Balanced:T,Ordinal:F},Ic:{Outliers:T,Balanced:T,Ordinal:F},Va:{Outliers:T,Balanced:T,Ordinal:F},Vb:{Outliers:T,Balanced:T,Ordinal:F},Vc:{Outliers:T,Balanced:T,Ordinal:F}};detect_dataset_histograms_numeric.png
+55;{'BMI <= 29.85': {'samples': 537, 'value': [350,187], 'class': '0', 'True': {'Age <= 27.5': {'samples': 209, 'value': [177,32], 'class': '0', 'True': {'samples': 111, 'value': [108,3], 'class': '0'}, 'False': {'samples': 98, 'value': [69,29], 'class': '0'}}}, 'False': {'Age <= 27.5': {'samples': 328, 'value': [173,155], 'class': '0', 'True': {'samples': 167, 'value': [113,54], 'class': '0'}, 'False': {'samples': 161, 'value': [60,101], 'class': '1'}}}}};diabetes_decision_tree.png
+56;no;diabetes_overfitting_mlp.png
+57;no;diabetes_overfitting_gb.png
+58;underfitting until 502,no overfitting,acc<0.8;diabetes_overfitting_rf.png
+59;overfitting until 15;diabetes_overfitting_knn.png
+60;overfitting after 6;diabetes_overfitting_decision_tree.png
+61;acc_rec;diabetes_overfitting_dt_acc_rec.png
+62;[0.89,0.06,0.03,0.01,0.01,0.00,0.00,0.00];diabetes_pca.png
+63;{8,[]};diabetes_correlation_heatmap.png
+64;[F,{Pregnancies:{Outliers:T,Balanced:F},Glucose:{Outliers:T,Balanced:F},BloodPressure:{Outliers:T,Balanced:F},SkinThickness:{Outliers:T,Balanced:F},Insulin:{Outliers:T,Balanced:F},BMI:{Outliers:T,Balanced:F},DiabetesPedigreeFunction:{Outliers:T,Balanced:F},Age:{Outliers:T,Balanced:F}}];diabetes_boxplots.png
+65;[500,268];diabetes_class_histogram.png
+66;[768,9];diabetes_nr_records_nr_variables.png
+67;{Pregnancies:{Outliers:T,Balanced:F,Ordinal:F},Glucose:{Outliers:T,Balanced:F,Ordinal:F},BloodPressure:{Outliers:T,Balanced:F,Ordinal:F},SkinThickness:{Outliers:T,Balanced:F,Ordinal:F},Insulin:{Outliers:T,Balanced:F,Ordinal:F},BMI:{Outliers:T,Balanced:F,Ordinal:F},DiabetesPedigreeFunction:{Outliers:T,Balanced:F,Ordinal:F},Age:{Outliers:T,Balanced:F,Ordinal:F}};diabetes_histograms_numeric.png
+68;{'ssc_p <= 60.09': {'samples': 150, 'value': [47,103], 'class': 'Placed', 'True': {'hsc_p <= 70.24': {'samples': 36, 'value': [29,7], 'class': 'Not Placed', 'True': {'samples': 16, 'value': [16,0], 'class': 'Not Placed'}, 'False': {'samples': 20, 'value': [13,7], 'class': 'Not Placed'}}}, 'False': {'hsc_p <= 70.24': {'samples': 114, 'value': [18,96], 'class': 'Placed', 'True': {'samples': 68, 'value': [18,50], 'class': 'Placed'}, 'False': {'samples': 46, 'value': [0,46], 'class': 'Placed'}}}}};Placement_decision_tree.png
+69;no;Placement_overfitting_mlp.png
+70;no;Placement_overfitting_gb.png
+71;underfitting until 502,no overfitting,acc=0.8;Placement_overfitting_rf.png
+72;overfitting until 15;Placement_overfitting_knn.png
+73;overfitting after 5;Placement_overfitting_decision_tree.png
+74;acc_rec;Placement_overfitting_dt_acc_rec.png
+75;[0.50,0.26,0.12,0.07,0.05];Placement_pca.png
+76;{5,[]};Placement_correlation_heatmap.png
+77;[F,{ssc_p:{Outliers:T,Balanced:F},hsc_p:{Outliers:T,Balanced:F},degree_p:{Outliers:T,Balanced:F},etest_p:{Outliers:F,Balanced:T},mba_p:{Outliers:T,Balanced:F}}];Placement_boxplots.png
+78;{hsc_s:['Commerce', 'Science', 'Arts'],degree_t:['Sci&Tech', 'Comm&Mgmt', 'Others'],gender:['M', 'F'],ssc_b:['Others', 'Central'],hsc_b:['Others', 'Central'],workex:['No', 'Yes'],specialisation:['Mkt&HR', 'Mkt&Fin']};Placement_histograms_symbolic.png
+79;[148,67];Placement_class_histogram.png
+80;[215,13];Placement_nr_records_nr_variables.png
+81;{ssc_p:{Outliers:F,Balanced:F,Ordinal:F},hsc_p:{Outliers:T,Balanced:F,Ordinal:F},degree_p:{Outliers:F,Balanced:F,Ordinal:F},etest_p:{Outliers:F,Balanced:F,Ordinal:F},mba_p:{Outliers:F,Balanced:F,Ordinal:F}};Placement_histograms_numeric.png
+82;{'Alkphos <= 211.5': {'samples': 405, 'value': [290,115], 'class': '1', 'True': {'Sgot <= 26.5': {'samples': 202, 'value': [118,84], 'class': '1', 'True': {'samples': 77, 'value': [35,42], 'class': '2'}, 'False': {'samples': 125, 'value': [83,42], 'class': '1'}}}, 'False': {'Sgot <= 26.5': {'samples': 203, 'value': [172,31], 'class': '1', 'True': {'samples': 109, 'value': [84,25], 'class': '1'}, 'False': {'samples': 94, 'value': [88,6], 'class': '1'}}}}};Liver_Patient_decision_tree.png
+83;no;Liver_Patient_overfitting_mlp.png
+84;overfitting after 502;Liver_Patient_overfitting_gb.png
+85;underfitting until 1002,no overfitting,acc<0.8;Liver_Patient_overfitting_rf.png
+86;overfitting until 13;Liver_Patient_overfitting_knn.png
+87;overfitting after 3;Liver_Patient_overfitting_decision_tree.png
+88;acc_rec;Liver_Patient_overfitting_dt_acc_rec.png
+89;[0.63,0.32,0.05,0.00,0.00,0.00,0.00,0.00,0.00];Liver_Patient_pca.png
+90;{9,[[TB,DB],[Sgpt,Sgot],[TP,ALB]]};Liver_Patient_correlation_heatmap.png
+91;[F,{Age:{Outliers:T,Balanced:T},TB:{Outliers:T,Balanced:F},DB:{Outliers:T,Balanced:F},Alkphos:{Outliers:T,Balanced:F},Sgpt:{Outliers:T,Balanced:F},Sgot:{Outliers:T,Balanced:F},TP:{Outliers:T,Balanced:F},ALB:{Outliers:T,Balanced:T},AG_Ratio:{Outliers:T,Balanced:F}}];Liver_Patient_boxplots.png
+92;{Gender:['Female', 'Male']};Liver_Patient_histograms_symbolic.png
+93;{'AG_Ratio': 4};Liver_Patient_mv.png
+94;[416,167];Liver_Patient_class_histogram.png
+95;[583,11];Liver_Patient_nr_records_nr_variables.png
+96;{Age:{Outliers:T,Balanced:T,Ordinal:F},TB:{Outliers:T,Balanced:F,Ordinal:F},DB:{Outliers:T,Balanced:F,Ordinal:F},Alkphos:{Outliers:T,Balanced:F,Ordinal:F},Sgpt:{Outliers:T,Balanced:F,Ordinal:F},Sgot:{Outliers:T,Balanced:F,Ordinal:F},TP:{Outliers:T,Balanced:F,Ordinal:F},ALB:{Outliers:T,Balanced:F,Ordinal:F},AG_Ratio:{Outliers:T,Balanced:F,Ordinal:F}};Liver_Patient_histograms_numeric.png
+97;{'lead_time <= 151.5': {'samples': 25392, 'value': [8319,17073], 'class': 'Not_Canceled', 'True': {'no_of_special_requests <= 2.5': {'samples': 20368, 'value': [4712,15656], 'class': 'Not_Canceled', 'True': {'samples': 10612, 'value': [3542,7070], 'class': 'Not_Canceled'}, 'False': {'samples': 9756, 'value': [1170,8586], 'class': 'Not_Canceled'}}}, 'False': {'no_of_special_requests <= 2.5': {'samples': 5024, 'value': [3607,1417], 'class': 'Canceled', 'True': {'samples': 4955, 'value': [3607,1348], 'class': 'Canceled'}, 'False': {'samples': 69, 'value': [0,69], 'class': 'Not_Canceled'}}}}};Hotel_Reservations_decision_tree.png
+98;no;Hotel_Reservations_overfitting_mlp.png
+99;no;Hotel_Reservations_overfitting_gb.png
+100;no underfitting,no overfitting,acc>0.8;Hotel_Reservations_overfitting_rf.png
+101;no;Hotel_Reservations_overfitting_knn.png
+102;overfitting after 16;Hotel_Reservations_overfitting_decision_tree.png
+103;acc_rec;Hotel_Reservations_overfitting_dt_acc_rec.png
+104;[0.85,0.14,0.01,0.00,0.00,0.00,0.00,0.00,0.00];Hotel_Reservations_pca.png
+105;{9,[]};Hotel_Reservations_correlation_heatmap.png
+106;[F,{no_of_adults:{Outliers:F,Balanced:T},no_of_children:{Outliers:T,Balanced:F},no_of_weekend_nights:{Outliers:F,Balanced:F},no_of_week_nights:{Outliers:F,Balanced:F},lead_time:{Outliers:T,Balanced:F},arrival_month:{Outliers:T,Balanced:F},arrival_date:{Outliers:F,Balanced:T},avg_price_per_room:{Outliers:T,Balanced:F},no_of_special_requests:{Outliers:F,Balanced:F}}];Hotel_Reservations_boxplots.png
+107;{type_of_meal_plan:['Meal Plan 1', 'Not Selected', 'Meal Plan 2', 'Meal Plan 3'],room_type_reserved:['Room_Type 1', 'Room_Type 4', 'Room_Type 2', 'Room_Type 6', 'Room_Type 5', 'Room_Type 7', 'Room_Type 3'],required_car_parking_space:[0, 1],arrival_year:[2017, 2018],repeated_guest:[0, 1]};Hotel_Reservations_histograms_symbolic.png
+108;[24390,11885];Hotel_Reservations_class_histogram.png
+109;[36275,15];Hotel_Reservations_nr_records_nr_variables.png
+110;{no_of_adults:{Outliers:F,Balanced:F,Ordinal:T},no_of_children:{Outliers:T,Balanced:F,Ordinal:T},no_of_weekend_nights:{Outliers:T,Balanced:F,Ordinal:T},no_of_week_nights:{Outliers:T,Balanced:F,Ordinal:F},lead_time:{Outliers:T,Balanced:F,Ordinal:F},arrival_month:{Outliers:F,Balanced:F,Ordinal:T},arrival_date:{Outliers:F,Balanced:F,Ordinal:T},avg_price_per_room:{Outliers:T,Balanced:F,Ordinal:F},no_of_special_requests:{Outliers:F,Balanced:F,Ordinal:T}};Hotel_Reservations_histograms_numeric.png
+111;{'basic_needs <= 3.5': {'samples': 770, 'value': [261,251,258], 'class': '0', 'True': {'bullying <= 1.5': {'samples': 511, 'value': [32,236,243], 'class': '2', 'True': {'samples': 271, 'value': [26,224,21], 'class': '1'}, 'False': {'samples': 240, 'value': [6,12,222], 'class': '2'}}}, 'False': {'bullying <= 1.5': {'samples': 259, 'value': [229,15,15], 'class': '0', 'True': {'samples': 223, 'value': [215,4,4], 'class': '0'}, 'False': {'samples': 36, 'value': [14,11,11], 'class': '0'}}}}};StressLevelDataset_decision_tree.png
+112;no;StressLevelDataset_overfitting_mlp.png
+113;no;StressLevelDataset_overfitting_gb.png
+114;underfitting until 502,overfitting after 502,acc>0.8;StressLevelDataset_overfitting_rf.png
+115;no;StressLevelDataset_overfitting_knn.png
+116;no;StressLevelDataset_overfitting_decision_tree.png
+117;[0.78,0.11,0.07,0.01,0.01,0.00,0.00,0.00,0.00,0.00];StressLevelDataset_pca.png
+118;{11,[]};StressLevelDataset_correlation_heatmap.png
+119;[F,{anxiety_level:{Outliers:F,Balanced:T},self_esteem:{Outliers:F,Balanced:F},depression:{Outliers:F,Balanced:F},headache:{Outliers:T,Balanced:F},sleep_quality:{Outliers:F,Balanced:T},breathing_problem:{Outliers:T,Balanced:F},living_conditions:{Outliers:F,Balanced:F},basic_needs:{Outliers:T,Balanced:F},study_load:{Outliers:F,Balanced:F},bullying:{Outliers:F,Balanced:F}}];StressLevelDataset_boxplots.png
+120;{mental_health_history:[0, 1]};StressLevelDataset_histograms_symbolic.png
+121;[373,369,358];StressLevelDataset_class_histogram.png
+122;[1100,12];StressLevelDataset_nr_records_nr_variables.png
+123;{anxiety_level:{Outliers:F,Balanced:F,Ordinal:F},self_esteem:{Outliers:F,Balanced:F,Ordinal:F},depression:{Outliers:F,Balanced:F,Ordinal:F},headache:{Outliers:F,Balanced:F,Ordinal:T},sleep_quality:{Outliers:F,Balanced:F,Ordinal:T},breathing_problem:{Outliers:F,Balanced:F,Ordinal:T},living_conditions:{Outliers:F,Balanced:T,Ordinal:T},basic_needs:{Outliers:F,Balanced:F,Ordinal:T},study_load:{Outliers:F,Balanced:F,Ordinal:T},bullying:{Outliers:F,Balanced:F,Ordinal:T}};StressLevelDataset_histograms_numeric.png
+124;{'density <= 1.0': {'samples': 800, 'value': [4,23,338,324,100,11], 'class': '5', 'True': {'chlorides <= 0.08': {'samples': 181, 'value': [1,6,43,75,50,6], 'class': '6', 'True': {'samples': 154, 'value': [0,4,31,67,47,5], 'class': '6'}, 'False': {'samples': 27, 'value': [1,2,12,8,3,1], 'class': '5'}}}, 'False': {'chlorides <= 0.08': {'samples': 619, 'value': [3,17,295,249,50,5], 'class': '5', 'True': {'samples': 172, 'value': [2,8,68,70,21,3], 'class': '6'}, 'False': {'samples': 447, 'value': [1,9,227,179,29,2], 'class': '5'}}}}};WineQT_decision_tree.png
+125;no;WineQT_overfitting_mlp.png
+126;overfitting after 1002;WineQT_overfitting_gb.png
+127;underfitting until 502,no overfitting,acc<0.8;WineQT_overfitting_rf.png
+128;no;WineQT_overfitting_knn.png
+129;no;WineQT_overfitting_decision_tree.png
+130;[0.95,0.05,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00];WineQT_pca.png
+131;{12,[]};WineQT_correlation_heatmap.png
+132;[F,{fixed acidity:{Outliers:T,Balanced:F},volatile acidity:{Outliers:T,Balanced:F},citric acid:{Outliers:T,Balanced:F},residual sugar:{Outliers:T,Balanced:F},chlorides:{Outliers:T,Balanced:F},free sulfur dioxide:{Outliers:T,Balanced:F},total sulfur dioxide:{Outliers:T,Balanced:F},density:{Outliers:T,Balanced:T},pH:{Outliers:T,Balanced:T},sulphates:{Outliers:T,Balanced:F},alcohol:{Outliers:T,Balanced:F}}];WineQT_boxplots.png
+133;[483,462,143,33,16,6];WineQT_class_histogram.png
+134;[1143,12];WineQT_nr_records_nr_variables.png
+135;{fixed acidity:{Outliers:T,Balanced:F,Ordinal:F},volatile acidity:{Outliers:T,Balanced:F,Ordinal:F},citric acid:{Outliers:T,Balanced:F,Ordinal:F},residual sugar:{Outliers:T,Balanced:F,Ordinal:F},chlorides:{Outliers:T,Balanced:F,Ordinal:F},free sulfur dioxide:{Outliers:T,Balanced:F,Ordinal:F},total sulfur dioxide:{Outliers:T,Balanced:F,Ordinal:F},density:{Outliers:T,Balanced:T,Ordinal:F},pH:{Outliers:T,Balanced:F,Ordinal:F},sulphates:{Outliers:T,Balanced:F,Ordinal:F},alcohol:{Outliers:T,Balanced:F,Ordinal:F}};WineQT_histograms_numeric.png
+136;{'Loan_Amount_Term <= 420.0': {'samples': 215, 'value': [62,153], 'class': 'Y', 'True': {'ApplicantIncome <= 1519.0': {'samples': 207, 'value': [57,150], 'class': 'Y', 'True': {'samples': 3, 'value': [3,0], 'class': 'N'}, 'False': {'samples': 204, 'value': [54,150], 'class': 'Y'}}}, 'False': {'ApplicantIncome <= 1519.0': {'samples': 8, 'value': [5,3], 'class': 'N', 'True': {'samples': 2, 'value': [0,2], 'class': 'Y'}, 'False': {'samples': 6, 'value': [5,1], 'class': 'N'}}}}};loan_data_decision_tree.png
+137;no;loan_data_overfitting_mlp.png
+138;no;loan_data_overfitting_gb.png
+139;no underfitting,no overfitting,acc<0.8;loan_data_overfitting_rf.png
+140;overfitting until 13;loan_data_overfitting_knn.png
+141;no;loan_data_overfitting_decision_tree.png
+142;acc_rec;loan_data_overfitting_dt_acc_rec.png
+143;[0.77,0.23,0.00,0.00];loan_data_pca.png
+144;{4,[]};loan_data_correlation_heatmap.png
+145;[F,{ApplicantIncome:{Outliers:T,Balanced:F},CoapplicantIncome:{Outliers:T,Balanced:F},LoanAmount:{Outliers:T,Balanced:F},Loan_Amount_Term:{Outliers:T,Balanced:F}}];loan_data_boxplots.png
+146;{Dependents:['1', '0', '2', '3+'],Property_Area:['Rural', 'Urban', 'Semiurban'],Gender:['Male', 'Female'],Married:['Yes', 'No'],Education:['Graduate', 'Not Graduate'],Self_Employed:['No', 'Yes'],Credit_History:[1.0, 0.0]};loan_data_histograms_symbolic.png
+147;{'Gender': 5, 'Dependents': 8, 'Self_Employed': 21, 'Loan_Amount_Term': 11, 'Credit_History': 30};loan_data_mv.png
+148;[271,110];loan_data_class_histogram.png
+149;[381,12];loan_data_nr_records_nr_variables.png
+150;{ApplicantIncome:{Outliers:T,Balanced:F,Ordinal:F},CoapplicantIncome:{Outliers:T,Balanced:F,Ordinal:F},LoanAmount:{Outliers:F,Balanced:F,Ordinal:F},Loan_Amount_Term:{Outliers:T,Balanced:F,Ordinal:F}};loan_data_histograms_numeric.png
+151;{'Area <= 39172.5': {'samples': 9527, 'value': [925,365,1141,2482,1350,1419,1845], 'class': 'DERMASON', 'True': {'AspectRation <= 1.86': {'samples': 3261, 'value': [0,0,0,2294,47,724,196], 'class': 'DERMASON', 'True': {'samples': 760, 'value': [0,0,0,72,0,685,3], 'class': 'SEKER'}, 'False': {'samples': 2501, 'value': [0,0,0,2222,47,39,193], 'class': 'DERMASON'}}}, 'False': {'AspectRation <= 1.86': {'samples': 6266, 'value': [925,365,1141,188,1303,695,1649], 'class': 'SIRA', 'True': {'samples': 4982, 'value': [916,361,1053,188,127,695,1642], 'class': 'SIRA'}, 'False': {'samples': 1284, 'value': [9,4,88,0,1176,0,7], 'class': 'HOROZ'}}}}};Dry_Bean_Dataset_decision_tree.png
+152;no;Dry_Bean_Dataset_overfitting_mlp.png
+153;no;Dry_Bean_Dataset_overfitting_gb.png
+154;no underfitting,no overfitting,acc>0.8;Dry_Bean_Dataset_overfitting_rf.png
+155;no;Dry_Bean_Dataset_overfitting_knn.png
+156;overfitting after 7;Dry_Bean_Dataset_overfitting_decision_tree.png
+157;[1.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00];Dry_Bean_Dataset_pca.png
+158;{10,[[Area,Perimeter],[Area,MinorAxisLength],[Area,EquivDiameter],[Perimeter,MinorAxisLength],[Perimeter,EquivDiameter],[MinorAxisLength,EquivDiameter],[MinorAxisLength,ShapeFactor1],[AspectRation,Eccentricity],[EquivDiameter,ShapeFactor1]]};Dry_Bean_Dataset_correlation_heatmap.png
+159;[F,{Area:{Outliers:T,Balanced:F},Perimeter:{Outliers:T,Balanced:F},MinorAxisLength:{Outliers:T,Balanced:F},AspectRation:{Outliers:T,Balanced:F},Eccentricity:{Outliers:T,Balanced:F},EquivDiameter:{Outliers:T,Balanced:F},Extent:{Outliers:T,Balanced:F},Solidity:{Outliers:T,Balanced:F},roundness:{Outliers:T,Balanced:F},ShapeFactor1:{Outliers:T,Balanced:T}}];Dry_Bean_Dataset_boxplots.png
+160;[3546,2636,2027,1928,1630,1322,522];Dry_Bean_Dataset_class_histogram.png
+161;[13611,11];Dry_Bean_Dataset_nr_records_nr_variables.png
+162;{Area:{Outliers:T,Balanced:F,Ordinal:F},Perimeter:{Outliers:T,Balanced:F,Ordinal:F},MinorAxisLength:{Outliers:T,Balanced:F,Ordinal:F},AspectRation:{Outliers:F,Balanced:F,Ordinal:F},Eccentricity:{Outliers:T,Balanced:F,Ordinal:F},EquivDiameter:{Outliers:T,Balanced:F,Ordinal:F},Extent:{Outliers:F,Balanced:F,Ordinal:F},Solidity:{Outliers:T,Balanced:F,Ordinal:F},roundness:{Outliers:T,Balanced:F,Ordinal:F},ShapeFactor1:{Outliers:T,Balanced:F,Ordinal:F}};Dry_Bean_Dataset_histograms_numeric.png
+163;{'existing_credits <= 1.5': {'samples': 700, 'value': [210,490], 'class': 'good', 'True': {'residence_since <= 3.5': {'samples': 447, 'value': [147,300], 'class': 'good', 'True': {'samples': 264, 'value': [94,170], 'class': 'good'}, 'False': {'samples': 183, 'value': [53,130], 'class': 'good'}}}, 'False': {'residence_since <= 3.5': {'samples': 253, 'value': [63,190], 'class': 'good', 'True': {'samples': 146, 'value': [33,113], 'class': 'good'}, 'False': {'samples': 107, 'value': [30,77], 'class': 'good'}}}}};credit_customers_decision_tree.png
+164;no;credit_customers_overfitting_mlp.png
+165;no;credit_customers_overfitting_gb.png
+166;underfitting until 502,no overfitting,acc<0.8;credit_customers_overfitting_rf.png
+167;overfitting until 23;credit_customers_overfitting_knn.png
+168;overfitting after 4;credit_customers_overfitting_decision_tree.png
+169;acc_rec;credit_customers_overfitting_dt_acc_rec.png
+170;[1.00,0.00,0.00,0.00,0.00,0.00];credit_customers_pca.png
+171;{6,[]};credit_customers_correlation_heatmap.png
+172;[F,{duration:{Outliers:T,Balanced:F},credit_amount:{Outliers:T,Balanced:F},installment_commitment:{Outliers:F,Balanced:F},residence_since:{Outliers:F,Balanced:F},age:{Outliers:T,Balanced:F},existing_credits:{Outliers:F,Balanced:F}}];credit_customers_boxplots.png
+173;{checking_status:['<0', '0<=X<200', 'no checking', '>=200'],employment:['>=7', '1<=X<4', '4<=X<7', 'unemployed', '<1'],other_parties:['none', 'guarantor', 'co applicant'],other_payment_plans:['none', 'bank', 'stores'],housing:['own', 'for free', 'rent'],num_dependents:[1.0, 2.0],own_telephone:['yes', 'none'],foreign_worker:['yes', 'no']};credit_customers_histograms_symbolic.png
+174;[700,300];credit_customers_class_histogram.png
+175;[1000,15];credit_customers_nr_records_nr_variables.png
+176;{duration:{Outliers:T,Balanced:F,Ordinal:F},credit_amount:{Outliers:T,Balanced:F,Ordinal:F},installment_commitment:{Outliers:F,Balanced:F,Ordinal:T},residence_since:{Outliers:F,Balanced:F,Ordinal:T},age:{Outliers:T,Balanced:F,Ordinal:F},existing_credits:{Outliers:F,Balanced:F,Ordinal:T}};credit_customers_histograms_numeric.png
+177;{'Rainfall <= 0.1': {'samples': 3699, 'value': [3016,683], 'class': 'No', 'True': {'Pressure3pm <= 1009.65': {'samples': 2840, 'value': [2604,236], 'class': 'No', 'True': {'samples': 1154, 'value': [952,202], 'class': 'No'}, 'False': {'samples': 1686, 'value': [1652,34], 'class': 'No'}}}, 'False': {'Pressure3pm <= 1009.65': {'samples': 859, 'value': [412,447], 'class': 'Yes', 'True': {'samples': 251, 'value': [66,185], 'class': 'Yes'}, 'False': {'samples': 608, 'value': [346,262], 'class': 'No'}}}}};weatherAUS_decision_tree.png
+178;no;weatherAUS_overfitting_mlp.png
+179;overfitting after 502;weatherAUS_overfitting_gb.png
+180;underfitting until 502,no overfitting,acc>0.8;weatherAUS_overfitting_rf.png
+181;overfitting until 7;weatherAUS_overfitting_knn.png
+182;overfitting after 5;weatherAUS_overfitting_decision_tree.png
+183;acc_rec;weatherAUS_overfitting_dt_acc_rec.png
+184;[0.54,0.22,0.16,0.06,0.02,0.01,0.00];weatherAUS_pca.png
+185;{7,[]};weatherAUS_correlation_heatmap.png
+186;[F,{Rainfall:{Outliers:T,Balanced:F},WindSpeed9am:{Outliers:T,Balanced:F},Pressure9am:{Outliers:T,Balanced:T},Pressure3pm:{Outliers:T,Balanced:T},Cloud9am:{Outliers:F,Balanced:F},Cloud3pm:{Outliers:F,Balanced:T},Temp3pm:{Outliers:T,Balanced:F}}];weatherAUS_boxplots.png
+187;{Location:['Launceston', 'AliceSprings', 'Darwin', 'Katherine', 'Uluru'],WindGustDir:['E', 'SSE', 'N', 'NNW', 'NW', 'SSW', 'S', 'ESE', 'NNE', 'W', 'ENE', 'SE', 'SW', 'WNW', 'WSW', 'NE'],WindDir9am:['E', 'ENE', 'NW', 'NNW', 'W', 'ESE', 'SSE', 'NNE', 'WNW', 'N', 'NE', 'SE', 'SSW', 'WSW', 'S', 'SW'],WindDir3pm:['E', 'NW', 'S', 'W', 'ESE', 'N', 'NNW', 'SSE', 'SW', 'SSW', 'NNE', 'NE', 'WNW', 'WSW', 'SE', 'ENE'],RainToday:['No', 'Yes']};weatherAUS_histograms_symbolic.png
+188;{'Rainfall': 42, 'WindGustDir': 155, 'WindDir9am': 493, 'WindDir3pm': 58, 'WindSpeed9am': 31, 'Pressure9am': 1070, 'Pressure3pm': 1075, 'Cloud9am': 1954, 'Cloud3pm': 2572, 'Temp3pm': 715, 'RainToday': 42};weatherAUS_mv.png
+189;[8669,1689];weatherAUS_class_histogram.png
+190;[10367,13];weatherAUS_nr_records_nr_variables.png
+191;{Rainfall:{Outliers:T,Balanced:F,Ordinal:F},WindSpeed9am:{Outliers:T,Balanced:F,Ordinal:F},Pressure9am:{Outliers:T,Balanced:F,Ordinal:F},Pressure3pm:{Outliers:T,Balanced:F,Ordinal:F},Cloud9am:{Outliers:F,Balanced:F,Ordinal:T},Cloud3pm:{Outliers:F,Balanced:F,Ordinal:T},Temp3pm:{Outliers:F,Balanced:F,Ordinal:F}};weatherAUS_histograms_numeric.png
+192;{'displacement <= 1196.5': {'samples': 7414, 'value': [6951,463], 'class': '0', 'True': {'height <= 1519.0': {'samples': 2827, 'value': [2681,146], 'class': '0', 'True': {'samples': 2141, 'value': [2026,115], 'class': '0'}, 'False': {'samples': 686, 'value': [655,31], 'class': '0'}}}, 'False': {'height <= 1519.0': {'samples': 4587, 'value': [4270,317], 'class': '0', 'True': {'samples': 774, 'value': [714,60], 'class': '0'}, 'False': {'samples': 3813, 'value': [3556,257], 'class': '0'}}}}};car_insurance_decision_tree.png
+193;no;car_insurance_overfitting_mlp.png
+194;overfitting after 502;car_insurance_overfitting_gb.png
+195;no underfitting,no overfitting,acc>0.8;car_insurance_overfitting_rf.png
+196;overfitting until 5;car_insurance_overfitting_knn.png
+197;overfitting after 6;car_insurance_overfitting_decision_tree.png
+198;acc_rec;car_insurance_overfitting_dt_acc_rec.png
+199;[0.91,0.06,0.02,0.01,0.00,0.00,0.00,0.00,0.00];car_insurance_pca.png
+200;{9,[[airbags,gross_weight],[displacement,length],[displacement,width],[length,width],[length,gross_weight]]};car_insurance_correlation_heatmap.png
+201;[F,{policy_tenure:{Outliers:F,Balanced:F},age_of_car:{Outliers:T,Balanced:F},age_of_policyholder:{Outliers:F,Balanced:F},airbags:{Outliers:F,Balanced:F},displacement:{Outliers:F,Balanced:F},length:{Outliers:F,Balanced:F},width:{Outliers:F,Balanced:F},height:{Outliers:T,Balanced:F},gross_weight:{Outliers:F,Balanced:F}}];car_insurance_boxplots.png
+202;{area_cluster:['C2', 'C8', 'C9', 'C1', 'C3', 'C5', 'C10', 'C13', 'C6', 'C12', 'C17', 'C16', 'C15', 'C11', 'C14', 'C22', 'C21', 'C7', 'C19', 'C4', 'C20', 'C18'],segment:['C2', 'B2', 'A', 'C1', 'B1', 'Utility'],model:['M4', 'M6', 'M1', 'M7', 'M2', 'M9', 'M8', 'M5', 'M10', 'M3', 'M11'],fuel_type:['Diesel', 'Petrol', 'CNG'],max_torque:['250Nm@2750rpm', '113Nm@4400rpm', '60Nm@3500rpm', '200Nm@1750rpm', '82.1Nm@3400rpm', '200Nm@3000rpm', '85Nm@3000rpm', '91Nm@4250rpm', '170Nm@4000rpm'],max_power:['113.45bhp@4000rpm', '88.50bhp@6000rpm', '40.36bhp@6000rpm', '97.89bhp@3600rpm', '55.92bhp@5300rpm', '88.77bhp@4000rpm', '61.68bhp@6000rpm', '67.06bhp@5500rpm', '118.36bhp@5500rpm'],steering_type:['Power', 'Electric', 'Manual'],is_esc:['Yes', 'No'],is_adjustable_steering:['Yes', 'No']};car_insurance_histograms_symbolic.png
+203;[9931,661];car_insurance_class_histogram.png
+204;[10592,19];car_insurance_nr_records_nr_variables.png
+205;{policy_tenure:{Outliers:F,Balanced:F,Ordinal:F},age_of_car:{Outliers:T,Balanced:F,Ordinal:F},age_of_policyholder:{Outliers:F,Balanced:F,Ordinal:F},airbags:{Outliers:T,Balanced:F,Ordinal:T},displacement:{Outliers:T,Balanced:F,Ordinal:T},length:{Outliers:T,Balanced:F,Ordinal:T},width:{Outliers:T,Balanced:F,Ordinal:T},height:{Outliers:T,Balanced:F,Ordinal:F},gross_weight:{Outliers:T,Balanced:F,Ordinal:T}};car_insurance_histograms_numeric.png
+206;{'slope <= 1.5': {'samples': 717, 'value': [349,368], 'class': '1', 'True': {'restecg <= 0.5': {'samples': 383, 'value': [250,133], 'class': '0', 'True': {'samples': 202, 'value': [138,64], 'class': '0'}, 'False': {'samples': 181, 'value': [112,69], 'class': '0'}}}, 'False': {'restecg <= 0.5': {'samples': 334, 'value': [99,235], 'class': '1', 'True': {'samples': 137, 'value': [58,79], 'class': '1'}, 'False': {'samples': 197, 'value': [41,156], 'class': '1'}}}}};heart_decision_tree.png
+207;no;heart_overfitting_mlp.png
+208;overfitting after 502;heart_overfitting_gb.png
+209;no underfitting,no overfitting,acc>0.8;heart_overfitting_rf.png
+210;no;heart_overfitting_knn.png
+211;no;heart_overfitting_decision_tree.png
+212;acc_rec;heart_overfitting_dt_acc_rec.png
+213;[0.75,0.15,0.08,0.02,0.00,0.00,0.00,0.00,0.00,0.00];heart_pca.png
+214;{10,[]};heart_correlation_heatmap.png
+215;[F,{age:{Outliers:T,Balanced:F},cp:{Outliers:F,Balanced:F},trestbps:{Outliers:T,Balanced:F},chol:{Outliers:T,Balanced:F},restecg:{Outliers:T,Balanced:F},thalach:{Outliers:T,Balanced:F},oldpeak:{Outliers:T,Balanced:F},slope:{Outliers:T,Balanced:F},ca:{Outliers:F,Balanced:F},thal:{Outliers:F,Balanced:F}}];heart_boxplots.png
+216;{sex:[1, 0],fbs:[0, 1],exang:[0, 1]};heart_histograms_symbolic.png
+217;[525,499];heart_class_histogram.png
+218;[1025,14];heart_nr_records_nr_variables.png
+219;{age:{Outliers:T,Balanced:F,Ordinal:F},cp:{Outliers:F,Balanced:F,Ordinal:T},trestbps:{Outliers:T,Balanced:F,Ordinal:F},chol:{Outliers:T,Balanced:F,Ordinal:F},restecg:{Outliers:F,Balanced:F,Ordinal:T},thalach:{Outliers:T,Balanced:F,Ordinal:F},oldpeak:{Outliers:T,Balanced:F,Ordinal:F},slope:{Outliers:F,Balanced:F,Ordinal:T},ca:{Outliers:F,Balanced:F,Ordinal:T},thal:{Outliers:F,Balanced:F,Ordinal:T}};heart_histograms_numeric.png
+220;{'perimeter_mean <= 90.47': {'samples': 398, 'value': [250,148], 'class': 'B', 'True': {'texture_worst <= 27.89': {'samples': 234, 'value': [218,16], 'class': 'B', 'True': {'samples': 184, 'value': [181,3], 'class': 'B'}, 'False': {'samples': 50, 'value': [37,13], 'class': 'B'}}}, 'False': {'texture_worst <= 27.89': {'samples': 164, 'value': [32,132], 'class': 'M', 'True': {'samples': 20, 'value': [15,5], 'class': 'B'}, 'False': {'samples': 144, 'value': [17,127], 'class': 'M'}}}}};Breast_Cancer_decision_tree.png
+221;no;Breast_Cancer_overfitting_mlp.png
+222;no;Breast_Cancer_overfitting_gb.png
+223;underfitting until 502,no overfitting,acc>0.8;Breast_Cancer_overfitting_rf.png
+224;overfitting until 3;Breast_Cancer_overfitting_knn.png
+225;no;Breast_Cancer_overfitting_decision_tree.png
+226;acc_rec;Breast_Cancer_overfitting_dt_acc_rec.png
+227;[0.86,0.12,0.01,0.01,,0.00,0.00,0.00,0.00,0.00,0.00];Breast_Cancer_pca.png
+228;{10,[[texture_mean,texture_worst],[perimeter_mean,radius_worst],[perimeter_mean,perimeter_worst],[perimeter_se,area_se],[radius_worst,perimeter_worst]]};Breast_Cancer_correlation_heatmap.png
+229;[F,{texture_mean:{Outliers:T,Balanced:F},perimeter_mean:{Outliers:T,Balanced:F},texture_se:{Outliers:T,Balanced:F},perimeter_se:{Outliers:T,Balanced:F},area_se:{Outliers:T,Balanced:F},smoothness_se:{Outliers:T,Balanced:F},symmetry_se:{Outliers:T,Balanced:F},radius_worst:{Outliers:T,Balanced:F},texture_worst:{Outliers:T,Balanced:F},perimeter_worst:{Outliers:T,Balanced:F}}];Breast_Cancer_boxplots.png
+230;[357,212];Breast_Cancer_class_histogram.png
+231;[569,11];Breast_Cancer_nr_records_nr_variables.png
+232;{texture_mean:{Outliers:,Balanced:,Ordinal:F},perimeter_mean:{Outliers:,Balanced:,Ordinal:F},texture_se:{Outliers:,Balanced:,Ordinal:F},perimeter_se:{Outliers:,Balanced:,Ordinal:F},area_se:{Outliers:,Balanced:,Ordinal:F},smoothness_se:{Outliers:,Balanced:,Ordinal:F},symmetry_se:{Outliers:,Balanced:,Ordinal:F},radius_worst:{Outliers:,Balanced:,Ordinal:F},texture_worst:{Outliers:,Balanced:,Ordinal:F},perimeter_worst:{Outliers:,Balanced:,Ordinal:F}};Breast_Cancer_histograms_numeric.png
+233;{'Prior_purchases <= 3.5': {'samples': 7699, 'value': [3105,4594], 'class': 'Yes', 'True': {'Customer_care_calls <= 4.5': {'samples': 4563, 'value': [1679,2884], 'class': 'Yes', 'True': {'samples': 3657, 'value': [1370,2287], 'class': 'Yes'}, 'False': {'samples': 906, 'value': [309,597], 'class': 'Yes'}}}, 'False': {'Customer_care_calls <= 4.5': {'samples': 3136, 'value': [1426,1710], 'class': 'Yes', 'True': {'samples': 1540, 'value': [650,890], 'class': 'Yes'}, 'False': {'samples': 1596, 'value': [776,820], 'class': 'Yes'}}}}};e-commerce_decision_tree.png
+234;no;e-commerce_overfitting_mlp.png
+235;overfitting after 502;e-commerce_overfitting_gb.png
+236;underfitting until 502,no overfitting,acc<0.8;e-commerce_overfitting_rf.png
+237;overfitting until 19;e-commerce_overfitting_knn.png
+238;overfitting after 5;e-commerce_overfitting_decision_tree.png
+239;acc_rec;e-commerce_overfitting_dt_acc_rec.png
+240;[1.00,0.00,0.00,0.00,0.00,0.00];e-commerce_pca.png
+241;{6,[]};e-commerce_correlation_heatmap.png
+242;[F,{Customer_care_calls:{Outliers:F,Balanced:F},Customer_rating:{Outliers:F,Balanced:T},Cost_of_the_Product:{Outliers:F,Balanced:F},Prior_purchases:{Outliers:T,Balanced:F},Discount_offered:{Outliers:F,Balanced:F},Weight_in_gms:{Outliers:T,Balanced:F}}];e-commerce_boxplots.png
+243;{Warehouse_block:['D', 'F', 'A', 'B', 'C'],Mode_of_Shipment:['Flight', 'Ship', 'Road'],Product_importance:['low', 'medium', 'high'],Gender:['F', 'M']};e-commerce_histograms_symbolic.png
+244;[6563,4436];e-commerce_class_histogram.png
+245;[10999,11];e-commerce_nr_records_nr_variables.png
+246;{Customer_care_calls:{Outliers:F,Balanced:F,Ordinal:T},Customer_rating:{Outliers:F,Balanced:T,Ordinal:T},Cost_of_the_Product:{Outliers:T,Balanced:F,Ordinal:F},Prior_purchases:{Outliers:T,Balanced:F,Ordinal:T},Discount_offered:{Outliers:F,Balanced:F,Ordinal:F},Weight_in_gms:{Outliers:T,Balanced:F,Ordinal:F}};e-commerce_histograms_numeric.png
+247;{'Rotational speed [rpm] <= 1381.5': {'samples': 7000, 'value': [6763,237], 'class': '0', 'True': {'Torque [Nm] <= 65.05': {'samples': 989, 'value': [835,154], 'class': '0', 'True': {'samples': 943, 'value': [826,117], 'class': '0'}, 'False': {'samples': 46, 'value': [9,37], 'class': '1'}}}, 'False': {'Torque [Nm] <= 65.05': {'samples': 6011, 'value': [5928,83], 'class': '0', 'True': {'samples': 21, 'value': [1,20], 'class': '1'}, 'False': {'samples': 5990, 'value': [5927,63], 'class': '0'}}}}};maintenance_decision_tree.png
+248;no;maintenance_overfitting_mlp.png
+249;no;maintenance_overfitting_gb.png
+250;no underfitting,no overfitting,acc>0.8;maintenance_overfitting_rf.png
+251;overfitting until 3;maintenance_overfitting_knn.png
+252;no;maintenance_overfitting_decision_tree.png
+253;acc_rec;maintenance_overfitting_dt_acc_rec.png
+254;[0.89,0.11,0.00,0.00,0.00];maintenance_pca.png
+255;{5,[[Air temperature [K],Process temperature [K]],[Rotational speed [rpm],Torque [Nm]]]};maintenance_correlation_heatmap.png
+256;[F,{Air temperature [K]:{Outliers:F,Balanced:T},Process temperature [K]:{Outliers:F,Balanced:T},Rotational speed [rpm]:{Outliers:T,Balanced:F},Torque [Nm]:{Outliers:T,Balanced:T},Tool wear [min]:{Outliers:F,Balanced:F}}];maintenance_boxplots.png
+257;{Type:['M', 'L', 'H'],TWF:[0, 1],HDF:[0, 1],PWF:[0, 1],OSF:[0, 1],RNF:[0, 1]};maintenance_histograms_symbolic.png
+258;[9661,339];maintenance_class_histogram.png
+259;[10000,12];maintenance_nr_records_nr_variables.png
+260;{Air temperature [K]:{Outliers:T,Balanced:F,Ordinal:F},Process temperature [K]:{Outliers:T,Balanced:T,Ordinal:F},Rotational speed [rpm]:{Outliers:T,Balanced:F,Ordinal:F},Torque [Nm]:{Outliers:T,Balanced:T,Ordinal:F},Tool wear [min]:{Outliers:F,Balanced:F,Ordinal:F}};maintenance_histograms_numeric.png
+261;{'Age <= 42.5': {'samples': 7000, 'value': [5574,1426], 'class': '0', 'True': {'NumOfProducts <= 2.5': {'samples': 4945, 'value': [4373,572], 'class': '0', 'True': {'samples': 4831, 'value': [4343,488], 'class': '0'}, 'False': {'samples': 114, 'value': [30,84], 'class': '1'}}}, 'False': {'NumOfProducts <= 2.5': {'samples': 2055, 'value': [1201,854], 'class': '0', 'True': {'samples': 1931, 'value': [1198,733], 'class': '0'}, 'False': {'samples': 124, 'value': [3,121], 'class': '1'}}}}};Churn_Modelling_decision_tree.png
+262;no;Churn_Modelling_overfitting_mlp.png
+263;overfitting after 502;Churn_Modelling_overfitting_gb.png
+264;underfitting until 502,no overfitting,acc>0.8;Churn_Modelling_overfitting_rf.png
+265;overfitting until 11;Churn_Modelling_overfitting_knn.png
+266;overfitting after 6;Churn_Modelling_overfitting_decision_tree.png
+267;acc_rec;Churn_Modelling_overfitting_dt_acc_rec.png
+268;[0.54,0.46,0.00,0.00,0.00,0.00];Churn_Modelling_pca.png
+269;{6,[]};Churn_Modelling_correlation_heatmap.png
+270;[F,{CreditScore:{Outliers:F,Balanced:F},Age:{Outliers:T,Balanced:F},Tenure:{Outliers:F,Balanced:T},Balance:{Outliers:T,Balanced:F},NumOfProducts:{Outliers:F,Balanced:F},EstimatedSalary:{Outliers:F,Balanced:T}}];Churn_Modelling_boxplots.png
+271;{Geography:['France', 'Spain', 'Germany'],Gender:['Female', 'Male'],HasCrCard:[1, 0],IsActiveMember:[1, 0]};Churn_Modelling_histograms_symbolic.png
+272;[7963,2037];Churn_Modelling_class_histogram.png
+273;[10000,11];Churn_Modelling_nr_records_nr_variables.png
+274;{CreditScore:{Outliers:T,Balanced:F,Ordinal:F},Age:{Outliers:T,Balanced:F,Ordinal:F},Tenure:{Outliers:F,Balanced:F,Ordinal:T},Balance:{Outliers:T,Balanced:F,Ordinal:F},NumOfProducts:{Outliers:F,Balanced:F,Ordinal:T},EstimatedSalary:{Outliers:F,Balanced:T,Ordinal:F}};Churn_Modelling_histograms_numeric.png
+275;{'MAJORSKEWNESS <= 74.5': {'samples': 592, 'value': [148,152,153,139], 'class': '3', 'True': {'CIRCULARITY <= 49.5': {'samples': 414, 'value': [129,133,60,92], 'class': '2', 'True': {'samples': 305, 'value': [77,76,60,92], 'class': '4'}, 'False': {'samples': 109, 'value': [52,57,0,0], 'class': '2'}}}, 'False': {'CIRCULARITY <= 49.5': {'samples': 178, 'value': [19,19,93,47], 'class': '3', 'True': {'samples': 53, 'value': [14,18,1,20], 'class': '4'}, 'False': {'samples': 125, 'value': [5,1,92,27], 'class': '3'}}}}};vehicle_decision_tree.png
+276;no;vehicle_overfitting_mlp.png
+277;no;vehicle_overfitting_gb.png
+278;underfitting until 502,no overfitting,acc<0.8;vehicle_overfitting_rf.png
+279;no;vehicle_overfitting_knn.png
+280;no;vehicle_overfitting_decision_tree.png
+281;[0.96,0.02,0.01,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00];vehicle_pca.png
+282;{12,[[CIRCULARITY,GYRATIONRADIUS],[DISTANCE CIRCULARITY,MINORVARIANCE],[MAJORVARIANCE,MINORVARIANCE]]};vehicle_correlation_heatmap.png
+283;[F,{COMPACTNESS:{Outliers:T,Balanced:F},CIRCULARITY:{Outliers:T,Balanced:F},DISTANCE CIRCULARITY:{Outliers:T,Balanced:F},RADIUS RATIO:{Outliers:T,Balanced:F},MAJORVARIANCE:{Outliers:T,Balanced:F},MINORVARIANCE:{Outliers:T,Balanced:F},GYRATIONRADIUS:{Outliers:T,Balanced:F},MAJORSKEWNESS:{Outliers:T,Balanced:F},MINORSKEWNESS:{Outliers:F,Balanced:F},MINORKURTOSIS:{Outliers:T,Balanced:F},MAJORKURTOSIS:{Outliers:T,Balanced:F}}];vehicle_boxplots.png
+284;[218,217,212,199];vehicle_class_histogram.png
+285;[846,12];vehicle_nr_records_nr_variables.png
+286;{COMPACTNESS:{Outliers:F,Balanced:F,Ordinal:F},CIRCULARITY:{Outliers:F,Balanced:F,Ordinal:F},DISTANCE CIRCULARITY:{Outliers:F,Balanced:F,Ordinal:F},RADIUS RATIO:{Outliers:T,Balanced:F,Ordinal:F},MAJORVARIANCE:{Outliers:T,Balanced:F,Ordinal:F},MINORVARIANCE:{Outliers:T,Balanced:F,Ordinal:F},GYRATIONRADIUS:{Outliers:F,Balanced:F,Ordinal:F},MAJORSKEWNESS:{Outliers:T,Balanced:F,Ordinal:F},MINORSKEWNESS:{Outliers:T,Balanced:F,Ordinal:F},MINORKURTOSIS:{Outliers:F,Balanced:F,Ordinal:F},MAJORKURTOSIS:{Outliers:F,Balanced:F,Ordinal:F}};vehicle_histograms_numeric.png
+287;{'hours-per-week <= 41.5': {'samples': 32223, 'value': [24228,7995], 'class': '<=50K', 'True': {'capital-loss <= 1820.5': {'samples': 22515, 'value': [18430,4085], 'class': '<=50K', 'True': {'samples': 21974, 'value': [18242,3732], 'class': '<=50K'}, 'False': {'samples': 541, 'value': [188,353], 'class': '>50K'}}}, 'False': {'capital-loss <= 1820.5': {'samples': 9708, 'value': [5798,3910], 'class': '<=50K', 'True': {'samples': 9274, 'value': [5724,3550], 'class': '<=50K'}, 'False': {'samples': 434, 'value': [74,360], 'class': '>50K'}}}}};adult_decision_tree.png
+288;no;adult_overfitting_mlp.png
+289;overfitting after 502;adult_overfitting_gb.png
+290;no underfitting,no overfitting,acc>0.8;adult_overfitting_rf.png
+291;overfitting until 15;adult_overfitting_knn.png
+292;overfitting after 12;adult_overfitting_decision_tree.png
+293;acc_rec;adult_overfitting_dt_acc_rec.png
+294;[1.00,0.00,0.00,0.00,0.00,0.00];adult_pca.png
+295;{6,[]};adult_correlation_heatmap.png
+296;[F,{age:{Outliers:F,Balanced:F},fnlwgt:{Outliers:T,Balanced:F},educational-num:{Outliers:F,Balanced:F},capital-gain:{Outliers:T,Balanced:F},capital-loss:{Outliers:T,Balanced:F},hours-per-week:{Outliers:F,Balanced:F}}];adult_boxplots.png
+297;{workclass:['Private', 'Local-gov', '?', 'Self-emp-not-inc', 'Federal-gov', 'State-gov', 'Self-emp-inc', 'Without-pay', 'Never-worked'],education:['11th', 'HS-grad', 'Assoc-acdm', 'Some-college', '10th', 'Prof-school', '7th-8th', 'Bachelors', 'Masters', 'Doctorate', '5th-6th', 'Assoc-voc', '9th', '12th', '1st-4th', 'Preschool'],marital-status:['Never-married', 'Married-civ-spouse', 'Widowed', 'Divorced', 'Separated', 'Married-spouse-absent', 'Married-AF-spouse'],occupation:['Machine-op-inspct', 'Farming-fishing', 'Protective-serv', '?', 'Other-service', 'Prof-specialty', 'Craft-repair', 'Adm-clerical', 'Exec-managerial', 'Tech-support', 'Sales', 'Priv-house-serv', 'Transport-moving', 'Handlers-cleaners', 'Armed-Forces'],relationship:['Own-child', 'Husband', 'Not-in-family', 'Unmarried', 'Wife', 'Other-relative'],race:['Black', 'White', 'Asian-Pac-Islander', 'Other', 'Amer-Indian-Eskimo'],gender:['Male', 'Female']};adult_histograms_symbolic.png
+298;[37155,11687];adult_class_histogram.png
+299;[48842,14];adult_nr_records_nr_variables.png
+300;{age:{Outliers:T,Balanced:F,Ordinal:F},fnlwgt:{Outliers:T,Balanced:F,Ordinal:F},educational-num:{Outliers:F,Balanced:F,Ordinal:T},capital-gain:{Outliers:T,Balanced:F,Ordinal:F},capital-loss:{Outliers:T,Balanced:F,Ordinal:F},hours-per-week:{Outliers:T,Balanced:F,Ordinal:T}};adult_histograms_numeric.png
+301;{'CARDIOVASCULAR <= 50.0': {'samples': 8206, 'value': [2185,6021], 'class': 'Yes', 'True': {'ASHTMA <= 1.5': {'samples': 8144, 'value': [2183,5961], 'class': 'Yes', 'True': {'samples': 173, 'value': [51,122], 'class': 'Yes'}, 'False': {'samples': 7971, 'value': [2132,5839], 'class': 'Yes'}}}, 'False': {'ASHTMA <= 1.5': {'samples': 62, 'value': [2,60], 'class': 'Yes', 'True': {'samples': 16, 'value': [0,16], 'class': 'Yes'}, 'False': {'samples': 46, 'value': [2,44], 'class': 'Yes'}}}}};Covid_Data_decision_tree.png
+302;no;Covid_Data_overfitting_mlp.png
+303;no;Covid_Data_overfitting_gb.png
+304;no underfitting,no overfitting,acc<0.8;Covid_Data_overfitting_rf.png
+305;overfitting until 11;Covid_Data_overfitting_knn.png
+306;overfitting after 9;Covid_Data_overfitting_decision_tree.png
+307;acc_rec;Covid_Data_overfitting_dt_acc_rec.png
+308;[0.50,0.34,0.08,0.05,0.01,0.00,0.00,0.00,0.00,0.00,0.00,0.00];Covid_Data_pca.png
+309;{12,[[COPD,ASTHMA],[COPD,HIPERTENSION],[COPD,CARDIOVASCULAR],[COPD,RENAL_CHRONIC],[ASTHMA,RENAL_CHRONIC],[HIPERTENSION,CARDIOVASCULAR],[HIPERTENSION,RENAL_CHRONIC],[HIPERTENSION,TOBACCO],[CARDIOVASCULAR,RENAL_CHRONIC],[CARDIOVASCULAR,TOBACCO],[RENAL_CHRONIC,TOBACCO]]};Covid_Data_correlation_heatmap.png
+310;[F,{MEDICAL_UNIT:{Outliers:F,Balanced:F},PNEUMONIA:{Outliers:T,Balanced:F},AGE:{Outliers:T,Balanced:F},PREGNANT:{Outliers:F,Balanced:F},COPD:{Outliers:T,Balanced:F},ASTHMA:{Outliers:T,Balanced:F},HIPERTENSION:{Outliers:T,Balanced:F},OTHER_DISEASE:{Outliers:T,Balanced:F},CARDIOVASCULAR:{Outliers:T,Balanced:F},RENAL_CHRONIC:{Outliers:T,Balanced:F},TOBACCO:{Outliers:T,Balanced:F},ICU:{Outliers:T,Balanced:F}}];Covid_Data_boxplots.png
+311;{USMER:[2, 1],SEX:[2, 1],PATIENT_TYPE:[2, 1]};Covid_Data_histograms_symbolic.png
+312;[8601,3122];Covid_Data_class_histogram.png
+313;[11723,16];Covid_Data_nr_records_nr_variables.png
+314;{MEDICAL_UNIT:{Outliers:T,Balanced:F,Ordinal:T},PNEUMONIA:{Outliers:T,Balanced:F,Ordinal:T},AGE:{Outliers:T,Balanced:F,Ordinal:F},PREGNANT:{Outliers:F,Balanced:T,Ordinal:T},COPD:{Outliers:T,Balanced:F,Ordinal:T},ASTHMA:{Outliers:T,Balanced:F,Ordinal:T},HIPERTENSION:{Outliers:T,Balanced:F,Ordinal:T},OTHER_DISEASE:{Outliers:T,Balanced:F,Ordinal:T},CARDIOVASCULAR:{Outliers:T,Balanced:F,Ordinal:T},RENAL_CHRONIC:{Outliers:T,Balanced:F,Ordinal:T},TOBACCO:{Outliers:T,Balanced:F,Ordinal:T},ICU:{Outliers:F,Balanced:F,Ordinal:T}};Covid_Data_histograms_numeric.png
+315;{'dec <= 22.21': {'samples': 14000, 'value': [9341,1407,3252], 'class': 'GALAXY', 'True': {'mjd <= 55090.5': {'samples': 11327, 'value': [8214,1004,2109], 'class': 'GALAXY', 'True': {'samples': 208, 'value': [0,0,208], 'class': 'STAR'}, 'False': {'samples': 11119, 'value': [8214,1004,1901], 'class': 'GALAXY'}}}, 'False': {'mjd <= 55090.5': {'samples': 2673, 'value': [1127,403,1143], 'class': 'STAR', 'True': {'samples': 945, 'value': [24,53,868], 'class': 'STAR'}, 'False': {'samples': 1728, 'value': [1103,350,275], 'class': 'GALAXY'}}}}};sky_survey_decision_tree.png
+316;no;sky_survey_overfitting_mlp.png
+317;overfitting after 502;sky_survey_overfitting_gb.png
+318;no underfitting,no overfitting,acc>0.8;sky_survey_overfitting_rf.png
+319;no;sky_survey_overfitting_knn.png
+320;overfitting after 6;sky_survey_overfitting_decision_tree.png
+321;[0.85,0.14,0.01,0.00,0.00,0.00,0.00,0.00];sky_survey_pca.png
+322;{8,[[plate,mjd]]};sky_survey_correlation_heatmap.png
+323;[F,{ra:{Outliers:T,Balanced:T},dec:{Outliers:T,Balanced:F},run:{Outliers:F,Balanced:F},camcol:{Outliers:T,Balanced:F},field:{Outliers:F,Balanced:F},redshift:{Outliers:T,Balanced:F},plate:{Outliers:T,Balanced:F},mjd:{Outliers:T,Balanced:F}}];sky_survey_boxplots.png
+324;[13345,4645,1010];sky_survey_class_histogram.png
+325;[20000,9];sky_survey_nr_records_nr_variables.png
+326;{ra:{Outliers:T,Balanced:F,Ordinal:F},dec:{Outliers:T,Balanced:F,Ordinal:F},run:{Outliers:T,Balanced:F,Ordinal:F},camcol:{Outliers:F,Balanced:F,Ordinal:T},field:{Outliers:T,Balanced:F,Ordinal:F},redshift:{Outliers:T,Balanced:F,Ordinal:F},plate:{Outliers:T,Balanced:F,Ordinal:F},mjd:{Outliers:T,Balanced:F,Ordinal:F}};sky_survey_histograms_numeric.png
+327;{'Total phenols <= 2.36': {'samples': 123, 'value': [40,49,34], 'class': '2', 'True': {'Proanthocyanins <= 1.58': {'samples': 61, 'value': [0,29,32], 'class': '3', 'True': {'samples': 49, 'value': [0,18,31], 'class': '3'}, 'False': {'samples': 12, 'value': [0,11,1], 'class': '2'}}}, 'False': {'Proanthocyanins <= 1.58': {'samples': 62, 'value': [40,20,2], 'class': '1', 'True': {'samples': 2, 'value': [0,2,0], 'class': '2'}, 'False': {'samples': 60, 'value': [40,18,2], 'class': '1'}}}}};Wine_decision_tree.png
+328;no;Wine_overfitting_mlp.png
+329;no;Wine_overfitting_gb.png
+330;underfitting until 502,no overfitting,acc>0.8;Wine_overfitting_rf.png
+331;no;Wine_overfitting_knn.png
+332;no;Wine_overfitting_decision_tree.png
+333;[0.56,0.28,0.08,0.04,0.02,0.01,0.01,0.00,0.00,0.00,0.00];Wine_pca.png
+334;{12,[[Class,Flavanoids],[Class,OD280-OD315 of diluted wines],[Total phenols,Flavanoids],[Flavanoids,OD280-OD315 of diluted wines]]};Wine_correlation_heatmap.png
+335;[F,{Alcohol:{Outliers:T,Balanced:T},Malic acid:{Outliers:T,Balanced:F},Ash:{Outliers:T,Balanced:T},Alcalinity of ash:{Outliers:T,Balanced:T},Total phenols:{Outliers:T,Balanced:F},Flavanoids:{Outliers:T,Balanced:F},Nonflavanoid phenols:{Outliers:T,Balanced:F},Proanthocyanins:{Outliers:T,Balanced:F},Color intensity:{Outliers:T,Balanced:F},Hue:{Outliers:T,Balanced:F},OD280-OD315 of diluted wines:{Outliers:F,Balanced:F}}];Wine_boxplots.png
+336;[71,58,48];Wine_class_histogram.png
+337;[177,12];Wine_nr_records_nr_variables.png
+338;{Alcohol:{Outliers:F,Balanced:F,Ordinal:F},Malic acid:{Outliers:F,Balanced:F,Ordinal:F},Ash:{Outliers:T,Balanced:F,Ordinal:F},Alcalinity of ash:{Outliers:T,Balanced:F,Ordinal:F},Total phenols:{Outliers:F,Balanced:F,Ordinal:F},Flavanoids:{Outliers:T,Balanced:F,Ordinal:F},Nonflavanoid phenols:{Outliers:F,Balanced:F,Ordinal:F},Proanthocyanins:{Outliers:F,Balanced:F,Ordinal:F},Color intensity:{Outliers:F,Balanced:F,Ordinal:F},Hue:{Outliers:T,Balanced:F,Ordinal:F},OD280-OD315 of diluted wines:{Outliers:F,Balanced:F,Ordinal:F}};Wine_histograms_numeric.png
+339;{'Hardness <= 278.29': {'samples': 1407, 'value': [840,567], 'class': '0', 'True': {'Chloramines <= 6.7': {'samples': 1396, 'value': [838,558], 'class': '0', 'True': {'samples': 8, 'value': [1,7], 'class': '1'}, 'False': {'samples': 1388, 'value': [837,551], 'class': '0'}}}, 'False': {'Chloramines <= 6.7': {'samples': 11, 'value': [2,9], 'class': '1', 'True': {'samples': 5, 'value': [2,3], 'class': '1'}, 'False': {'samples': 6, 'value': [0,6], 'class': '1'}}}}};water_potability_decision_tree.png
+340;no;water_potability_overfitting_mlp.png
+341;overfitting after 502;water_potability_overfitting_gb.png
+342;underfitting until 502,no overfitting,acc<0.8;water_potability_overfitting_rf.png
+343;overfitting until 7;water_potability_overfitting_knn.png
+344;overfitting after 6;water_potability_overfitting_decision_tree.png
+345;acc_rec;water_potability_overfitting_dt_acc_rec.png
+346;[0.68,0.18,0.11,0.03,0.00,0.00,0.00];water_potability_pca.png
+347;{7,[]};water_potability_correlation_heatmap.png
+348;[F,{ph:{Outliers:T,Balanced:T},Hardness:{Outliers:T,Balanced:T},Chloramines:{Outliers:T,Balanced:T},Sulfate:{Outliers:T,Balanced:T},Conductivity:{Outliers:T,Balanced:F},Trihalomethanes:{Outliers:T,Balanced:T},Turbidity:{Outliers:T,Balanced:T}}];water_potability_boxplots.png
+349;{'ph': 491, 'Sulfate': 781, 'Trihalomethanes': 162};water_potability_mv.png
+350;[1998,1278];water_potability_class_histogram.png
+351;[3276,8];water_potability_nr_records_nr_variables.png
+352;{ph:{Outliers:T,Balanced:T,Ordinal:F},Hardness:{Outliers:T,Balanced:T,Ordinal:F},Chloramines:{Outliers:T,Balanced:T,Ordinal:F},Sulfate:{Outliers:T,Balanced:T,Ordinal:F},Conductivity:{Outliers:T,Balanced:T,Ordinal:F},Trihalomethanes:{Outliers:T,Balanced:T,Ordinal:F},Turbidity:{Outliers:T,Balanced:T,Ordinal:F}};water_potability_histograms_numeric.png
+353;{'Height <= 0.13': {'samples': 2923, 'value': [915,939,1069], 'class': 'M', 'True': {'Diameter <= 0.45': {'samples': 1049, 'value': [137,681,231], 'class': 'I', 'True': {'samples': 932, 'value': [100,648,184], 'class': 'I'}, 'False': {'samples': 117, 'value': [37,33,47], 'class': 'M'}}}, 'False': {'Diameter <= 0.45': {'samples': 1874, 'value': [778,258,838], 'class': 'M', 'True': {'samples': 683, 'value': [236,192,255], 'class': 'M'}, 'False': {'samples': 1191, 'value': [542,66,583], 'class': 'M'}}}}};abalone_decision_tree.png
+354;no;abalone_overfitting_mlp.png
+355;no;abalone_overfitting_gb.png
+356;no underfitting,no overfitting,acc<0.8;abalone_overfitting_rf.png
+357;overfitting until 15;abalone_overfitting_knn.png
+358;overfitting after 5;abalone_overfitting_decision_tree.png
+359;[0.98,0.02,0.00,0.00,0.00,0.00,0.00,0.00];abalone_pca.png
+360;{8,[[Length,Diameter],[Length,Whole weight],[Diameter,Whole weight],[Whole weight,Shucked weight],[Whole weight,Viscera weight],[Whole weight,Shell weight],[Shucked weight,Viscera weight]]};abalone_correlation_heatmap.png
+361;[F,{Length:{Outliers:T,Balanced:F},Diameter:{Outliers:T,Balanced:F},Height:{Outliers:T,Balanced:F},Whole weight:{Outliers:T,Balanced:F},Shucked weight:{Outliers:T,Balanced:F},Viscera weight:{Outliers:T,Balanced:F},Shell weight:{Outliers:T,Balanced:F},Rings:{Outliers:T,Balanced:F}}];abalone_boxplots.png
+362;[1528,1342,1307];abalone_class_histogram.png
+363;[4177,9];abalone_nr_records_nr_variables.png
+364;{Length:{Outliers:T,Balanced:F,Ordinal:F},Diameter:{Outliers:T,Balanced:F,Ordinal:F},Height:{Outliers:T,Balanced:F,Ordinal:F},Whole weight:{Outliers:T,Balanced:F,Ordinal:F},Shucked weight:{Outliers:T,Balanced:F,Ordinal:F},Viscera weight:{Outliers:T,Balanced:F,Ordinal:F},Shell weight:{Outliers:T,Balanced:F,Ordinal:F},Rings:{Outliers:T,Balanced:F,Ordinal:T}};abalone_histograms_numeric.png
+365;{'SMK_stat_type_cd <= 1.5': {'samples': 14942, 'value': [7451,7491], 'class': 'Y', 'True': {'gamma_GTP <= 35.5': {'samples': 9014, 'value': [5846,3168], 'class': 'N', 'True': {'samples': 7218, 'value': [4909,2309], 'class': 'N'}, 'False': {'samples': 1796, 'value': [937,859], 'class': 'N'}}}, 'False': {'gamma_GTP <= 35.5': {'samples': 5928, 'value': [1605,4323], 'class': 'Y', 'True': {'samples': 3135, 'value': [1163,1972], 'class': 'Y'}, 'False': {'samples': 2793, 'value': [442,2351], 'class': 'Y'}}}}};smoking_drinking_decision_tree.png
+366;no;smoking_drinking_overfitting_mlp.png
+367;overfitting after 502;smoking_drinking_overfitting_gb.png
+368;underfitting until 502,no overfitting,acc<0.8;smoking_drinking_overfitting_rf.png
+369;overfitting until 17;smoking_drinking_overfitting_knn.png
+370;overfitting after 5;smoking_drinking_overfitting_decision_tree.png
+371;acc_rec;smoking_drinking_overfitting_dt_acc_rec.png
+372;[0.63,0.15,0.13,0.03,0.02,0.02,0.01,0.01,0.00,0.00,0.00,0.00];smoking_drinking_pca.png
+373;{12,[[weight,waistline],[tot_chole,LDL_chole]]};smoking_drinking_correlation_heatmap.png
+374;[F,{age:{Outliers:F,Balanced:F},height:{Outliers:F,Balanced:F},weight:{Outliers:F,Balanced:F},waistline:{Outliers:T,Balanced:F},SBP:{Outliers:T,Balanced:F},BLDS:{Outliers:T,Balanced:F},tot_chole:{Outliers:T,Balanced:F},LDL_chole:{Outliers:T,Balanced:F},triglyceride:{Outliers:T,Balanced:F},hemoglobin:{Outliers:T,Balanced:F},gamma_GTP:{Outliers:T,Balanced:F},SMK_stat_type_cd:{Outliers:T,Balanced:F}}];smoking_drinking_boxplots.png
+375;{sex:['Male', 'Female'],hear_left:[1.0, 2.0],hear_right:[1.0, 2.0]};smoking_drinking_histograms_symbolic.png
+376;[10701,10645];smoking_drinking_class_histogram.png
+377;[21346,16];smoking_drinking_nr_records_nr_variables.png
+378;{age:{Outliers:F,Balanced:F,Ordinal:T},height:{Outliers:F,Balanced:T,Ordinal:T},weight:{Outliers:T,Balanced:F,Ordinal:T},waistline:{Outliers:T,Balanced:T,Ordinal:F},SBP:{Outliers:T,Balanced:F,Ordinal:F},BLDS:{Outliers:T,Balanced:F,Ordinal:F},tot_chole:{Outliers:T,Balanced:F,Ordinal:F},LDL_chole:{Outliers:T,Balanced:F,Ordinal:F},triglyceride:{Outliers:T,Balanced:F,Ordinal:F},hemoglobin:{Outliers:T,Balanced:F,Ordinal:F},gamma_GTP:{Outliers:T,Balanced:F,Ordinal:F},SMK_stat_type_cd:{Outliers:F,Balanced:F,Ordinal:T}};smoking_drinking_histograms_numeric.png
+379;{'skewness <= 5.16': {'samples': 960, 'value': [533,427], 'class': '0', 'True': {'curtosis <= 0.19': {'samples': 650, 'value': [250,400], 'class': '1', 'True': {'samples': 214, 'value': [17,197], 'class': '1'}, 'False': {'samples': 436, 'value': [233,203], 'class': '0'}}}, 'False': {'curtosis <= 0.19': {'samples': 310, 'value': [283,27], 'class': '0', 'True': {'samples': 179, 'value': [179,0], 'class': '0'}, 'False': {'samples': 131, 'value': [104,27], 'class': '0'}}}}};BankNoteAuthentication_decision_tree.png
+380;no;BankNoteAuthentication_overfitting_mlp.png
+381;no;BankNoteAuthentication_overfitting_gb.png
+382;no underfitting,no overfitting,acc>0.8;BankNoteAuthentication_overfitting_rf.png
+383;no;BankNoteAuthentication_overfitting_knn.png
+384;no;BankNoteAuthentication_overfitting_decision_tree.png
+385;acc_rec;BankNoteAuthentication_overfitting_dt_acc_rec.png
+386;[0.76,0.14,0.07,0.03];BankNoteAuthentication_pca.png
+387;{4,[]};BankNoteAuthentication_correlation_heatmap.png
+388;[F,{variance:{Outliers:T,Balanced:F},skewness:{Outliers:T,Balanced:F},curtosis:{Outliers:T,Balanced:F},entropy:{Outliers:T,Balanced:F}}];BankNoteAuthentication_boxplots.png
+389;[762,610];BankNoteAuthentication_class_histogram.png
+390;[1372,5];BankNoteAuthentication_nr_records_nr_variables.png
+391;{variance:{Outliers:F,Balanced:F,Ordinal:F},skewness:{Outliers:T,Balanced:F,Ordinal:F},curtosis:{Outliers:T,Balanced:F,Ordinal:F},entropy:{Outliers:F,Balanced:F,Ordinal:F}};BankNoteAuthentication_histograms_numeric.png
+392;{'PetalWidthCm <= 0.7': {'samples': 105, 'value': [35,35,35], 'class': 'Iris-setosa', 'True': {'samples': 35, 'value': [35,0,0], 'class': 'Iris-setosa'}, 'False': {'PetalWidthCm <= 1.75': {'samples': 70, 'value': [0,35,35], 'class': 'Iris-versicolor', 'True': {'samples': 38, 'value': [0,35,3], 'class': 'Iris-versicolor'}, 'False': {'samples': 32, 'value': [0,0,32], 'class': 'Iris-virginica'}}}}};Iris_decision_tree.png
+393;no;Iris_overfitting_mlp.png
+394;no;Iris_overfitting_gb.png
+395;no underfitting,no overfitting,acc>0.8;Iris_overfitting_rf.png
+396;no;Iris_overfitting_knn.png
+397;no;Iris_overfitting_decision_tree.png
+398;[0.92,0.05,0.02,0.01];Iris_pca.png
+399;{4,[[SepalLengthCm,PetalLengthCm],[PetalLengthCm,PetalWidthCm]]};Iris_correlation_heatmap.png
+400;[F,{SepalLengthCm:{Outliers:T,Balanced:F},SepalWidthCm:{Outliers:T,Balanced:F},PetalLengthCm:{Outliers:F,Balanced:F},PetalWidthCm:{Outliers:F,Balanced:F}}];Iris_boxplots.png
+401;[50,50,50];Iris_class_histogram.png
+402;[150,5];Iris_nr_records_nr_variables.png
+403;{SepalLengthCm:{Outliers:T,Balanced:F,Ordinal:F},SepalWidthCm:{Outliers:F,Balanced:F,Ordinal:F},PetalLengthCm:{Outliers:F,Balanced:F,Ordinal:F},PetalWidthCm:{Outliers:F,Balanced:F,Ordinal:F}};Iris_histograms_numeric.png
+404;{'int_memory <= 30.5': {'samples': 1400, 'value': [350,350,350,350], 'class': '0', 'True': {'mobile_wt <= 91.5': {'samples': 678, 'value': [179,169,182,148], 'class': '2', 'True': {'samples': 469, 'value': [114,128,118,109], 'class': '1'}, 'False': {'samples': 209, 'value': [65,41,64,39], 'class': '0'}}}, 'False': {'mobile_wt <= 91.5': {'samples': 722, 'value': [171,181,168,202], 'class': '3', 'True': {'samples': 86, 'value': [26,19,11,30], 'class': '3'}, 'False': {'samples': 636, 'value': [145,162,157,172], 'class': '3'}}}}};phone_decision_tree.png
+405;no;phone_overfitting_mlp.png
+406;overfitting after 1502;phone_overfitting_gb.png
+407;underfitting until 502,no overfitting,acc>0.8;phone_overfitting_rf.png
+408;overfitting until 9;phone_overfitting_knn.png
+409;no;phone_overfitting_decision_tree.png
+410;[0.67,0.17,0.11,0.05,0.00,0.00,0.00,0.00,0.00,0.00,0.00,0.00];phone_pca.png
+411;{13,[[ram,price_range]]};phone_correlation_heatmap.png
+412;[F,{battery_power:{Outliers:F,Balanced:T},fc:{Outliers:F,Balanced:F},int_memory:{Outliers:F,Balanced:T},mobile_wt:{Outliers:F,Balanced:T},n_cores:{Outliers:F,Balanced:F},pc:{Outliers:F,Balanced:T},px_height:{Outliers:F,Balanced:F},px_width:{Outliers:F,Balanced:T},ram:{Outliers:F,Balanced:T},sc_h:{Outliers:F,Balanced:F},sc_w:{Outliers:F,Balanced:F},talk_time:{Outliers:F,Balanced:T}}];phone_boxplots.png
+413;{blue:[0, 1],dual_sim:[0, 1],four_g:[0, 1],three_g:[0, 1],touch_screen:[0, 1],wifi:[1, 0]};phone_histograms_symbolic.png
+414;[500,500,500,500];phone_class_histogram.png
+415;[2000,19];phone_nr_records_nr_variables.png
+416;{battery_power:{Outliers:F,Balanced:T,Ordinal:F},fc:{Outliers:T,Balanced:F,Ordinal:F},int_memory:{Outliers:F,Balanced:F,Ordinal:F},mobile_wt:{Outliers:F,Balanced:F,Ordinal:F},n_cores:{Outliers:F,Balanced:F,Ordinal:T},pc:{Outliers:F,Balanced:F,Ordinal:F},px_height:{Outliers:F,Balanced:F,Ordinal:F},px_width:{Outliers:F,Balanced:T,Ordinal:F},ram:{Outliers:F,Balanced:T,Ordinal:F},sc_h:{Outliers:F,Balanced:F,Ordinal:F},sc_w:{Outliers:F,Balanced:F,Ordinal:F},talk_time:{Outliers:F,Balanced:F,Ordinal:F}};phone_histograms_numeric.png
+417;{'Pclass <= 2.5': {'samples': 498, 'value': [297,201], 'class': '0', 'True': {'Parch <= 0.5': {'samples': 253, 'value': [115,138], 'class': '1', 'True': {'samples': 181, 'value': [94,87], 'class': '0'}, 'False': {'samples': 72, 'value': [21,51], 'class': '1'}}}, 'False': {'Parch <= 0.5': {'samples': 245, 'value': [182,63], 'class': '0', 'True': {'samples': 188, 'value': [144,44], 'class': '0'}, 'False': {'samples': 57, 'value': [38,19], 'class': '0'}}}}};Titanic_decision_tree.png
+418;no;Titanic_overfitting_mlp.png
+419;overfitting after 502;Titanic_overfitting_gb.png
+420;underfitting until 502,no overfitting,acc=0.8;Titanic_overfitting_rf.png
+421;overfitting until 5;Titanic_overfitting_knn.png
+422;overfitting after 10;Titanic_overfitting_decision_tree.png
+423;acc_rec;Titanic_overfitting_dt_acc_rec.png
+424;[0.93,0.07,0.00,0.00,0.00];Titanic_pca.png
+425;{5,[]};Titanic_correlation_heatmap.png
+426;[F,{Pclass:{Outliers:F,Balanced:T},Age:{Outliers:T,Balanced:F},SibSp:{Outliers:F,Balanced:F},Parch:{Outliers:F,Balanced:F},Fare:{Outliers:T,Balanced:F}}];Titanic_boxplots.png
+427;{Embarked:['S', 'C', 'Q'],Sex:['male', 'female']};Titanic_histograms_symbolic.png
+428;{'Age': 177, 'Embarked': 2};Titanic_mv.png
+429;[549,342];Titanic_class_histogram.png
+430;[891,8];Titanic_nr_records_nr_variables.png
+431;{Pclass:{Outliers:F,Balanced:F,Ordinal:T},Age:{Outliers:T,Balanced:F,Ordinal:F},SibSp:{Outliers:T,Balanced:F,Ordinal:T},Parch:{Outliers:T,Balanced:F,Ordinal:F},Fare:{Outliers:T,Balanced:F,Ordinal:F}};Titanic_histograms_numeric.png
+432;{'Juiciness <= -0.3': {'samples': 2800, 'value': [1397,1403], 'class': 'good', 'True': {'Crunchiness <= 2.25': {'samples': 932, 'value': [635,297], 'class': 'bad', 'True': {'samples': 148, 'value': [64,84], 'class': 'good'}, 'False': {'samples': 784, 'value': [571,213], 'class': 'bad'}}}, 'False': {'Crunchiness <= 2.25': {'samples': 1868, 'value': [762,1106], 'class': 'good', 'True': {'samples': 1625, 'value': [734,891], 'class': 'good'}, 'False': {'samples': 243, 'value': [28,215], 'class': 'good'}}}}};apple_quality_decision_tree.png
+433;no;apple_quality_overfitting_mlp.png
+434;overfitting after 502;apple_quality_overfitting_gb.png
+435;underfitting until 502,no overfitting,acc>0.8;apple_quality_overfitting_rf.png
+436;overfitting until 9;apple_quality_overfitting_knn.png
+437;no;apple_quality_overfitting_decision_tree.png
+438;acc_rec;apple_quality_overfitting_dt_acc_rec.png
+439;[0.25,0.22,0.17,0.14,0.12,0.07,0.04];apple_quality_pca.png
+440;{7,[]};apple_quality_correlation_heatmap.png
+441;[F,{Size:{Outliers:T,Balanced:T},Weight:{Outliers:T,Balanced:T},Sweetness:{Outliers:T,Balanced:T},Crunchiness:{Outliers:T,Balanced:T},Juiciness:{Outliers:T,Balanced:T},Ripeness:{Outliers:T,Balanced:T},Acidity:{Outliers:T,Balanced:T}}];apple_quality_boxplots.png
+442;[2004,1996];apple_quality_class_histogram.png
+443;[4000,8];apple_quality_nr_records_nr_variables.png
+444;{Size:{Outliers:T,Balanced:T,Ordinal:F},Weight:{Outliers:T,Balanced:T,Ordinal:F},Sweetness:{Outliers:T,Balanced:T,Ordinal:F},Crunchiness:{Outliers:T,Balanced:T,Ordinal:F},Juiciness:{Outliers:T,Balanced:T,Ordinal:F},Ripeness:{Outliers:T,Balanced:T,Ordinal:F},Acidity:{Outliers:T,Balanced:T,Ordinal:F}};apple_quality_histograms_numeric.png
+445;{'JoiningYear <= 2017.5': {'samples': 3257, 'value': [2137,1120], 'class': '0', 'True': {'ExperienceInCurrentDomain <= 3.5': {'samples': 2996, 'value': [2134,862], 'class': '0', 'True': {'samples': 1781, 'value': [1227,554], 'class': '0'}, 'False': {'samples': 1215, 'value': [907,308], 'class': '0'}}}, 'False': {'ExperienceInCurrentDomain <= 3.5': {'samples': 261, 'value': [3,258], 'class': '1', 'True': {'samples': 44, 'value': [0,44], 'class': '1'}, 'False': {'samples': 217, 'value': [3,214], 'class': '1'}}}}};Employee_decision_tree.png
+446;no;Employee_overfitting_mlp.png
+447;no;Employee_overfitting_gb.png
+448;underfitting until 502,no overfitting,acc>0.8;Employee_overfitting_rf.png
+449;overfitting until 9;Employee_overfitting_knn.png
+450;overfitting after 8;Employee_overfitting_decision_tree.png
+451;acc_rec;Employee_overfitting_dt_acc_rec.png
+452;[0.79,0.12,0.08,0.01];Employee_pca.png
+453;{4,[]};Employee_correlation_heatmap.png
+454;[F,{JoiningYear:{Outliers:F,Balanced:T},PaymentTier:{Outliers:F,Balanced:F},Age:{Outliers:F,Balanced:F},ExperienceInCurrentDomain:{Outliers:F,Balanced:F}}];Employee_boxplots.png
+455;{Education:['Bachelors', 'Masters', 'PHD'],City:['Bangalore', 'Pune', 'New Delhi'],Gender:['Male', 'Female'],EverBenched:['No', 'Yes']};Employee_histograms_symbolic.png
+456;[3053,1600];Employee_class_histogram.png
+457;[4653,9];Employee_nr_records_nr_variables.png
+458;{JoiningYear:{Outliers:F,Balanced:F,Ordinal:T},PaymentTier:{Outliers:F,Balanced:F,Ordinal:T},Age:{Outliers:F,Balanced:F,Ordinal:F},ExperienceInCurrentDomain:{Outliers:F,Balanced:F,Ordinal:T}};Employee_histograms_numeric.png

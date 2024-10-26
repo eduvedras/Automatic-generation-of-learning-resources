@@ -1,0 +1,9 @@
+Image,Prediction
+Titanic_decision_tree.png,"Pclass <= 2.5, Parch <= 0.5"
+Titanic_pca.png,5
+Titanic_correlation_heatmap.png,"Pclass, Age, SibSp, Parch, Fare"
+Titanic_boxplots.png,"Pclass, Age, SibSp, Parch, Fare"
+Titanic_histograms_symbolic.png,"Embarked, Sex, Gender"
+Titanic_mv.png,AG_Employed
+Titanic_class_histogram.png,Survived
+Titanic_histograms_numeric.png,"Pclass, Age, SibSp, Parch, Fare"

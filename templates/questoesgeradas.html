@@ -1,0 +1,956 @@
+ 
+<html> 
+<head></head> 
+<body> 
+            <p></p>
+            <h3>-----------------------------gpt3.5-finetuned-----------------------------</h3>
+            <img src="images/smoking_drinking_decision_tree.png" width="auto" height = "600"/> 
+            <p>0: Considering that A=True<=>[SMK_stat_type_cd <= 1.5] and B=True<=>[gamma_GTP <= 35.5], it is possible to state that KNN algorithm classifies (A,B) as 0 for any k ≤ 105.</p>
+            <img src="images/smoking_drinking_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>1: We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.</p>
+            <img src="images/smoking_drinking_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>2: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/smoking_drinking_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>3: We are able to identify the existence of overfitting for random forest models with more than 502 estimators.</p>
+            <img src="images/smoking_drinking_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>4: KNN with less than 7 neighbours is in overfitting.</p>
+            <img src="images/smoking_drinking_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>5: The chart reporting the recall for different trees helps in understanding the existence of overfitting for this models.</p>
+            <img src="images/smoking_drinking_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>6: The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.</p>
+            <img src="images/smoking_drinking_pca.png" width="auto" height = "600"/> 
+            <p>7: The first 10 principal components are enough to explain half the data variance.</p>
+            <img src="images/smoking_drinking_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>8: Removing variable hemoglobin would not improve the training of the decision tree algorithm .</p>
+            <img src="images/smoking_drinking_boxplots.png" width="auto" height = "600"/> 
+            <p>9: A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.</p>
+            <img src="images/smoking_drinking_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>10: Considering the common semantics for sex variable, dummification would be the most adequate encoding.</p>
+            <img src="images/smoking_drinking_class_histogram.png" width="auto" height = "600"/> 
+            <p>11: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/smoking_drinking_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>12: As we are facing the curse of dimensionality, dummification could be a better option than using binary variables.</p>
+            <img src="images/smoking_drinking_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>13: The existence of outliers is one of the problems to tackle in this dataset.</p>
+            <img src="images/BankNoteAuthentication_decision_tree.png" width="auto" height = "600"/> 
+            <p>14: Considering that A stands for {curtosis <= 0.19}, the decision tree shown classifies A as 1.</p>
+            <img src="images/BankNoteAuthentication_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>15: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/BankNoteAuthentication_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>16: We are able to identify the existence of overfitting for gradient boosting models with more than 1002 estimators.</p>
+            <img src="images/BankNoteAuthentication_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>17: We are able to identify the existence of overfitting for random forests with more than 502 estimators.</p>
+            <img src="images/BankNoteAuthentication_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>18: KNN with 7 neighbour is in overfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>19: According to the decision tree overfitting chart, the tree with 16 nodes of depth is in overfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>20: The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.</p>
+            <img src="images/BankNoteAuthentication_pca.png" width="auto" height = "600"/> 
+            <p>21: The first 2 principal components are enough for explaining half the data variance.</p>
+            <img src="images/BankNoteAuthentication_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>22: Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.</p>
+            <img src="images/BankNoteAuthentication_boxplots.png" width="auto" height = "600"/> 
+            <p>23: A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.</p>
+            <img src="images/BankNoteAuthentication_class_histogram.png" width="auto" height = "600"/> 
+            <p>24: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/BankNoteAuthentication_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>25: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/BankNoteAuthentication_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>26: Normalization of this dataset could not help a KNN algorithm to outperform a Naive Bayes.</p>
+            <img src="images/Iris_decision_tree.png" width="auto" height = "600"/> 
+            <p>27: Given the intrinsic dimensions of the data, the kNN algorithm would be expected to outperform a Logistic Regression one.</p>
+            <img src="images/Iris_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>28: As reported in the chart, the MLP enters into overfitting after 500 iterations.</p>
+            <img src="images/Iris_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>29: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/Iris_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>30: The random forests results shown can be explained by the fact that the models become more complex with the number of estimators.</p>
+            <img src="images/Iris_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>31: KNN is in overfitting for k less than 5.</p>
+            <img src="images/Iris_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>32: According to the decision tree overfitting chart, the tree with 12 nodes of depth is in overfitting.</p>
+            <img src="images/Iris_pca.png" width="auto" height = "600"/> 
+            <p>33: The first 2 principal components are enough for explaining half the data variance.</p>
+            <img src="images/Iris_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>34: The intrinsic dimensionality of this dataset is 3.</p>
+            <img src="images/Iris_boxplots.png" width="auto" height = "600"/> 
+            <p>35: Normalization of this dataset could not help a KNN algorithm to outperform a LDA in the same problem.</p>
+            <img src="images/Iris_class_histogram.png" width="auto" height = "600"/> 
+            <p>36: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/Iris_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>37: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/Iris_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>38: It is clear that variable SepalLengthCm shows some outliers, but we can’t be sure of the same for variable PetalWidthCm.</p>
+            <img src="images/phone_decision_tree.png" width="auto" height = "600"/> 
+            <p>39: Pruning can only improve the decision tree presented if it is based on post-pruning.</p>
+            <img src="images/phone_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>40: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/phone_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>41: We are able to identify the existence of overfitting for gradient boosting models with more than 1002 estimators.</p>
+            <img src="images/phone_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>42: Results for Random Forests identified as 20, may be explained by its estimators being in overfitting.</p>
+            <img src="images/phone_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>43: We are able to identify the existence of overfitting for KNN models with less than 3 neighbors.</p>
+            <img src="images/phone_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>44: The chart reporting the recall for different trees shows that the model enters in overfitting for models with depth higher than 6.</p>
+            <img src="images/phone_pca.png" width="auto" height = "600"/> 
+            <p>45: The first 3 principal components are enough for explaining half the data variance.</p>
+            <img src="images/phone_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>46: The intrinsic dimensionality of this dataset is 11.</p>
+            <img src="images/phone_boxplots.png" width="auto" height = "600"/> 
+            <p>47: The existence of outliers is one of the problems to tackle in this dataset.</p>
+            <img src="images/phone_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>48: The variable wifi can be seen as ordinal without losing information.</p>
+            <img src="images/phone_class_histogram.png" width="auto" height = "600"/> 
+            <p>49: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/phone_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>50: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/phone_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>51: The histograms presented show a large number of outliers for most of the numeric variables.</p>
+            <img src="images/Titanic_decision_tree.png" width="auto" height = "600"/> 
+            <p>52: Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], the Decision Tree presented classifies (not A, B) as 1.</p>
+            <img src="images/Titanic_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>53: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/Titanic_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>54: We are able to identify the existence of overfitting for gradient boosting models with more than 1502 estimators.</p>
+            <img src="images/Titanic_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>55: We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.</p>
+            <img src="images/Titanic_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>56: KNN with 7 neighbour is in overfitting.</p>
+            <img src="images/Titanic_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>57: We are able to identify the existence of overfitting for decision tree models with more than 3 nodes of depth.</p>
+            <img src="images/Titanic_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>58: The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.</p>
+            <img src="images/Titanic_pca.png" width="auto" height = "600"/> 
+            <p>59: Using the first 4 principal components would imply an error between 5 and 20%.</p>
+            <img src="images/Titanic_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>60: The intrinsic dimensionality of this dataset is 2.</p>
+            <img src="images/Titanic_boxplots.png" width="auto" height = "600"/> 
+            <p>61: Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.</p>
+            <img src="images/Titanic_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>62: All variables, but the class, should be dealt with as numeric.</p>
+            <img src="images/Titanic_mv.png" width="auto" height = "600"/> 
+            <p>63: According to the variable generation report, the variable Embarked can be seen as ordinal without losing information.</p>
+            <img src="images/Titanic_class_histogram.png" width="auto" height = "600"/> 
+            <p>64: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/Titanic_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>65: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/Titanic_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>66: J48 would not be my choice of algorithm for this dataset, as we face the typical challenges of decision tree algorithms.</p>
+            <img src="images/apple_quality_decision_tree.png" width="auto" height = "600"/> 
+            <p>67: The number of True Positives is lower than the number of False Negatives for the presented tree.</p>
+            <img src="images/apple_quality_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>68: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/apple_quality_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>69: We are able to identify the existence of overfitting for gradient boosting models with more than 1002 estimators.</p>
+            <img src="images/apple_quality_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>70: We are able to identify the existence of overfitting for random forest models with more than 1502 estimators.</p>
+            <img src="images/apple_quality_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>71: We are able to identify the existence of overfitting for KNN models with less than 3 neighbors.</p>
+            <img src="images/apple_quality_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>72: The chart reporting the recall of a K-NN classifier for different  values is .</p>
+            <img src="images/apple_quality_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>73: The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.</p>
+            <img src="images/apple_quality_pca.png" width="auto" height = "600"/> 
+            <p>74: The first 3 principal components are enough for explaining half the data variance.</p>
+            <img src="images/apple_quality_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>75: The variable Juiciness can be discarded without risking losing information.</p>
+            <img src="images/apple_quality_boxplots.png" width="auto" height = "600"/> 
+            <p>76: Scaling this dataset would be mandatory to improve the results with distance-based methods.</p>
+            <img src="images/apple_quality_class_histogram.png" width="auto" height = "600"/> 
+            <p>77: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/apple_quality_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>78: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/apple_quality_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>79: The histograms presented show a large number of outliers for most of the numeric variables.</p>
+            <img src="images/Employee_decision_tree.png" width="auto" height = "600"/> 
+            <p>80: Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], it is possible to state that KNN algorithm classifies (A, not B) as 0 for any k ≤ 471.</p>
+            <img src="images/Employee_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>81: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/Employee_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>82: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/Employee_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>83: The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.</p>
+            <img src="images/Employee_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>84: KNN with more than 7 neighbours is in overfitting.</p>
+            <img src="images/Employee_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>85: Results for Decision Trees identified as 3, are underspecified.</p>
+            <img src="images/Employee_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>86: We are able to identify the existence of overfitting for decision tree models with more than 3 nodes of depth.</p>
+            <img src="images/Employee_pca.png" width="auto" height = "600"/> 
+            <p>87: The first 2 principal components are enough for explaining half the data variance.</p>
+            <img src="images/Employee_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>88: Variable JoiningYear seems to be important for the majority of mining tasks.</p>
+            <img src="images/Employee_boxplots.png" width="auto" height = "600"/> 
+            <p>89: The boxplots presented show a large number of outliers for most of the analysed variables.</p>
+            <img src="images/Employee_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>90: Given the usual semantics of Gender variable, dummification would have been a better codification.</p>
+            <img src="images/Employee_class_histogram.png" width="auto" height = "600"/> 
+            <p>91: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/Employee_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>92: Balancing this dataset by synthetic oversampling would most probably be preferable over generative undersampling.</p>
+            <img src="images/Employee_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>93: A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.</p>
+            <p></p>
+            <h3>-----------------------------mistral-zeroshot-----------------------------</h3>
+            <img src="images/smoking_drinking_decision_tree.png" width="auto" height = "600"/> 
+            <p>94: The decision tree has a depth of 2 and the first split is based on the condition SMK_stat_type_cd <= 1.5, while the second split is based on gamma_GTP <= 35.5.</p>
+            <img src="images/smoking_drinking_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>95: The data chart suggests that MLP models begin to overfit after a certain number of iterations, which is not explicitly indicated in the chart but can be inferred.</p>
+            <img src="images/smoking_drinking_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>96: The gradient boosting model's accuracy reaches a plateau and then decreases beyond approximately 1000 estimatorsdue to overfitting.</p>
+            <img src="images/smoking_drinking_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>97: The random forest model's accuracy progressively increases as the number of estimators goes up, but eventually plateaus and then decreases, indicating overfitting.</p>
+            <img src="images/smoking_drinking_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>98: The accuracy of KNN increases with the number of neighbors up to a certain point, beyond which it starts to overfit the data. Specifically, overfitting begins around 13 or more neighbors.</p>
+            <img src="images/smoking_drinking_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>99: According to the decision tree overfitting chart, a tree with a max depth greater than the point where accuracy on the training data starts decreasing is in overfitting.</p>
+            <img src="images/smoking_drinking_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>100:  The performance of both accuracy and recall increases with the max depth up to a point, but beyond that, the model begins to overfit, resulting in a decrease in accuracy and an unstable recall.</p>
+            <img src="images/smoking_drinking_pca.png" width="auto" height = "600"/> 
+            <p>101:  The bar chart reveals that the first 12 principal components together explain 100.0% of the data variance.</p>
+            <img src="images/smoking_drinking_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>102: All correlations between the variables 'age' and 'waistline' are shown in this heatmap.</p>
+            <img src="images/smoking_drinking_boxplots.png" width="auto" height = "600"/> 
+            <p>103: The boxplot for variable height shows a symmetrical distribution.</p>
+            <img src="images/smoking_drinking_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>104: The data chart does not provide sufficient information to determine if the variables 'sex', 'hear_left', and 'hear_right' are binary or not.</p>
+            <img src="images/smoking_drinking_class_histogram.png" width="auto" height = "600"/> 
+            <p>105: The proportion of DRK_YN target variable being 'Y' is greater than that of 'N'.</p>
+            <img src="images/smoking_drinking_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>106: If the number of variables is significantly larger than the number of records, the dataset may have a high risk of suffering from the curse of dimensionality.</p>
+            <img src="images/smoking_drinking_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>107: Could not generate the sentence.</p>
+            <img src="images/BankNoteAuthentication_decision_tree.png" width="auto" height = "600"/> 
+            <p>108:  The decision tree has a depth of 2, with the first split made at the condition skewness <= 5.16, and the second split made at curtosis <= 0.19.</p>
+            <img src="images/BankNoteAuthentication_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>109: The MLP model shows signs of overfitting after approximately 700 iterations, as evidenced by a decrease in accuracy.</p>
+            <img src="images/BankNoteAuthentication_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>110: The gradient boosting model starts to overfit the data and shows a decrease in accuracy for a very large number of estimators.</p>
+            <img src="images/BankNoteAuthentication_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>111: The accuracy of Random Forests increases as the number of estimators grows, but at a point beyond a certain value, the model becomes overfitted and the accuracy starts to decrease.</p>
+            <img src="images/BankNoteAuthentication_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>112:  KNN exhibits overfitting when the number of neighbors is greater than 5, as indicated by the decreasing accuracy on the chart.</p>
+            <img src="images/BankNoteAuthentication_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>113: According to the multi-line chart, the decision tree exhibits increasing overfitting as the max depth increases, reaching high accuracy levels but eventually leading to overfitting beyond a max depth of approximately 15.</p>
+            <img src="images/BankNoteAuthentication_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>114: The performance of both accuracy and recall increase as the max depth of the decision tree increases, but the extent of the increase in accuracy contrasts the decrease in recall, indicating overfitting.</p>
+            <img src="images/BankNoteAuthentication_pca.png" width="auto" height = "600"/> 
+            <p>115: The four principal components collectively explain a significant proportion of the variance in the data.</p>
+            <img src="images/BankNoteAuthentication_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>116:  The heatmap illustrates the correlational relationships among variance, skewness, curtosis, and entropy in the dataset.</p>
+            <img src="images/BankNoteAuthentication_boxplots.png" width="auto" height = "600"/> 
+            <p>117: Could not generate the sentence.</p>
+            <img src="images/BankNoteAuthentication_class_histogram.png" width="auto" height = "600"/> 
+            <p>118: Based on the given data chart, the distribution of the target variable classes is clearly represented.</p>
+            <img src="images/BankNoteAuthentication_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>119: The dataset consists of 300 records and 10 variables.</p>
+            <img src="images/BankNoteAuthentication_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>120: Could not generate the sentence.</p>
+            <img src="images/Iris_decision_tree.png" width="auto" height = "600"/> 
+            <p>121: Could not generate the sentence.</p>
+            <img src="images/Iris_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>122: The MLP model shows signs of overfitting after approximately 800 iterations.</p>
+            <img src="images/Iris_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>123: The gradient boosting model achieves its highest accuracy with 2002 estimators.</p>
+            <img src="images/Iris_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>124: The random forest model's accuracy increases as the number of estimators grows, but it eventually reaches a plateau and starts to decrease due to overfitting.</p>
+            <img src="images/Iris_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>125:  KNN shows overfitting when the number of neighbors is greater than 17.</p>
+            <img src="images/Iris_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>126: According to the given chart, the decision tree exhibits increasing accuracy with max depth up to a certain point, after which accuracy starts decreasing, indicating overfitting.</p>
+            <img src="images/Iris_pca.png" width="auto" height = "600"/> 
+            <p>127:  The bar chart illustrates the percentage of total data variance explained by each of the four principal components.</p>
+            <img src="images/Iris_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>128: The correlation between SepalLengthCm, SepalWidthCm, PetalLengthCm, and PetalWidthCm is represented in this heatmap.</p>
+            <img src="images/Iris_boxplots.png" width="auto" height = "600"/> 
+            <p>129: The boxplot for SepalWidthCm indicates a greater variance in the data compared to PetalLengthCm.</p>
+            <img src="images/Iris_class_histogram.png" width="auto" height = "600"/> 
+            <p>130:  The bar chart illustrates the distribution of different species in the dataset.</p>
+            <img src="images/Iris_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>131: The dataset consists of a certain number of records and an specific number of variables.</p>
+            <img src="images/Iris_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>132: Could not generate the sentence.</p>
+            <img src="images/phone_decision_tree.png" width="auto" height = "600"/> 
+            <p>133:  The decision tree has a depth of 2, with the first split based on int_memory being less than or equal to 30.5, and the second split based on mobile_wt being less than or equal to 91.5.</p>
+            <img src="images/phone_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>134: The MLP model shows increasing accuracy but also signs of overfitting past 800 iterations.</p>
+            <img src="images/phone_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>135: The gradient boosting model displays increasing accuracy but also higher overfitting as the number of estimators exceeds 500.</p>
+            <img src="images/phone_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>136: The accuracy of Random Forests continuously increases as the number of estimators goes up, but eventually it plateaus and then starts decreasing due to overfitting.</p>
+            <img src="images/phone_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>137: KNN is not overfitting until the number of neighbors is greater than 15.</p>
+            <img src="images/phone_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>138: According to the chart, the decision tree exhibits increasing accuracy with max depth up to a certain point, beyond which the accuracy starts to decrease, indicating overfitting.</p>
+            <img src="images/phone_pca.png" width="auto" height = "600"/> 
+            <p>139: The first 12 principal components collectively explain 100% of the data variance.</p>
+            <img src="images/phone_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>140: Based on the provided data chart, the correlation between the variables 'battery\_power', 'fc', 'int\_memory', 'mobile\_wt', 'n\_cores', 'pc', 'px\_height', 'px\_width', 'ram', 'sc\_h', and 'sc\_w' can be observed.</p>
+            <img src="images/phone_boxplots.png" width="auto" height = "600"/> 
+            <p>141: The variable sc_h has a larger spread than the other variables.</p>
+            <img src="images/phone_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>142: The chart presents bar data for the variables 'blue', 'dual_sim', 'four_g', 'three_g', 'touch_screen', and 'wifi'.</p>
+            <img src="images/phone_class_histogram.png" width="auto" height = "600"/> 
+            <p>143: The bar chart illustrates the proportion of observations in different price ranges for the target variable.</p>
+            <img src="images/phone_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>144: Could not generate the sentence.</p>
+            <img src="images/phone_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>145: Could not generate the sentence.</p>
+            <img src="images/Titanic_decision_tree.png" width="auto" height = "600"/> 
+            <p>146: The decision tree has a depth of 2, with the first split made based on the condition Pclass <= 2.5, and the second split made based on Parch <= 0.5.</p>
+            <img src="images/Titanic_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>147: The MLP model shows increasing accuracy as the number of iterations increases, but accuracy platesauhs and begins to decrease after a certain point, indicating overfitting.</p>
+            <img src="images/Titanic_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>148: Gradient boosting models display clear signs of overfitting with more than 1000 estimators.</p>
+            <img src="images/Titanic_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>149: The accuracy of Random Forests increases as the number of estimators grows, but at a certain point, the model begins to overfit, resulting in a decrease in accuracy.</p>
+            <img src="images/Titanic_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>150: KNN is overfitting for values of k greater than the optimal number, which is not explicitly stated in the chart but can be identified as the point where the accuracy starts to plateau or decreases slightly.</p>
+            <img src="images/Titanic_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>151: According to the chart, the decision tree shows increasing accuracy with max depth up to a certain point, after which accuracy begins to decrease, indicating overfitting.</p>
+            <img src="images/Titanic_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>152: The performance of both accuracy and recall increases as the max depth of the decision tree increases, but the trend of each metric may differ and the gap between them may narrow down at larger depths due to overfitting.</p>
+            <img src="images/Titanic_pca.png" width="auto" height = "600"/> 
+            <p>153: Based on the given data chart, the six principal components together explain 100.0% of the data variance.</p>
+            <img src="images/Titanic_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>154: The heatmap indicates the degree of correlation between the variables 'Pclass', 'Age', 'SibSp', 'Parch', and 'Fare' in this dataset.</p>
+            <img src="images/Titanic_boxplots.png" width="auto" height = "600"/> 
+            <p>155: It is not possible to determine if the variable "Fare" is symmetrically distributed based on the given boxplots.</p>
+            <img src="images/Titanic_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>156:  The bar charts present data on theEmbarked and Sex variables.</p>
+            <img src="images/Titanic_mv.png" width="auto" height = "600"/> 
+            <p>157:  The bar chart indicates that both variables 'Age' and 'Embarked' have missing values.</p>
+            <img src="images/Titanic_class_histogram.png" width="auto" height = "600"/> 
+            <p>158:  The chart illustrates the number of passengers in each survival group (Survived = Yes or No) on the Titanic.</p>
+            <img src="images/Titanic_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>159: Could not generate the sentence.</p>
+            <img src="images/Titanic_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>160: Could not generate the sentence.</p>
+            <img src="images/apple_quality_decision_tree.png" width="auto" height = "600"/> 
+            <p>161: The decision tree has a depth of 2, with the first split based on the condition Juiciness <= -0.3 and the second split based on Crunchiness <= 2.25.</p>
+            <img src="images/apple_quality_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>162: We can observe that the accuracy of the MLP model continues to increase beyond 500 iterations, indicating overfitting.</p>
+            <img src="images/apple_quality_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>163: We can see from the chart that graduate boosting models exhibit overfitting when there are more than a certain number of estimators, which varies depending on the specific data set.</p>
+            <img src="images/apple_quality_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>164: The accuracy of Random Forests continues to increase as the number of estimators goes up, but at a decreasing rate, eventually reaching a plateau, indicating the model is Overfitting.</p>
+            <img src="images/apple_quality_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>165:  KNN shows overfitting for values of neighbors greater than 17.</p>
+            <img src="images/apple_quality_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>166:  According to the given chart, the decision tree showing overfitting has increasing accuracy up to a certain max depth, after which the accuracy starts to decrease.</p>
+            <img src="images/apple_quality_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>167:  The performance of both accuracy and recall increases with max depth up to a certain point, after which overfitting causes a significant decrease in both metrics.</p>
+            <img src="images/apple_quality_pca.png" width="auto" height = "600"/> 
+            <p>168: The seven principal components together explain a significant proportion of the variance in the data.</p>
+            <img src="images/apple_quality_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>169: Could not generate the sentence.</p>
+            <img src="images/apple_quality_boxplots.png" width="auto" height = "600"/> 
+            <p>170: Could not generate the sentence.</p>
+            <img src="images/apple_quality_class_histogram.png" width="auto" height = "600"/> 
+            <p>171:  The chart illustrates the distribution of the quality variable in different categories.</p>
+            <img src="images/apple_quality_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>172: If there are more variables than records in the dataset, then it is likely to be suffering from the multicollinearity problem.</p>
+            <img src="images/apple_quality_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>173:  The histograms represent the distribution of the variables Size, Weight, Sweetness, Crunchiness, Juiciness, Ripeness, and Acidity.</p>
+            <img src="images/Employee_decision_tree.png" width="auto" height = "600"/> 
+            <p>174:  The decision tree has a depth of 2, with the first split being made based on the condition JoiningYear <= 2017.5, and the second split being made based on ExperienceInCurrentDomain <= 3.5.</p>
+            <img src="images/Employee_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>175:  beyond a certain point, the MLP model's accuracy starts to decrease, indicating overfitting, in the given data chart.</p>
+            <img src="images/Employee_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>176:  The gradient boosting model shows increasing accuracy but also deteriorating performance with the number of estimators exceeding 500.</p>
+            <img src="images/Employee_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>177:  The random forest model with 2 estimators may exhibit high accuracy, but as the number of estimators increases, the model may begin to overfit the data, leading to decreased accuracy.</p>
+            <img src="images/Employee_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>178:  The accuracy of K-Nearest Neighbors (KNN) increases as the number of neighbors grows, up until a point where it begins to overfit the data, around 13 or more neighbors.</p>
+            <img src="images/Employee_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>179:  The decision tree chart indicates an increasing accuracy as the max depth increases up to a point, after which accuracy starts to decrease, suggesting overfitting.</p>
+            <img src="images/Employee_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>180:  The performance of both accuracy and recall shows increasing variability with an increasing max depth, indicating the decision tree is overfitting the data.</p>
+            <img src="images/Employee_pca.png" width="auto" height = "600"/> 
+            <p>181: The four principal components in this chart explain a combined percentage of the data variance, as shown in the chart.</p>
+            <img src="images/Employee_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>182: The correlation between 'Age' and 'ExperienceInCurrentDomain' is negative.</p>
+            <img src="images/Employee_boxplots.png" width="auto" height = "600"/> 
+            <p>183:  It is not possible to determine if the variable "JoiningYear" is normally distributed based on the provided boxplots.</p>
+            <img src="images/Employee_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>184: Could not generate the sentence.</p>
+            <img src="images/Employee_class_histogram.png" width="auto" height = "600"/> 
+            <p>185: The majority of data points in this chart represent the 'Leave' category.</p>
+            <img src="images/Employee_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>186: Based on the given bar chart, the dataset contains a total of 500 records and 20 variables.</p>
+            <img src="images/Employee_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>187: Could not generate the sentence.</p>
+            <p></p>
+            <h3>-----------------------------gpt3.5-zeroshot-----------------------------</h3>
+            <img src="images/smoking_drinking_decision_tree.png" width="auto" height = "600"/> 
+            <p>188: The number of False Positives is higher than the number of False Negatives for the presented tree.</p>
+            <img src="images/smoking_drinking_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>189: Overfitting occurs when the training accuracy continues to increase while the validation accuracy starts to decrease.</p>
+            <img src="images/smoking_drinking_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>190: Overfitting occurs in gradient boosting models when the number of estimators increases beyond a certain threshold.</p>
+            <img src="images/smoking_drinking_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>191: The overfitting of the random forest model is observable as the number of estimators increases.</p>
+            <img src="images/smoking_drinking_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>192: KNN with more than 13 neighbors is in overfitting.</p>
+            <img src="images/smoking_drinking_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>193: The overfitting in the decision tree chart increases with depth.</p>
+            <img src="images/smoking_drinking_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>194: The difference between accuracy and recall increases as the max depth of the decision tree increases due to overfitting.</p>
+            <img src="images/smoking_drinking_pca.png" width="auto" height = "600"/> 
+            <p>195: The first two principal components explain more variance than the last two principal components.</p>
+            <img src="images/smoking_drinking_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>196: The variable weight and BLDS are redundant in this dataset.</p>
+            <img src="images/smoking_drinking_boxplots.png" width="auto" height = "600"/> 
+            <p>197: Variable waistline is balanced.</p>
+            <img src="images/smoking_drinking_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>198: The variable 'sex' can be seen as binary for this data chart description.</p>
+            <img src="images/smoking_drinking_class_histogram.png" width="auto" height = "600"/> 
+            <p>199: The bar chart displays frequency counts of the categories in the variable DRK_YN.</p>
+            <img src="images/smoking_drinking_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>200: The bar chart displays the count of records and variables in the dataset.</p>
+            <img src="images/smoking_drinking_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>201: 'The variable LDL_chole shows some outlier values.'</p>
+            <img src="images/BankNoteAuthentication_decision_tree.png" width="auto" height = "600"/> 
+            <p>202: The condition "skewness <= 5.16" is used as the first decision in the decision tree.</p>
+            <img src="images/BankNoteAuthentication_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>203: The accuracy of the MLP model decreases as the number of iterations increases, indicating overfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>204: In the chart, the accuracy decreases as the number of estimators increases, indicating overfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>205: When the number of estimators in a random forest model increases, the accuracy tends to decrease due to overfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>206: 'Overfitting in KNN models typically occurs when the number of neighbors is low.'</p>
+            <img src="images/BankNoteAuthentication_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>207: The decision tree starts overfitting for depths above 20.</p>
+            <img src="images/BankNoteAuthentication_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>208: The accuracy increases as the maximum depth of the decision tree model increases.</p>
+            <img src="images/BankNoteAuthentication_pca.png" width="auto" height = "600"/> 
+            <p>209: The sum of the explained variance ratios of the 4 principal components is equal to 1.</p>
+            <img src="images/BankNoteAuthentication_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>210: 'Variables entropy and curtosis are redundant, but we can’t say the same for the pair variance and skewness.'</p>
+            <img src="images/BankNoteAuthentication_boxplots.png" width="auto" height = "600"/> 
+            <p>211: The boxplots suggest that variable curtosis has outliers.</p>
+            <img src="images/BankNoteAuthentication_class_histogram.png" width="auto" height = "600"/> 
+            <p>212: The bar chart is used to visualize categorical data.</p>
+            <img src="images/BankNoteAuthentication_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>213: The number of records in the dataset is visualized using a bar chart.</p>
+            <img src="images/BankNoteAuthentication_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>214: The variable skewness doesn't have any outliers.</p>
+            <img src="images/Iris_decision_tree.png" width="auto" height = "600"/> 
+            <p>215: The data chart "nan" contains missing values.</p>
+            <img src="images/Iris_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>216: Overfitting in the MLP model worsens as the number of iterations increases past a certain point.</p>
+            <img src="images/Iris_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>217: The accuracy decreases as the number of estimators in the gradient boosting model increases, indicating overfitting.</p>
+            <img src="images/Iris_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>218: The chart shows that as the number of estimators increases, the accuracy also increases, indicating a typical case of overfitting.</p>
+            <img src="images/Iris_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>219: KNN with more than 23 neighbors is in overfitting.</p>
+            <img src="images/Iris_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>220: According to the chart, as the decision tree depth increases, the accuracy also increases.</p>
+            <img src="images/Iris_pca.png" width="auto" height = "600"/> 
+            <p>221: The sum of the explained variance ratios of the 4 principal components should be equal to 1.</p>
+            <img src="images/Iris_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>222: 'The variable PetalWidthCm can be discarded without risking losing information.'</p>
+            <img src="images/Iris_boxplots.png" width="auto" height = "600"/> 
+            <p>223: 'Those boxplots show that the data is not normalized.'</p>
+            <img src="images/Iris_class_histogram.png" width="auto" height = "600"/> 
+            <p>224: A bar chart is a suitable visualization to represent categorical data like Species distribution.</p>
+            <img src="images/Iris_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>225: The bar chart would display two bars representing the number of records and variables.</p>
+            <img src="images/Iris_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>226: The variable PetalWidthCm can be seen as ordinal.</p>
+            <img src="images/phone_decision_tree.png" width="auto" height = "600"/> 
+            <p>227: The number of True Negatives is higher than the number of True Positives for the presented tree.</p>
+            <img src="images/phone_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>228: It is possible to observe overfitting in MLP models after a large number of iterations.</p>
+            <img src="images/phone_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>229: As the number of estimators increases, the accuracy of the model decreases due to overfitting.</p>
+            <img src="images/phone_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>230: The accuracy of the random forest model decreases as the number of estimators increases, indicating potential overfitting.</p>
+            <img src="images/phone_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>231: KNN is in overfitting for k less than 13.</p>
+            <img src="images/phone_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>232: The chart illustrates that the decision tree begins to overfit at a max depth of 10.</p>
+            <img src="images/phone_pca.png" width="auto" height = "600"/> 
+            <p>233: The second principal component explains more data variance than the fourth principal component.</p>
+            <img src="images/phone_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>234: The variable 'ram' has a high correlation with 'battery_power'.</p>
+            <img src="images/phone_boxplots.png" width="auto" height = "600"/> 
+            <p>235: Variable px_height shows some outlier values.</p>
+            <img src="images/phone_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>236: The variable 'wifi' can be seen as ordinal without losing information.</p>
+            <img src="images/phone_class_histogram.png" width="auto" height = "600"/> 
+            <p>237: The data chart displays the frequency of different price ranges in the dataset.</p>
+            <img src="images/phone_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>238: The number of variables in the dataset is greater than the number of records.</p>
+            <img src="images/phone_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>239: The histograms presented show a large number of outliers for most of the numeric variables.</p>
+            <img src="images/Titanic_decision_tree.png" width="auto" height = "600"/> 
+            <p>240: The variable Parch discriminates between the target values, as shown in the decision tree.</p>
+            <img src="images/Titanic_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>241: Overfitting occurs in the MLP model as the number of iterations increases beyond a certain point.</p>
+            <img src="images/Titanic_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>242: The accuracy of the gradient boosting model decreases as the number of estimators increases from 2 to 2002.</p>
+            <img src="images/Titanic_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>243: The overfitting of random forests increases with the number of estimators.</p>
+            <img src="images/Titanic_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>244: KNN is in overfitting for k larger than 13.</p>
+            <img src="images/Titanic_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>245: "The chart shows that the decision tree accuracy continues to increase as the max depth increases."</p>
+            <img src="images/Titanic_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>246: The accuracy typically increases as the max depth of the decision tree increases, while the recall may decrease.</p>
+            <img src="images/Titanic_pca.png" width="auto" height = "600"/> 
+            <p>247: The bar chart will display the relative importance of each principal component in explaining the total variance in the data.</p>
+            <img src="images/Titanic_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>248: Variables Fare and Age seem to be useful for classification tasks.</p>
+            <img src="images/Titanic_boxplots.png" width="auto" height = "600"/> 
+            <p>249: Variable Age is balanced.</p>
+            <img src="images/Titanic_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>250: The variable 'Embarked' is categorical, so it should be encoded using one-hot encoding.</p>
+            <img src="images/Titanic_mv.png" width="auto" height = "600"/> 
+            <p>251: Removing all records with missing values for 'Embarked' variable would result in losing more information than removing the variable itself.</p>
+            <img src="images/Titanic_class_histogram.png" width="auto" height = "600"/> 
+            <p>252: The bar chart visualizes the distribution of the target variable Survived.</p>
+            <img src="images/Titanic_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>253: The number of records in the dataset is represented by the bars in the chart.</p>
+            <img src="images/Titanic_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>254: The variable Fare can be seen as ordinal without losing information.</p>
+            <img src="images/apple_quality_decision_tree.png" width="auto" height = "600"/> 
+            <p>255: 'The condition Juiciness <= -0.3 is used as the first split in the decision tree.'</p>
+            <img src="images/apple_quality_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>256: The overfitting on the MLP model is visible on the chart.</p>
+            <img src="images/apple_quality_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>257: The higher the number of estimators in gradient boosting, the more likely overfitting will occur.</p>
+            <img src="images/apple_quality_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>258: The overfitting of random forest models increases as the number of estimators increases from 2 to 2002.</p>
+            <img src="images/apple_quality_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>259: In the chart, KNN is in overfitting for k larger than 17.</p>
+            <img src="images/apple_quality_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>260: In the multi-line chart showing the overfitting of a decision tree, the accuracy increases continuously as the max depth of the tree increases.</p>
+            <img src="images/apple_quality_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>261: Increasing the maximum depth of a decision tree can lead to overfitting, causing both accuracy and recall to decrease.</p>
+            <img src="images/apple_quality_pca.png" width="auto" height = "600"/> 
+            <p>262: The total explained variance ratio of the 7 principal components is equal to 1.</p>
+            <img src="images/apple_quality_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>263: 'Variables Juiciness and Crunchiness are redundant, but we can’t say the same for the pair Sweetness and Ripeness.'</p>
+            <img src="images/apple_quality_boxplots.png" width="auto" height = "600"/> 
+            <p>264: The boxplots provide insights into the distribution of the variables.</p>
+            <img src="images/apple_quality_class_histogram.png" width="auto" height = "600"/> 
+            <p>265: The bar chart provides visual representation of the distribution of the target variable Quality.</p>
+            <img src="images/apple_quality_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>266: The dataset has a count of both records and variables.</p>
+            <img src="images/apple_quality_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>267: The variable Size can be seen as ordinal without losing information.</p>
+            <img src="images/Employee_decision_tree.png" width="auto" height = "600"/> 
+            <p>268: The number of False Positives is higher than the number of False Negatives for the presented tree.</p>
+            <img src="images/Employee_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>269: Overfitting is observed in the multi-line chart for MLP models as the number of iterations increases.</p>
+            <img src="images/Employee_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>270: The accuracy decreases as the number of estimators increases in the overfitting of gradient boosting model.</p>
+            <img src="images/Employee_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>271: The random forest model with a small number of estimators is less likely to overfit.</p>
+            <img src="images/Employee_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>272: KNN with 1 neighbor is in overfitting.</p>
+            <img src="images/Employee_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>273: The chart illustrates that the decision tree starts overfitting after a depth of 10.</p>
+            <img src="images/Employee_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>274: The accuracy increases with the depth while the recall decreases due to overfitting.</p>
+            <img src="images/Employee_pca.png" width="auto" height = "600"/> 
+            <p>275: The sum of the explained variance ratios of the 4 principal components is equal to 1.</p>
+            <img src="images/Employee_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>276: The variable 'Age' has a strong positive correlation with 'ExperienceInCurrentDomain'.</p>
+            <img src="images/Employee_boxplots.png" width="auto" height = "600"/> 
+            <p>277: Variable Age shows a high number of outlier values, based on the boxplots.</p>
+            <img src="images/Employee_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>278: The variable 'Gender' can be seen as ordinal.</p>
+            <img src="images/Employee_class_histogram.png" width="auto" height = "600"/> 
+            <p>279: A bar chart can visually represent the frequency or count of different categories within the target variable LeaveOrNot.</p>
+            <img src="images/Employee_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>280: The number of variables in the dataset is represented by the height of the bars in the chart.</p>
+            <img src="images/Employee_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>281: The variable PaymentTier can be seen as ordinal.</p>
+            <p></p>
+            <h3>-----------------------------mistral-finetuned-----------------------------</h3>
+            <img src="images/smoking_drinking_decision_tree.png" width="auto" height = "600"/> 
+            <p>282:  The decision tree can be pruned with a depth of 3.</p>
+            <img src="images/smoking_drinking_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>283:  The model begins to underfit after 800 iterations.</p>
+            <img src="images/smoking_drinking_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>284:  Gradient boosting with 1003 estimators is not overfitting the data.</p>
+            <img src="images/smoking_drinking_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>285:  Random forest is not affected by overfitting when using 2 estimators.</p>
+            <img src="images/smoking_drinking_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>286:  The accuracy is always above 95% when k-nearest neighbors is applied.</p>
+            <img src="images/smoking_drinking_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>287:  The decision tree performs better when max depth is greater than 15.</p>
+            <img src="images/smoking_drinking_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>288:  The decision tree with a max depth of 15 shows better recall than the one with a max depth of 13.</p>
+            <img src="images/smoking_drinking_pca.png" width="auto" height = "600"/> 
+            <p>289:  A component with an explained variance ratio of 0.5 has a greater explanatory power than the first principal component.</p>
+            <img src="images/smoking_drinking_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>290: Hemoglobin and waistline present a negative correlation.</p>
+            <img src="images/smoking_drinking_boxplots.png" width="auto" height = "600"/> 
+            <p>291:  Age and waistline have identical distributions.</p>
+            <img src="images/smoking_drinking_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>292:  The difference between the mean of hear\_right for Male and Female is statistically significant.</p>
+            <img src="images/smoking_drinking_class_histogram.png" width="auto" height = "600"/> 
+            <p>293:  The mean value of DRK_YN is greater than 0.5.</p>
+            <img src="images/smoking_drinking_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>294:  The dataset contains more variables than records.</p>
+            <img src="images/smoking_drinking_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>295:  Height and weight have similar distributions.</p>
+            <img src="images/BankNoteAuthentication_decision_tree.png" width="auto" height = "600"/> 
+            <p>296:  The decision tree has a depth greater than 2.</p>
+            <img src="images/BankNoteAuthentication_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>297:  The model starts to overfit after 600 iterations.</p>
+            <img src="images/BankNoteAuthentication_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>298:  Gradient boosting models with more than 250 estimators reach a plateau in terms of accuracy.</p>
+            <img src="images/BankNoteAuthentication_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>299:  Random forest starts overfitting at approximately 250 estimators.</p>
+            <img src="images/BankNoteAuthentication_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>300:  The chart indicates that overfitting occurs with k-nearest neighbors starting from 10 neighbors.</p>
+            <img src="images/BankNoteAuthentication_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>301:  The decision tree model reaches its optimal accuracy for max depth equal to 11.</p>
+            <img src="images/BankNoteAuthentication_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>302: Max depth of 10 is best for both accuracy and recall.</p>
+            <img src="images/BankNoteAuthentication_pca.png" width="auto" height = "600"/> 
+            <p>303:  The second principal component explains less variance than the third principal component.</p>
+            <img src="images/BankNoteAuthentication_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>304:  Variance and entropy have a negative correlation.</p>
+            <img src="images/BankNoteAuthentication_boxplots.png" width="auto" height = "600"/> 
+            <p>305:  Entropy is more variables have negative values.</p>
+            <img src="images/BankNoteAuthentication_class_histogram.png" width="auto" height = "600"/> 
+            <p>306:  There are more instances of class 1 than class 0.</p>
+            <img src="images/BankNoteAuthentication_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>307:  The number of variables is always smaller than the number of records.</p>
+            <img src="images/BankNoteAuthentication_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>308:  Skewness of 'variance' is positive.</p>
+            <img src="images/Iris_decision_tree.png" width="auto" height = "600"/> 
+            <p>309: Could not generate the sentence.</p>
+            <img src="images/Iris_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>310: The MLP model is not overfitting when 300 iterations are reached.</p>
+            <img src="images/Iris_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>311:  The accuracy is decreasing after a certain number of estimators.</p>
+            <img src="images/Iris_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>312:  The random forest model with 201 estimators underfits the data.</p>
+            <img src="images/Iris_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>313:  The accuracy starts to decrease when the number of neighbors is greater than 12.</p>
+            <img src="images/Iris_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>314:  The decision tree starts to overfit from a depth of 15.</p>
+            <img src="images/Iris_pca.png" width="auto" height = "600"/> 
+            <p>315:  The first principal component explains more than 50% of the variance.</p>
+            <img src="images/Iris_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>316:  The correlation between PetalWidthCm and SepalLengthCm is negative.</p>
+            <img src="images/Iris_boxplots.png" width="auto" height = "600"/> 
+            <p>317:  Petal length varies more between Species than Petal width.</p>
+            <img src="images/Iris_class_histogram.png" width="auto" height = "600"/> 
+            <p>318:  The number of samples for Iris-virginica is higher than for Iris-syringium.</p>
+            <img src="images/Iris_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>319:  The number of variables is always greater than the number of records.</p>
+            <img src="images/Iris_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>320:  The petal width of Iris-versicolor is greater than the sepal length of Iris-setosa.</p>
+            <img src="images/phone_decision_tree.png" width="auto" height = "600"/> 
+            <p>321:  Int memory is the only feature used in the second split.</p>
+            <img src="images/phone_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>322:  The model starts to underfit at around 750 iterations.</p>
+            <img src="images/phone_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>323:  The model is underfitting when 50 estimators are used.</p>
+            <img src="images/phone_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>324:  Random forest with 100 estimators is an overfitting model.</p>
+            <img src="images/phone_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>325:  The accuracy will increase when the number of neighbors is greater than 13.</p>
+            <img src="images/phone_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>326: The decision tree with max depth 12 shows the best performance.</p>
+            <img src="images/phone_pca.png" width="auto" height = "600"/> 
+            <p>327:  The explained variance ratios of the first five principal components are higher than those of the last five principal components.</p>
+            <img src="images/phone_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>328:  Talk time has a negative correlation with battery power.</p>
+            <img src="images/phone_boxplots.png" width="auto" height = "600"/> 
+            <p>329:  FC is more variable than battery_power.</p>
+            <img src="images/phone_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>330:  Four-G is more prevalent than Wifi.</p>
+            <img src="images/phone_class_histogram.png" width="auto" height = "600"/> 
+            <p>331:  The price range "Low price" is the most frequent.</p>
+            <img src="images/phone_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>332:  The dataset has more variables than records.</p>
+            <img src="images/phone_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>333:  Talk time has greater variance than mobile wt.</p>
+            <img src="images/Titanic_decision_tree.png" width="auto" height = "600"/> 
+            <p>334:  A passenger with Parch > 0.5 is never classified in this decision tree as survival.</p>
+            <img src="images/Titanic_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>335:  The accuracy is high with less than 300 iterations.</p>
+            <img src="images/Titanic_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>336:  The model starts overfitting around 100 estimators.</p>
+            <img src="images/Titanic_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>337:  Overfitting begins to occur with around 10 estimators.</p>
+            <img src="images/Titanic_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>338:  The accuracy of k-nearest neighbors can reach up to 99% with 11 neighbors.</p>
+            <img src="images/Titanic_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>339:  The decision tree with a max depth of 17 outperforms the one with a max depth of 23.</p>
+            <img src="images/Titanic_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>340:  The accuracy and recall values are always greater than 0.5.</p>
+            <img src="images/Titanic_pca.png" width="auto" height = "600"/> 
+            <p>341:  The fourth principal component explains 15% of the variance.</p>
+            <img src="images/Titanic_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>342:  Age is negatively correlated with Pclass.</p>
+            <img src="images/Titanic_boxplots.png" width="auto" height = "600"/> 
+            <p>343:  The mean of SibSp is greater than the mean of Parch.</p>
+            <img src="images/Titanic_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>344: The number of female passengers did not differ much between the embarkation ports.</p>
+            <img src="images/Titanic_mv.png" width="auto" height = "600"/> 
+            <p>345:  The variable 'Pclass' does not have missing values.</p>
+            <img src="images/Titanic_class_histogram.png" width="auto" height = "600"/> 
+            <p>346:  First passenger survived more than third class.</p>
+            <img src="images/Titanic_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>347:  The number of variables is always greater than the number of records.</p>
+            <img src="images/Titanic_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>348:  The mean of 'Age' is higher than the mean of 'SibSp'.</p>
+            <img src="images/apple_quality_decision_tree.png" width="auto" height = "600"/> 
+            <p>349:  Decision trees with depth = 2 have at most one node at the depth of 3.</p>
+            <img src="images/apple_quality_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>350:  The overfitting of the mlp starts around iteration 700.</p>
+            <img src="images/apple_quality_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>351:  The number of estimators for which the model obtains the lowest accuracy is 385.</p>
+            <img src="images/apple_quality_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>352:  The random forest accuracy tends to increase and then decrease as the number of estimators grows.</p>
+            <img src="images/apple_quality_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>353:  The chart indicates that the accuracy of k-nearest neighbors model decreases when the number of neighbors exceeds 16.</p>
+            <img src="images/apple_quality_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>354:  The decision tree with a max depth of 10 is not overfitting the data.</p>
+            <img src="images/apple_quality_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>355:  The decision tree with a max depth of 15 has the same performance as the decision tree with a max depth of 16.</p>
+            <img src="images/apple_quality_pca.png" width="auto" height = "600"/> 
+            <p>356:  The first principal component explains more than 80% of the variance.</p>
+            <img src="images/apple_quality_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>357:  Size and Ripeness are negatively correlated.</p>
+            <img src="images/apple_quality_boxplots.png" width="auto" height = "600"/> 
+            <p>358: Size has more outliers than other variables.</p>
+            <img src="images/apple_quality_class_histogram.png" width="auto" height = "600"/> 
+            <p>359: The highest percentage of low quality samples appears in the 60-70 range.</p>
+            <img src="images/apple_quality_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>360:  The dataset contains only numerical variables.</p>
+            <img src="images/apple_quality_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>361:  The average Size is greater than the average Weight.</p>
+            <img src="images/Employee_decision_tree.png" width="auto" height = "600"/> 
+            <p>362:  The decision tree's second split is not based on JoiningYear.</p>
+            <img src="images/Employee_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>363:  The overfitting of the MLP starts after 600 iterations.</p>
+            <img src="images/Employee_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>364:  The model becomes underfitting after 850 estimators.</p>
+            <img src="images/Employee_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>365:  The random forest model with 706 estimators has the best accuracy.</p>
+            <img src="images/Employee_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>366:  The accuracy is higher when k = 17 than when k = 13.</p>
+            <img src="images/Employee_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>367:  Overfitting starts between a max depth of 15 to 20.</p>
+            <img src="images/Employee_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>368:  The decision tree model starts overfitting at a max depth of 7.</p>
+            <img src="images/Employee_pca.png" width="auto" height = "600"/> 
+            <p>369:  Principal component 3 explains more variance than principal component 4.</p>
+            <img src="images/Employee_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>370:  PaymentTier is correlated with JoiningYear.</p>
+            <img src="images/Employee_boxplots.png" width="auto" height = "600"/> 
+            <p>371:  There's no outlier on 'Age' variable.</p>
+            <img src="images/Employee_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>372:  Women tend to bench press more than men in this dataset.</p>
+            <img src="images/Employee_class_histogram.png" width="auto" height = "600"/> 
+            <p>373:  More than half of the employees leave the company.</p>
+            <img src="images/Employee_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>374:  The number of variables is more than the number of records.</p>
+            <img src="images/Employee_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>375:  Age is the only variable with a normal distribution.</p>
+            <p></p>
+            <h3>-----------------------------final_model-----------------------------</h3>
+            <img src="images/smoking_drinking_decision_tree.png" width="auto" height = "600"/> 
+            <p>376: Considering that A=True<=>[MK_stat<2.5] and B=True<=>[cp_cd>1.5], the Decision Tree presented classifies (not A, B) as Healthy.</p>
+            <img src="images/smoking_drinking_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>377: We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.</p>
+            <img src="images/smoking_drinking_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>378: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/smoking_drinking_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>379: The random forests results shown can be explained by the fact that they are in overfitting.</p>
+            <img src="images/smoking_drinking_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>380: The chart reporting the recall for KNN would be more helpful than the chart reporting the accuracy for the same algorithm.</p>
+            <img src="images/smoking_drinking_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>381: The chart reporting the recall for different trees shows that the model enters in overfitting for models with depth higher than 6.</p>
+            <img src="images/smoking_drinking_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>382: The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.</p>
+            <img src="images/smoking_drinking_pca.png" width="auto" height = "600"/> 
+            <p>383: The first 4 principal components are enough for explaining half the data variance.</p>
+            <img src="images/smoking_drinking_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>384: Variable SMK_stat_type_cd seems to be relevant for the majority of mining tasks.</p>
+            <img src="images/smoking_drinking_boxplots.png" width="auto" height = "600"/> 
+            <p>385: Scaling this dataset would be mandatory to improve the results with distance-based methods.</p>
+            <img src="images/smoking_drinking_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>386: It is clear that variable sex shows some rare classes.</p>
+            <img src="images/smoking_drinking_class_histogram.png" width="auto" height = "600"/> 
+            <p>387: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/smoking_drinking_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>388: Balancing this dataset by SMOTE would most probably be preferable over undersampling.</p>
+            <img src="images/smoking_drinking_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>389: At least 50 of the variables present outliers.</p>
+            <img src="images/BankNoteAuthentication_decision_tree.png" width="auto" height = "600"/> 
+            <p>390: Considering that A=True<=>[skewness <= 5.16] and B=True<=>[curtosis <= 0.19], it is possible to verify that KNN algorithm classifies (not A, B) as 0 for any k ≤ 182.</p>
+            <img src="images/BankNoteAuthentication_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>391: We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.</p>
+            <img src="images/BankNoteAuthentication_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>392: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/BankNoteAuthentication_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>393: Results for Random Forests identified as 3, can be explained by its estimators being in underfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>394: KNN with 5 neighbour is in overfitting.</p>
+            <img src="images/BankNoteAuthentication_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>395: The decision tree is in overfitting for depths above 7.</p>
+            <img src="images/BankNoteAuthentication_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>396: The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.</p>
+            <img src="images/BankNoteAuthentication_pca.png" width="auto" height = "600"/> 
+            <p>397: The first 2 principal components are enough for explaining half the data variance.</p>
+            <img src="images/BankNoteAuthentication_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>398: Variable skewness seems to be relevant for the majority of mining tasks.</p>
+            <img src="images/BankNoteAuthentication_boxplots.png" width="auto" height = "600"/> 
+            <p>399: Variable skewness is balanced.</p>
+            <img src="images/BankNoteAuthentication_class_histogram.png" width="auto" height = "600"/> 
+            <p>400: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/BankNoteAuthentication_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>401: Balancing this dataset by SMOTE would most probably be preferable over Undersampling.</p>
+            <img src="images/BankNoteAuthentication_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>402: The variable skewness doesn’t have any outliers.</p>
+            <img src="images/Iris_decision_tree.png" width="auto" height = "600"/> 
+            <p>403: Considering that A=True<=>[PetalWidthCm <= 1.75] and B=True<=>[PetalWidthCm <= -2.0], it is possible to state that KNN algorithm classifies (not A, not B) as 2 (KNN with K = 3).</p>
+            <img src="images/Iris_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>404: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/Iris_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>405: We are able to identify the existence of overfitting for gradient boosting models with more than 500 estimators.</p>
+            <img src="images/Iris_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>406: The random forests results shown can be explained by the absence of balance in the training set.</p>
+            <img src="images/Iris_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>407: KNN with more than 17 neighbours is in overfitting.</p>
+            <img src="images/Iris_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>408: We are able to identify the existence of overfitting for decision tree models with more than 4 nodes of depth.</p>
+            <img src="images/Iris_pca.png" width="auto" height = "600"/> 
+            <p>409: The first 2 principal components are enough for explaining half the data variance.</p>
+            <img src="images/Iris_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>410: The intrinsic dimensionality of this dataset is 2.</p>
+            <img src="images/Iris_boxplots.png" width="auto" height = "600"/> 
+            <p>411: The existence of outliers is one of the problems to tackle in this dataset.</p>
+            <img src="images/Iris_class_histogram.png" width="auto" height = "600"/> 
+            <p>412: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/Iris_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>413: Given the number of records and that some variables are numeric, we might be facing the curse of dimensionality.</p>
+            <img src="images/Iris_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>414: At least 85 of the variables present outliers.</p>
+            <img src="images/phone_decision_tree.png" width="auto" height = "600"/> 
+            <p>415: Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], it is possible to state that KNN algorithm classifies (not A, not B) as 3 .</p>
+            <img src="images/phone_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>416: We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.</p>
+            <img src="images/phone_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>417: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/phone_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>418: The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.</p>
+            <img src="images/phone_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>419: KNN with more than 15 neighbours is in overfitting.</p>
+            <img src="images/phone_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>420: The decision tree is in overfitting for depths above 6.</p>
+            <img src="images/phone_pca.png" width="auto" height = "600"/> 
+            <p>421: The first 8 principal components are enough for explaining half the data variance.</p>
+            <img src="images/phone_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>422: The intrinsic dimensionality of this dataset is 4.</p>
+            <img src="images/phone_boxplots.png" width="auto" height = "600"/> 
+            <p>423: Scaling this dataset would be mandatory to improve the results with distance-based methods.</p>
+            <img src="images/phone_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>424: The variable three_g can be seen as ordinal.</p>
+            <img src="images/phone_class_histogram.png" width="auto" height = "600"/> 
+            <p>425: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/phone_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>426: We face the curse of dimensionality with this dataset.</p>
+            <img src="images/phone_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>427: It is clear that variable px_width shows some outliers, but we can’t be sure of the same for variable sc_w.</p>
+            <img src="images/Titanic_decision_tree.png" width="auto" height = "600"/> 
+            <p>428: As reported in the tree, the number of False Positive is smaller than the number of False Negatives.</p>
+            <img src="images/Titanic_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>429: We are able to identify the existence of overfitting for MLP models trained longer than 300 episodes.</p>
+            <img src="images/Titanic_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>430: We are able to identify the existence of overfitting for gradient boosting models with more than 1002 estimators.</p>
+            <img src="images/Titanic_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>431: We are able to identify the existence of overfitting for random forest models with more than 1502 estimators.</p>
+            <img src="images/Titanic_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>432: KNN is in overfitting for k larger than 17.</p>
+            <img src="images/Titanic_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>433: We are able to identify the existence of overfitting for decision tree models with more than 3 nodes of depth.</p>
+            <img src="images/Titanic_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>434: We are able to identify the existence of overfitting for decision tree models with more than 5 nodes of depth.</p>
+            <img src="images/Titanic_pca.png" width="auto" height = "600"/> 
+            <p>435: The first 2 principal components are enough for explaining half the data variance.</p>
+            <img src="images/Titanic_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>436: Removing variable SibSp might improve the training of decision trees .</p>
+            <img src="images/Titanic_boxplots.png" width="auto" height = "600"/> 
+            <p>437: The variable Age doesn’t have any outliers.</p>
+            <img src="images/Titanic_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>438: The variable Sex can be seen as ordinal.</p>
+            <img src="images/Titanic_mv.png" width="auto" height = "600"/> 
+            <p>439: Feature generation based on variable AG_Employed seems to be promising.</p>
+            <img src="images/Titanic_class_histogram.png" width="auto" height = "600"/> 
+            <p>440: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/Titanic_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>441: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/Titanic_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>442: Outliers seem to be a problem in the dataset.</p>
+            <img src="images/apple_quality_decision_tree.png" width="auto" height = "600"/> 
+            <p>443: The variable Juiciness discriminates between the target values, as shown in the decision tree.</p>
+            <img src="images/apple_quality_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>444: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/apple_quality_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>445: Results for Gradient Boosting up to 1502 estimators can be explained by overfitting.</p>
+            <img src="images/apple_quality_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>446: Results for Random Forest identified as 3, may be explained by its estimators being in underfitting.</p>
+            <img src="images/apple_quality_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>447: KNN with 5 neighbour is in overfitting.</p>
+            <img src="images/apple_quality_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>448: The decision tree is in overfitting for depths above 8.</p>
+            <img src="images/apple_quality_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>449: The difference between recall and accuracy grows with the depth due to the overfitting phenomenon.</p>
+            <img src="images/apple_quality_pca.png" width="auto" height = "600"/> 
+            <p>450: Using the first 2 principal components would imply an error between 5 and 20%.</p>
+            <img src="images/apple_quality_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>451: The variable Ripeness can be discarded without risking losing information.</p>
+            <img src="images/apple_quality_boxplots.png" width="auto" height = "600"/> 
+            <p>452: The histograms presented show a large number of outliers for most of the numeric variables.</p>
+            <img src="images/apple_quality_class_histogram.png" width="auto" height = "600"/> 
+            <p>453: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/apple_quality_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>454: Given the number of records and that some variables are date, we might be facing the curse of dimensionality.</p>
+            <img src="images/apple_quality_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>455: Given the usual semantics of Ripeness variable, dummification would have been a better codification.</p>
+            <img src="images/Employee_decision_tree.png" width="auto" height = "600"/> 
+            <p>456: Variable JoiningYear is one of the most relevant variables.</p>
+            <img src="images/Employee_overfitting_mlp.png" width="auto" height = "600"/> 
+            <p>457: We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.</p>
+            <img src="images/Employee_overfitting_gb.png" width="auto" height = "600"/> 
+            <p>458: We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.</p>
+            <img src="images/Employee_overfitting_rf.png" width="auto" height = "600"/> 
+            <p>459: We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.</p>
+            <img src="images/Employee_overfitting_knn.png" width="auto" height = "600"/> 
+            <p>460: KNN with less than 9 neighbours is in overfitting.</p>
+            <img src="images/Employee_overfitting_decision_tree.png" width="auto" height = "600"/> 
+            <p>461: The chart reporting the recall of a KNN model for different values of K shows that it enters in overfitting for K above 30.</p>
+            <img src="images/Employee_overfitting_dt_acc_rec.png" width="auto" height = "600"/> 
+            <p>462: We are able to identify the existence of overfitting for decision tree models with more than 8 nodes of depth.</p>
+            <img src="images/Employee_pca.png" width="auto" height = "600"/> 
+            <p>463: The first 3 principal components are enough for explaining half the data variance.</p>
+            <img src="images/Employee_correlation_heatmap.png" width="auto" height = "600"/> 
+            <p>464: It is clear that variable Age and variable JoiningYear are redundant.</p>
+            <img src="images/Employee_boxplots.png" width="auto" height = "600"/> 
+            <p>465: The existence of outliers is one of the problems to tackle in this dataset.</p>
+            <img src="images/Employee_histograms_symbolic.png" width="auto" height = "600"/> 
+            <p>466: The variable Gender can be seen as ordinal.</p>
+            <img src="images/Employee_class_histogram.png" width="auto" height = "600"/> 
+            <p>467: Balancing this dataset would be mandatory to improve the results.</p>
+            <img src="images/Employee_nr_records_nr_variables.png" width="auto" height = "600"/> 
+            <p>468: We face the curse of dimensionality when training a classifier with this dataset.</p>
+            <img src="images/Employee_histograms_numeric.png" width="auto" height = "600"/> 
+            <p>469: It is clear that variable ExperienceInCurrentDomain shows some outliers, but we can’t be sure of the same for variable Age.</p>
+</body> 
+</html> 

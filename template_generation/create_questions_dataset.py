@@ -107,7 +107,8 @@ for filename in os.scandir(directory):
                 
         vars[file_tag] = {'target': [classes[file_tag][0]], 
                           'binary': classes[file_tag][0] in variable_types[file_tag]['binary'],
-                          'numeric_vars': numeric_vars, 
+                          'numeric_vars': numeric_vars,
+                          'variables_dt': [conditions[file_tag][0].split(' <=')[0],conditions[file_tag][1].split(' <=')[0]],
                           'symbolic_vars': symbolic_vars,
                           'missing_values': mv,
                           'conditions': conditions[file_tag],
@@ -138,6 +139,8 @@ for filename in tqdm(os.scandir(directory)):
                         options[str(j)] = ['<all_variables>']
                     elif row['Space'+str(j)] == '<variables>':
                         options[str(j)] = vars[file_tag]['numeric_vars']
+                    elif row['Space'+str(j)] == '<variables-dt>':
+                        options[str(j)] = vars[file_tag]['variables_dt']
                     elif row['Space'+str(j)] == '<target-values>':
                         dataset = pd.read_csv(filename.path)
                         options[str(j)] = list(dataset[vars[file_tag]['target'][0]].unique())

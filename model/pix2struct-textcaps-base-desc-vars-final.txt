@@ -1,0 +1,6 @@
+BLEU: {'bleu': 0.0, 'precisions': [0.10975609756097561, 0.0, 0.0, 0.0], 'brevity_penalty': 0.05227591594298973, 'length_ratio': 0.25308641975308643, 'translation_length': 82, 'reference_length': 324}
+METEOR: {'meteor': 0.012753232902160168}
+ROUGE: {'rouge1': 0.051870525988173044, 'rouge2': 0.007141179234202489, 'rougeL': 0.03997510115157174, 'rougeLsum': 0.0406411453470277}
+BLEU: {'bleu': 0.8791842281420499, 'precisions': [0.8863636363636364, 0.8888888888888888, 0.8666666666666667, 0.875], 'brevity_penalty': 1.0, 'length_ratio': 1.0, 'translation_length': 44, 'reference_length': 44}
+METEOR: {'meteor': 0.6097657954935154}
+ROUGE: {'rouge1': 0.7576388888888889, 'rouge2': 0.5416666666666666, 'rougeL': 0.7736111111111111, 'rougeLsum': 0.7652777777777777}

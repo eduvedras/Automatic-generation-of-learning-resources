@@ -1,7 +1,7 @@
 from pandas import read_csv
 import random
 import pandas as pd
-from dslabs_functions import get_variable_types
+from model.dslabs_functions import get_variable_types
 import itertools
 
 def getnewindex(already_used,min,max):

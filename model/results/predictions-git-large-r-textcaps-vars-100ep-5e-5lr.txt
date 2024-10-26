@@ -1,3 +1,0 @@
-BLEU: {'bleu': 0.0, 'precisions': [0.08426966292134831, 0.0, 0.0, 0.0], 'brevity_penalty': 1.0, 'length_ratio': 4.8108108108108105, 'translation_length': 178, 'reference_length': 37}
-METEOR: {'meteor': 0.15198765590378546}
-ROUGE: {'rouge1': 0.05527210884353743, 'rouge2': 0.0, 'rougeL': 0.05578970718722272, 'rougeLsum': 0.05578970718722272}

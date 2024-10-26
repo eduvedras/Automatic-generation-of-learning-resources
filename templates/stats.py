@@ -1,6 +1,6 @@
 from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca,figure, savefig, show, subplots
-from dslabs_functions import plot_bar_chart
+from model.dslabs_functions import plot_bar_chart
 
 file_tag = "OneImageDataset"
 

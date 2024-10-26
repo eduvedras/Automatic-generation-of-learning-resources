@@ -1,6 +1,6 @@
 from pandas import read_csv
 import pandas as pd
-from dslabs_functions import get_variable_types
+from model.dslabs_functions import get_variable_types
 import numpy as np
 
 def get_variable_type(variable, variables_types):

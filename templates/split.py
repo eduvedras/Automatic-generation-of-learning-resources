@@ -1,7 +1,7 @@
 from numpy import array, ndarray
 from pandas import read_csv, DataFrame
 import numpy as np
-from dslabs_functions import get_variable_types
+from model.dslabs_functions import get_variable_types
 
 file_tag = "OriginalDataset"
 target = "Question"
@@ -50,7 +50,7 @@ X: ndarray = data.values
 from pandas import concat
 from matplotlib.pyplot import figure, show
 from sklearn.model_selection import train_test_split
-from dslabs_functions import plot_multibar_chart
+from model.dslabs_functions import plot_multibar_chart
 
 
 trnX, tstX, trnY, tstY = train_test_split(X, y, train_size=0.7, stratify=y)

@@ -2,7 +2,7 @@ from pandas import read_csv, DataFrame, Series
 from matplotlib.pyplot import gca
 
 from matplotlib.pyplot import figure, savefig, show, subplots
-from dslabs_functions import plot_bar_chart, get_variable_types, set_chart_labels, define_grid, HEIGHT, plot_multi_scatters_chart
+from model.dslabs_functions import plot_bar_chart, get_variable_types, set_chart_labels, define_grid, HEIGHT, plot_multi_scatters_chart
 from seaborn import heatmap
 from numpy import array, ndarray
 from matplotlib.figure import Figure
@@ -144,7 +144,7 @@ else:
     print("There are no numeric variables.")
     
 # Categorical Histograms
-from dslabs_functions import plot_bar_chart
+from model.dslabs_functions import plot_bar_chart
 
 symbolic: list[str] = variables_types["symbolic"] + variables_types["binary"]
 if target in symbolic:
@@ -265,7 +265,7 @@ else:
 from sklearn.decomposition import PCA
 from pandas import Series, Index
 from matplotlib.axes import Axes
-from dslabs_functions import plot_bar_chart
+from model.dslabs_functions import plot_bar_chart
 import itertools
 
 aux_data = data.copy()
@@ -313,8 +313,8 @@ from typing import Literal
 from numpy import array, ndarray
 from matplotlib.pyplot import figure, savefig, show
 from sklearn.tree import DecisionTreeClassifier
-from dslabs_functions import CLASS_EVAL_METRICS, DELTA_IMPROVE, read_train_test_from_files
-from dslabs_functions import plot_evaluation_results, plot_multiline_chart
+from model.dslabs_functions import CLASS_EVAL_METRICS, DELTA_IMPROVE, read_train_test_from_files
+from model.dslabs_functions import plot_evaluation_results, plot_multiline_chart
 
 
 def trees_study(

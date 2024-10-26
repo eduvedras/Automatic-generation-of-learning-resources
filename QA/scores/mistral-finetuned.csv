@@ -1,0 +1,95 @@
+QId;Score;Possible to answer;Original;Notes;Answer
+"282;";2;1;1;depth=2;F
+"283;";5;1;;;F
+"284;";5;1;;;T
+"285;";5;1;;;T
+"286;";3;1;1;too easy;F
+"287;";4;1;1;;F
+"288;";5;1;1;;F
+"289;";5;1;1;;F
+"290;";1;0;;can't say;
+"291;";3;1;;;F
+"292;";1;0;1;can't say;
+"293;";1;0;1;doesn't make sense;
+"294;";2;1;1;;F
+"295;";4;1;;;F
+"296;";2;1;;non-interesting;F
+"297;";3;1;;too easy;F
+"298;";3;1;;too easy;F
+"299;";4;1;;;F
+"300;";5;1;;;F
+"301;";4;1;;;F
+"302;";5;1;;;F
+"303;";5;1;;;F
+"304;";1;0;;can't say;
+"305;";1;0;;wrong sentence;
+"306;";2;1;;non-interesting;T
+"307;";3;1;1;theoretical;F
+"308;";2;1;1;non-interesting;F
+"309;";0;0;0;;
+"310;";5;1;;;T
+"311;";3;1;;too easy;F
+"312;";5;1;;;T
+"313;";4;1;;;F
+"314;";5;1;;;F
+"315;";5;1;;;T
+"316;";1;0;;can't say;
+"317;";1;0;;can't say;
+"318;";3;1;;;F
+"319;";2;1;;non-interesting;F
+"320;";1;0;;can't say;
+"321;";2;1;;non-interesting;F
+"322;";5;1;;;F
+"323;";5;1;;;F
+"324;";3;1;;;F
+"325;";3;1;;;T
+"326;";5;1;;;F
+"327;";4;1;;;T
+"328;";1;0;;can't say;
+"329;";0;0;1;"""more variable""?";
+"330;";0;0;1;"""more prevalent";
+"331;";0;0;;;
+"332;";2;1;;non-interesting;F
+"333;";2;1;;non-interesting;F
+"334;";3;1;;survival=1?;F
+"335;";1;0;;"what is ""high""";
+"336;";3;1;;too easy;F
+"337;";3;1;;too easy;F
+"338;";2;1;;non-interesting;F
+"339;";3;1;;too easy;T
+"340;";2;1;;non-interesting;F
+"341;";4;1;;;F
+"342;";1;0;;can't say;
+"343;";2;1;1;non-interesting;F
+"344;";1;0;;can't say;
+"345;";2;0;;non-interesting;T
+"346;";1;0;;can't say;
+"347;";2;1;;;F
+"348;";1;0;1;can't say;
+"349;";1;0;;doesn't make sense;
+"350;";3;1;;too easy;F
+"351;";2;1;;non-interesting;F
+"352;";3;1;;theoretical;F
+"353;";3;1;;too easy;T
+"354;";5;1;;;T
+"355;";3;1;;too easy;T
+"356;";4;1;;;F
+"357;";1;0;;can't say;
+"358;";5;1;;;F
+"359;";1;0;;doesn't make sense;
+"360;";1;0;;can't say;
+"361;";2;1;;z-score;F
+"362;";2;1;;non-interesting;F
+"363;";4;1;;;F
+"364;";5;1;;;F
+"365;";3;1;;too easy;F
+"366;";4;1;;slightly;F
+"367;";5;1;;;F
+"368;";4;1;;hard to say;T
+"369;";3;1;;too easy;T
+"370;";2;1;;non-interesting;F
+"371;";5;1;;;T
+"372;";1;0;1;can't say;
+"373;";2;1;1;non-interesting;F
+"374;";2;1;;non-interesting;F
+"375;";3;1;;too easy;F

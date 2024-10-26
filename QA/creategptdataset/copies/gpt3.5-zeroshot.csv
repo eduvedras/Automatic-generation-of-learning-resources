@@ -1,0 +1,588 @@
+Image;Question;Prediction;Reference
+phone_decision_tree.png;The variable mobile_wt discriminates between the target values, as shown in the decision tree.;True. The variable mobile_wt is used in the decision tree to discriminate between different target values/classes. The decision tree splits the data based on the mobile weight (mobile_wt) attribute, indicating that this variable is important in separating the different target classes.;T
+phone_decision_tree.png;Variable mobile_wt is one of the most relevant variables.;False. The chart provided does not contain information indicating that the variable mobile_wt is one of the most relevant variables.;T
+phone_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 6%.;False;T
+phone_decision_tree.png;Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], it is possible to state that KNN algorithm classifies (A,B) as 2 for any k ≤ 636.;False;F
+phone_decision_tree.png;Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], the Decision Tree presented classifies (not A, B) as 1.;"To determine whether the sentence is true or false, we need to follow the decision tree presented in the chart.
+
+Given that A=True <=> [int_memory <= 30.5] and B=True <=> [mobile_wt <= 91.5], we can look at the path in the decision tree for when int_memory <= 30.5 is true and mobile_wt <= 91.5 is true:
+
+- Starting from the root node: int_memory <= 30.5 is true (A=True)
+  - Go to the True branch: mobile_wt <= 91.5 is true (B=True)
+    - We reach a leaf node with class 1
+
+Therefore, based on the given decision tree configuration, the sentence ""Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], the Decision Tree presented classifies (not A, B) as 1."" is **True**.";F
+phone_decision_tree.png;Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], the Decision Tree presented classifies (A, not B) as 0.;True. The Decision Tree presented classifies (A=True, B=False) as class 0.;T
+phone_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 300 episodes.;False;F
+phone_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.;False. The sentence is incorrect because the chart shows overfitting happening after 1502 estimators, not 502.;F
+phone_overfitting_rf.png;Results for Random Forests identified as 10, may be explained by its estimators being in underfitting.;False. The sentence is incorrect as the chart shows that the random forest model is in underfitting until 502 estimators, not 10.;T
+phone_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;True;F
+phone_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.;True.;F
+phone_overfitting_knn.png;KNN is in overfitting for k less than 13.;True;T
+phone_overfitting_knn.png;KNN with 5 neighbour is in overfitting.;False.;T
+phone_overfitting_knn.png;KNN with more than 15 neighbours is in overfitting.;False.;T
+phone_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 5 neighbors.;True.;T
+phone_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 9 nodes of depth is in overfitting.;False.;F
+phone_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 5.;True.;F
+phone_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 4.;True;F
+phone_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 5 nodes of depth.;False. The sentence is false because it states that the chart does not suffer from overfitting, but then goes on to talk about identifying overfitting in decision tree models with more than 5 nodes of depth, which implies the possibility of overfitting.;F
+phone_pca.png;The first 8 principal components are enough for explaining half the data variance.;False. The first 8 principal components explain a cumulative variance of 0.67 + 0.17 + 0.11 + 0.05 = 1.00, which covers all the data variance.;T
+phone_pca.png;Using the first 11 principal components would imply an error between 10 and 25%.;"To determine if the statement is true or false, we need to sum the explained variance ratios of the first 11 principal components:
+
+0.67 + 0.17 + 0.11 + 0.05 = 1.00
+
+Since the sum is 1.00, it means that the first 11 principal components explain all the variance in the data. Therefore, using the first 11 principal components would not imply any error, as they capture 100% of the variance in the data. Thus, the statement is false.";F
+phone_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 11.;False;F
+phone_correlation_heatmap.png;One of the variables px_height or battery_power can be discarded without losing information.;"True.
+
+Since the pairs [ram, price_range] are redundant, we can discard one of the variables in each pair without losing information. Therefore, we can discard one of the variables px_height or battery_power without losing any information.";F
+phone_correlation_heatmap.png;The variable battery_power can be discarded without risking losing information.;False;F
+phone_correlation_heatmap.png;Variables ram and px_width are redundant, but we can’t say the same for the pair mobile_wt and sc_h.;False;F
+phone_correlation_heatmap.png;Variables px_height and sc_w are redundant.;False. The statement is false. The redundant pairs are [[ram, price_range]].;F
+phone_correlation_heatmap.png;Considering that the target variable is px_width we can say that from the correlation analysis alone, it is clear that there are relevant variables.;False. The fact that the target variable is px_width does not necessarily mean that there are relevant variables based on correlation analysis alone. It is important to investigate further and consider other factors before making such conclusions.;F
+phone_correlation_heatmap.png;Considering that the target variable is px_width we can say that variable n_cores seems to be relevant for the majority of mining tasks.;This statement is false. The correlation heatmap with features ram and price_range being redundant does not provide information about the relevance of the variable n_cores for mining tasks, especially if the target variable is px_width. Correlation heatmaps show relationships between variables, but relevance for a specific task cannot be directly inferred from this type of analysis.;F
+phone_correlation_heatmap.png;Considering that the target variable is px_width we can say that variables sc_h and fc seem to be useful for classification tasks.;False;F
+phone_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;True. Since the redundant pair [[ram, price_range]] is already identified, applying a non-supervised feature selection based on redundancy would not further increase the performance of the training algorithms in this dataset.;T
+phone_correlation_heatmap.png;Removing variable sc_h might improve the training of decision trees .;False;F
+phone_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable px_height previously than variable px_width.;This statement is true. In sequential backward selection, variables are removed one by one based on their importance in the model. Since the pairs [px_height, px_width] and [price_range, ram] are redundant, and [ram, price_range] is redundant, it would make sense to select px_height before px_width in the model building process.;F
+phone_boxplots.png;Variable n_cores is balanced.;"The sentence ""Variable n_cores is balanced."" is false.";F
+phone_boxplots.png;Those boxplots show that the data is not normalized.;This sentence is false. The given chart is about explained variance ratio of principal components and mentions outliers and balanced data for various features. It does not provide information about the normalization of the data. The presence of outliers and balanced data does not directly imply whether the data is normalized or not. The normalization of data refers to rescaling the features to have a mean of 0 and a standard deviation of 1, which is not evident from the information provided in the chart.;T
+phone_boxplots.png;It is clear that variable talk_time shows some outliers, but we can’t be sure of the same for variable px_width.;True.;F
+phone_boxplots.png;Outliers seem to be a problem in the dataset.;"The sentence ""Outliers seem to be a problem in the dataset."" is True based on the information provided in the chart. It indicates that there are outliers present for some of the features like fc, n_cores, px_height, sc_h, and sc_w. Outliers can impact the analysis and interpretation of the data, so they are often considered problematic in datasets.";F
+phone_boxplots.png;Variable px_height shows some outlier values.;False. The variable px_height does not have any outlier values as indicated in the chart.;F
+phone_boxplots.png;Variable sc_w doesn’t have any outliers.;"The sentence ""Variable sc_w doesn’t have any outliers."" is classified as **true** based on the given information in the chart.";F
+phone_boxplots.png;Variable pc presents some outliers.;True;F
+phone_boxplots.png;At least 50% of the variables present outliers.;False. According to the information provided in the sentence, only some variables have outliers, not all of them.;F
+phone_boxplots.png;The histograms presented show a large number of outliers for most of the numeric variables.;False;F
+phone_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;True.;T
+phone_boxplots.png;A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.;True. A scaling transformation is usually necessary when working with KNN algorithm, as it is sensitive to the scale of the features. By scaling the data, you can ensure that each feature contributes equally to the distance calculation performed by KNN, thereby improving its performance.;T
+phone_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;False. Scaling transformations such as multiplying ratio and Boolean variables by 100 and variables with a (0,10) range by 10 would not have a similar impact to other scaling transformations. The effect of scaling transformations on the data can vary and impact the performance of machine learning algorithms differently.;F
+phone_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;False. Normalization of the dataset can have a significant impact on a KNN classifier, as KNN is sensitive to the scale of the features. Normalizing the data ensures that all features contribute equally to the distance calculation, which is crucial for the performance of KNN algorithm.;F
+phone_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;True;T
+phone_histograms_symbolic.png;All variables should be dealt with as date.;False. The variables shown in the chart are symbolic variables, not date variables.;F
+phone_histograms_symbolic.png;The variable four_g can be seen as ordinal.;False. The variable four_g is a binary variable (0 or 1), making it a nominal variable rather than an ordinal variable.;T
+phone_histograms_symbolic.png;The variable wifi can be seen as ordinal without losing information.;False. The variable wifi is binary (1 or 0) and does not have a natural ordering, so it cannot be seen as ordinal without losing information.;T
+phone_histograms_symbolic.png;Considering the common semantics for touch_screen and blue variables, dummification if applied would increase the risk of facing the curse of dimensionality.;False. Dummification of categorical variables like touch_screen and blue is not likely to increase the risk of the curse of dimensionality as long as the number of levels within each variable is relatively small.;F
+phone_histograms_symbolic.png;Considering the common semantics for three_g variable, dummification would be the most adequate encoding.;True.;F
+phone_histograms_symbolic.png;The variable three_g can be coded as ordinal without losing information.;True. In this case, the variable three_g has two distinct values (0 and 1), which can be ordered from least to greatest. Therefore, it can be treated as an ordinal variable without losing information.;T
+phone_histograms_symbolic.png;Feature generation based on variable four_g seems to be promising.;"Based on the information provided in the sentence, it is not possible to determine if the feature generation based on variable ""four_g"" is promising or not. The sentence does not provide any insights or reasoning behind why generating features based on ""four_g"" would be promising. Therefore, the statement is ambiguous and cannot be classified as true or false without further context or information.";F
+phone_histograms_symbolic.png;Feature generation based on the use of variable three_g wouldn’t be useful, but the use of blue seems to be promising.;"The statement ""Feature generation based on the use of variable three_g wouldn’t be useful, but the use of blue seems to be promising."" is NOT verifiable based on the provided chart. We can see the presence of each variable in the dataset, but we cannot determine the usefulness of feature generation based solely on the information provided in the chart.";F
+phone_histograms_symbolic.png;Given the usual semantics of three_g variable, dummification would have been a better codification.;True;F
+phone_histograms_symbolic.png;Not knowing the semantics of four_g variable, dummification could have been a more adequate codification.;"True. Without knowing the semantics or meaning of the ""four_g"" variable, it may have been more appropriate to dummy code the variable. Dummy coding involves creating binary variables to represent different categories within the variable, which would be more appropriate if the meaning or scale of the variable is unknown.";F
+phone_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;False. Balancing the dataset is not necessary in the context of PCA (Principal Component Analysis) as it does not depend on the class distribution. The PCA focuses on finding the directions (principal components) that maximize the variance of the data, regardless of the class labels or balance in the dataset.;F
+phone_nr_records_nr_variables.png;Given the number of records and that some variables are binary, we might be facing the curse of dimensionality.;False. The statement about facing the curse of dimensionality based on the number of records and the nature of some variables being binary is not relevant in this context. The curse of dimensionality typically refers to problems arising from high-dimensional data, where the number of features or dimensions is much larger than the number of data points. In the case of a bar chart with only two values being referenced (2000 and 19), the issue of the curse of dimensionality is not a concern.;F
+phone_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;False. The dataset provided (2000, 19) does not exhibit the curse of dimensionality. The curse of dimensionality generally refers to problems that arise when working with datasets with a large number of features (dimensions) relative to the number of samples. In this case, we only have two values, so the curse of dimensionality is not a concern.;F
+phone_histograms_numeric.png;All variables should be dealt with as binary.;"False. The sentence ""All variables should be dealt with as binary"" is false. From the provided information, we can see that not all variables are binary and have different characteristics such as outliers, balance, and ordinality. It is essential to analyze each variable individually to determine the appropriate treatment and modeling approach for that specific variable.";F
+phone_histograms_numeric.png;The variable int_memory can be seen as ordinal.;"False. The variable ""int_memory"" is not classified as ordinal in the given dictionary.";F
+phone_histograms_numeric.png;The variable fc can be seen as ordinal without losing information.;False;F
+phone_histograms_numeric.png;Variable sc_h is balanced.;"The sentence ""Variable sc_h is balanced."" is classified as false.";F
+phone_histograms_numeric.png;It is clear that variable sc_w shows some outliers, but we can’t be sure of the same for variable sc_h.;True. According to the provided dictionary, for variable sc_w, outliers are flagged, but for variable sc_h, outliers are not mentioned, indicating uncertainty about the presence of outliers for sc_h.;F
+phone_histograms_numeric.png;Outliers seem to be a problem in the dataset.;False. The classification indicates that outliers are present in some variables (such as fc) but not in others. Therefore, outliers are not a problem in the entire dataset as a whole.;F
+phone_histograms_numeric.png;Variable pc shows a high number of outlier values.;False. The chart indicates that the variable pc does not have any outlier values.;F
+phone_histograms_numeric.png;Variable ram doesn’t have any outliers.;"Based on the provided dictionary, the variable ""ram"" does not have any outliers, as indicated by the entry {Outliers:F}. Therefore, the sentence ""Variable ram doesn’t have any outliers."" is **True**.";T
+phone_histograms_numeric.png;Variable fc presents some outliers.;True;T
+phone_histograms_numeric.png;At least 60% of the variables present outliers.;"To determine if the sentence ""At least 60% of the variables present outliers."" is true or false, let's count the number of variables that have outliers based on the information provided in the dictionary:
+
+Out of the 12 variables listed, the following variables have outliers: fc, px_width.
+
+Calculating the percentage of variables with outliers:
+Number of variables with outliers = 2
+Total number of variables = 12
+
+Percentage of variables with outliers = (2/12) * 100% = 16.67%
+
+Since 16.67% is less than 60%, the statement ""At least 60% of the variables present outliers."" is **false**.";F
+phone_histograms_numeric.png;The histograms presented show a large number of outliers for most of the numeric variables.;False;F
+phone_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;True. The presence of outliers in a dataset can affect the analysis and modeling process, hence it is important to identify and handle them properly to ensure the accuracy and reliability of the results.;T
+phone_histograms_numeric.png;Considering the common semantics for px_height and battery_power variables, dummification if applied would increase the risk of facing the curse of dimensionality.;True.;T
+phone_histograms_numeric.png;Considering the common semantics for px_height variable, dummification would be the most adequate encoding.;"False. 
+
+The sentence is false because the px_height variable is not ordinal according to the given dictionary. Since it is not ordinal, dummification (creating dummy variables) would not be the most appropriate encoding method for this variable.";F
+phone_histograms_numeric.png;The variable battery_power can be coded as ordinal without losing information.;False. The variable battery_power should not be coded as ordinal based on the information provided, as it does not seem to have the necessary characteristics to be considered ordinal (e.g., outliers, balance).;F
+phone_histograms_numeric.png;Feature generation based on variable mobile_wt seems to be promising.;"Based on the information provided in the dictionary, the variable mobile_wt does not have outliers, is not balanced, and is not considered ordinal. Therefore, the sentence ""Feature generation based on variable mobile_wt seems to be promising."" can be classified as false.";F
+phone_histograms_numeric.png;Feature generation based on the use of variable sc_h wouldn’t be useful, but the use of battery_power seems to be promising.;True.;F
+phone_histograms_numeric.png;Given the usual semantics of mobile_wt variable, dummification would have been a better codification.;False.;F
+phone_histograms_numeric.png;Not knowing the semantics of talk_time variable, dummification could have been a more adequate codification.;True, based on the information provided in the dictionary, talk_time variable does not have outliers, is not balanced, and is not ordinal. In this case, if the semantics of talk_time variable are unclear and it is not suitable for ordinal encoding, dummification (one-hot encoding) could be a more appropriate way to encode the variable for further analysis.;F
+Titanic_decision_tree.png;The variable Parch discriminates between the target values, as shown in the decision tree.;True. In the decision tree provided, the variable Parch is used to split the data into different branches based on its values. This means that the variable Parch is discriminating between the target values in the dataset.;T
+Titanic_decision_tree.png;Variable Parch is one of the most relevant variables.;"False. In the decision tree shown, the variable ""Parch"" is used as a decision node to split the data based on its value, but it does not appear to be one of the most relevant variables overall. The importance of a variable in a decision tree is typically determined by its placement in the tree, the number of samples affected by its split, and other factors.";T
+Titanic_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 5%.;False. Applying post-pruning to a decision tree typically results in a larger but simpler tree by removing nodes and branches that do not significantly improve the model's accuracy. In this case, accepting an accuracy reduction of 5% would likely result in a more complex tree.;T
+Titanic_decision_tree.png;As reported in the tree, the number of False Positive is bigger than the number of False Negatives, consider 1 as the positive class and 0 as the negative class.;"To determine whether the statement is true or false, we need to interpret the values in the decision tree related to False Positive and False Negatives.
+
+In the given decision tree configuration, we can see the values related to False Negatives and False Positives as follows:
+- False Negatives: In the branch where 'Pclass <= 2.5' is False, there is a subset where 'Parch <= 0.5' is True. In this subset, there are 51 False Negatives (class 1).
+- False Positives: In the branch where 'Pclass <= 2.5' is True, there is a subset where 'Parch <= 0.5' is False. In this subset, there are 63 False Positives (class 1).
+
+Given that the sentence states to consider 1 as the positive class (which implies that False Positives and False Negatives refer to the positive class), we can see that the number of False Positives (63) is indeed bigger than the number of False Negatives (51). Therefore, the statement is **True** based on the information provided in the decision tree configuration.";F
+Titanic_decision_tree.png;The accuracy for the presented tree is lower than 75%.;"To determine the accuracy of the decision tree based on the provided configuration, we can calculate it by considering the correct predictions made by the tree. From the configuration, we can see that the total number of samples is 498, with a class distribution of [297, 201]. This means that there are 297 samples of class '0' and 201 samples of class '1'.
+
+Now, let's identify the misclassifications in the leaf nodes:
+
+1. For the True branch of 'Pclass <= 2.5' node:
+   - True branch of 'Parch <= 0.5': Incorrect predictions for class '1' = 51
+   - False branch of 'Parch <= 0.5': Incorrect predictions for class '1' = 21
+
+2. For the False branch of 'Pclass <= 2.5' node:
+   - True branch of 'Parch <= 0.5': Incorrect predictions for class '1' = 44
+   - False branch of 'Parch <= 0.5':  Misclassification as class '0' = 19
+
+Adding up all the misclassifications, we get a total of 51 + 21 + 44 + 19 = 135 misclassifications out of 498 samples.
+
+To calculate the accuracy, we can subtract the misclassifications from the total samples and normalize it by dividing by the total samples:
+
+Accuracy = (498 - 135) / 498 = 363 / 498 ≈ 72.89%
+
+Therefore, the statement ""The accuracy for the presented tree is lower than 75%."" is **True**.";T
+Titanic_decision_tree.png;The number of True Negatives is lower than the number of False Positives for the presented tree, consider 1 as the positive class and 0 as the negative class.;"To determine whether the statement is true or false, let's break down the information provided about the decision tree:
+
+- True Negatives (TN): The instances that are classified as the negative class (0) correctly.
+- False Positives (FP): The instances that are classified as the positive class (1) incorrectly.
+
+From the given decision tree configuration, we can see the following values:
+- True Negatives (TN) for the left branch (Pclass <= 2.5 and Parch > 0.5): 94
+- False Positives (FP) for the left branch (Pclass <= 2.5 and Parch > 0.5): 51
+
+Since the number of True Negatives (TN = 94) is greater than the number of False Positives (FP = 51), the statement that ""The number of True Negatives is lower than the number of False Positives for the presented tree"" is **false**.";F
+Titanic_decision_tree.png;The number of True Negatives is higher than the number of False Positives for the presented tree, consider 1 as the positive class and 0 as the negative class.;"To determine if the statement is true or false, we need to understand the definitions of True Negatives (TN) and False Positives (FP):
+
+- True Negatives (TN): The instances that are actually negative and are correctly classified as negative.
+- False Positives (FP): The instances that are actually negative but are incorrectly classified as positive.
+
+Looking at the provided decision tree configuration and assuming that class 1 is considered as the positive class and class 0 as the negative class, we can deduce the following:
+- For the True conditions (Pclass <= 2.5 & Parch <= 0.5), we have:
+    - True Positives (TP) = 87
+    - True Negatives (TN) = 94
+- For the False conditions (Pclass <= 2.5 & Parch > 0.5), we have:
+    - False Positives (FP) = 21
+
+In this case, the number of True Negatives (94) is actually higher than the number of False Positives (21). Therefore, the statement is **true**.";T
+Titanic_decision_tree.png;The number of True Positives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class.;"To determine if the statement is true or false, let's first understand the meaning of True Positives (TP) and False Negatives (FN) in the context of a machine learning classification model:
+
+- True Positives (TP): The number of correctly predicted positive instances (1s) by the model.
+- False Negatives (FN): The number of actual positive instances (1s) incorrectly classified as negative (0s) by the model.
+
+Looking at the presented decision tree:
+- TP: The number of instances classified as '1' in the 'True' branches of the tree.
+- FN: The number of instances that should have been classified as '1' but were wrongly classified as '0' in the 'False' branches of the tree.
+
+Considering 1 as the positive class and 0 as the negative class, let's perform the calculations:
+
+- TP: 
+- For the 'True' branch under 'Pclass <= 2.5': 
+    - 'Parch <= 0.5' True sub-branch: 138 (correctly predicted '1')
+    - 'samples': 138
+
+- FN: 
+- For the 'False' branch under 'Pclass <= 2.5': 
+    - 'Parch <= 0.5' True sub-branch: 144 (actual '1' incorrectly predicted as '0')
+    - 'samples': 144
+
+Therefore, the number of True Positives (138) is **not higher** than the number of False Negatives (144) for the presented tree. 
+
+Therefore, the statement ""The number of True Positives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class."" is **false** based on the provided decision tree configuration.";F
+Titanic_decision_tree.png;Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], it is possible to state that KNN algorithm classifies (not A, B) as 1 for any k ≤ 181.;"To determine if the statement is true or false, we need to analyze the decision tree configuration provided and follow the path based on the conditions specified.
+
+Starting from the root of the decision tree:
+- If [Pclass <= 2.5] is True, we move to the True branch.
+- If [Parch <= 0.5] is True, we move to the True branch. This path leads to a value of [94, 87], which corresponds to class '0'. Therefore, (not A, B) would be classified as class '0', not class '1'.
+
+Hence, the statement is False. The KNN algorithm would classify (not A, B) as class '0' instead of class '1' for any k ≤ 181 according to the provided decision tree.";F
+Titanic_decision_tree.png;Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], it is possible to state that Naive Bayes algorithm classifies (A,B), as 1.;"To determine if the statement is true or false, we need to follow the decision tree and see if the conditions A=True and B=True lead to the classification as '1'.
+
+Based on the decision tree:
+- The first condition is 'Pclass <= 2.5'. This condition corresponds to A.
+- The second condition is 'Parch <= 0.5'. This condition corresponds to B.
+
+Following the conditions given in the decision tree:
+- If A=True and B=True:
+  - 'Pclass <= 2.5' is True.
+  - 'Parch <= 0.5' is True.
+  
+From the decision tree:
+- For A=True, B=True (Pclass <= 2.5, Parch <= 0.5):
+  - 'Pclass <= 2.5' is true, which leads to the first set of conditions where 'Parch <= 0.5' is also true.
+  - This path leads to classifying the data as '1'.
+
+Therefore, based on the given decision tree, it is true that the Naive Bayes algorithm classifies (A=True, B=True) as '1'.";F
+Titanic_decision_tree.png;Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], it is possible to state that Naive Bayes algorithm classifies (A, not B), as 0.;False.;F
+Titanic_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.;False;F
+Titanic_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 1502 estimators.;False.;T
+Titanic_overfitting_rf.png;Results for Random Forests identified as 10, may be explained by its estimators being in overfitting.;False.;F
+Titanic_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;False. The statement is not related to the information provided in the chart. The chart describes the behavior of a random forest model in terms of underfitting and overfitting based on the number of estimators used, and does not mention anything about the number of features considered or the diversity of features.;F
+Titanic_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 502 estimators.;False;F
+Titanic_overfitting_knn.png;KNN is in overfitting for k larger than 13.;False.;F
+Titanic_overfitting_knn.png;KNN with 11 neighbour is in overfitting.;False.;F
+Titanic_overfitting_knn.png;KNN with less than 7 neighbours is in overfitting.;False.;F
+Titanic_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 3 neighbors.;False;T
+Titanic_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 20 nodes of depth is in overfitting.;True.;T
+Titanic_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 9.;True. The sentence is true.;F
+Titanic_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 5.;True.;F
+Titanic_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 6 nodes of depth.;True.;F
+Titanic_overfitting_dt_acc_rec.png;The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.;False.;F
+Titanic_pca.png;The first 4 principal components are enough for explaining half the data variance.;False. The first 4 principal components in this case explain 100% of the data variance, not just half.;T
+Titanic_pca.png;Using the first 2 principal components would imply an error between 15 and 20%.;False. Using the first 2 principal components would imply an error rate of approximately 7%, not between 15 and 20%.;F
+Titanic_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 4.;False. The statement is false because the intrinsic dimensionality of a dataset refers to the minimum number of features needed to explain the variance in the data. If the chart is showing a correlation heatmap with 5 features and there are no redundant pairs, then the intrinsic dimensionality of the dataset would be 5, not 4.;F
+Titanic_correlation_heatmap.png;One of the variables SibSp or Parch can be discarded without losing information.;True.;F
+Titanic_correlation_heatmap.png;The variable Parch can be discarded without risking losing information.;True. Since Parch is a redundant feature, it can be discarded without losing any valuable information.;F
+Titanic_correlation_heatmap.png;Variables Fare and Age seem to be useful for classification tasks.;False.;F
+Titanic_correlation_heatmap.png;Variables Age and Fare are redundant.;False.;F
+Titanic_correlation_heatmap.png;Considering that the target variable is Pclass we can say that from the correlation analysis alone, it is clear that there are relevant variables.;False. Without providing the actual correlation values, it is not possible to make conclusions about the relevance of variables based solely on the correlation analysis.;F
+Titanic_correlation_heatmap.png;Considering that the target variable is Parch we can say that variable Pclass seems to be relevant for the majority of mining tasks.;False;F
+Titanic_correlation_heatmap.png;Considering that the target variable is Pclass we can say that variables Parch and SibSp seem to be useful for classification tasks.;False;F
+Titanic_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;True;F
+Titanic_correlation_heatmap.png;Removing variable SibSp might improve the training of decision trees .;False;F
+Titanic_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable Fare previously than variable Age.;False;F
+Titanic_boxplots.png;Variable Age is balanced.;True.;F
+Titanic_boxplots.png;Those boxplots show that the data is not normalized.;False. The sentence mentions boxplots, but the chart provided is a bar chart. The information in the chart does not provide any direct indication about whether the data is normalized or not.;T
+Titanic_boxplots.png;It is clear that variable Pclass shows some outliers, but we can’t be sure of the same for variable Fare.;True.;F
+Titanic_boxplots.png;Outliers seem to be a problem in the dataset.;True.;T
+Titanic_boxplots.png;Variable Fare shows a high number of outlier values.;True.;F
+Titanic_boxplots.png;Variable Fare doesn’t have any outliers.;False;F
+Titanic_boxplots.png;Variable Parch presents some outliers.;True. From the chart, it can be observed that the variable Parch has outliers.;F
+Titanic_boxplots.png;At least 50% of the variables present outliers.;False. The sentence is false because only three out of the five variables present outliers, which is less than 50%.;F
+Titanic_boxplots.png;The boxplots presented show a large number of outliers for most of the numeric variables.;False. The sentence is stating that there are outliers in the Age and Fare variables, but not in the Pclass, SibSp, and Parch variables.;T
+Titanic_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;True. The sentence is true because the presence of outliers, as indicated in the chart for certain features like Age and Fare, can cause issues in data analysis and modeling. Outliers can affect the accuracy and reliability of statistical analyses and may need special treatment to ensure that they do not unduly influence the results.;T
+Titanic_boxplots.png;A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.;False;T
+Titanic_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;False. Scaling transformations such as multiplying by 100 or by 10 for different variables would not have a similar impact as standard scaling transformations. These types of transformations would vary the scale of the variables in different ways and could lead to different interpretations of the data.;F
+Titanic_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;"False.
+
+Normalization of the dataset could have an impact on a KNN classifier, as KNN is sensitive to the scale of the features. Normalizing the data can help improve the performance of KNN by ensuring that all features contribute equally to the distance calculation.";F
+Titanic_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;True;T
+Titanic_histograms_symbolic.png;All variables should be dealt with as date.;False. Not all variables in the chart should be treated as dates. In this case, the variables 'Embarked' and 'Sex' are categorical variables, so they should be treated as such for analysis, not as dates.;F
+Titanic_histograms_symbolic.png;The variable Sex can be seen as ordinal.;False. The variable Sex is a categorical variable, not ordinal, as it represents different categories or groups without any inherent order.;T
+Titanic_histograms_symbolic.png;The variable Sex can be seen as ordinal without losing information.;False. The variable Sex in this case is nominal, not ordinal. The variable does not have a clear order or ranking associated with its categories (male and female).;F
+Titanic_histograms_symbolic.png;Considering the common semantics for Sex and Embarked variables, dummification if applied would increase the risk of facing the curse of dimensionality.;True;F
+Titanic_histograms_symbolic.png;Considering the common semantics for Embarked variable, dummification would be the most adequate encoding.;True. The Embarked variable in this case represents different categories (S, C, Q) without any inherent order or ranking. In such cases, dummification, also known as one-hot encoding, would be the most appropriate method of encoding categorical variables to avoid introducing incorrect ordinality in the data.;T
+Titanic_histograms_symbolic.png;The variable Embarked can be coded as ordinal without losing information.;False. The variable Embarked cannot be coded as ordinal without losing information because the values 'S', 'C', and 'Q' do not have a meaningful inherent order.;F
+Titanic_histograms_symbolic.png;Feature generation based on variable Sex seems to be promising.;False. The sentence is false because the variable Sex is nominal and would require one-hot encoding or similar techniques to be used as a feature in a machine learning model.;F
+Titanic_histograms_symbolic.png;Feature generation based on the use of variable Sex wouldn’t be useful, but the use of Embarked seems to be promising.;"True.
+
+Based on the provided information, it seems that the variable Embarked has 3 unique values ('S', 'C', 'Q') while the variable Sex has 2 unique values ('male', 'female'). Since Sex has only 2 unique values, feature generation based on this variable may not be as useful compared to the variable Embarked, which has more distinct values. Therefore, the use of Embarked seems to be more promising for feature generation in this scenario.";F
+Titanic_histograms_symbolic.png;Given the usual semantics of Sex variable, dummification would have been a better codification.;True.;F
+Titanic_histograms_symbolic.png;Not knowing the semantics of Embarked variable, dummification could have been a more adequate codification.;True.;T
+Titanic_mv.png;Considering that the dataset has 200 records, discarding variable Embarked would be better than discarding all the records with missing values for that variable.;True. By discarding the variable 'Embarked', you would only lose 2 records out of 200, which is a small percentage of the dataset. On the other hand, discarding all the records with missing values for the variable 'Age' would mean losing 177 records, which is a much higher percentage of the dataset.;F
+Titanic_mv.png;Considering that the dataset has 200 records, dropping all records with missing values would be better than to drop the variables with missing values.;True. Dropping all records with missing values would be better because the total number of missing values across all variables is 179, whereas dropping the variables with missing values would result in losing information for only 2 records. This means that dropping all records with missing values would result in retaining more information from the dataset.;F
+Titanic_mv.png;Considering that the dataset has 200 records, dropping all rows with missing values can lead to a dataset with less than 25% of the original data.;True.;T
+Titanic_mv.png;There is no reason to believe that discarding records showing missing values is safer than discarding the corresponding variables in this case.;True.;T
+Titanic_mv.png;Feature generation based on variable Embarked seems to be promising.;"False. The variable ""Embarked"" has only 2 missing values, which might not be a significant barrier for feature generation. Additionally, the number of missing values alone does not determine the promise of a variable for feature generation. Other factors such as the relevance of the variable to the problem at hand and the potential impact of imputing missing values should also be considered.";F
+Titanic_mv.png;Considering that the dataset has 200 records, it is better to drop the variable Age than removing all records with missing values.;"True. Dropping the variable ""Age"" with 177 missing values would still leave a significant amount of data in the dataset, while removing all records with missing values for the ""Embarked"" variable would result in the loss of data for only 2 records out of 200. It is generally better to drop variables with a high number of missing values rather than losing entire records.";T
+Titanic_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;False;T
+Titanic_nr_records_nr_variables.png;Given the number of records and that some variables are date, we might be facing the curse of dimensionality.;False;F
+Titanic_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;"False.
+
+The curse of dimensionality typically refers to problems that arise when working with high-dimensional datasets where the number of features or dimensions is much larger than the number of samples. In this case, the dataset consists of only two values [891,8], which is not considered high-dimensional.";F
+Titanic_histograms_numeric.png;All variables should be dealt with as symbolic.;"False. Among the variables mentioned in the chart, only ""Pclass"" is classified as ordinal, meaning it has a clear order or ranking. The other variables (""Age"", ""SibSp"", ""Parch"", ""Fare"") do not have the ordinal property. Therefore, they should not all be dealt with as symbolic variables.";F
+Titanic_histograms_numeric.png;The variable Parch can be seen as ordinal.;False;T
+Titanic_histograms_numeric.png;The variable Fare can be seen as ordinal without losing information.;False;F
+Titanic_histograms_numeric.png;Variable Pclass is balanced.;False. The variable Pclass is not balanced according to the provided dictionary, as it is classified as not balanced (Balanced:F).;F
+Titanic_histograms_numeric.png;It is clear that variable Parch shows some outliers, but we can’t be sure of the same for variable SibSp.;False. The sentence is false because according to the information provided in the dictionary, both variables Parch and SibSp show outliers.;F
+Titanic_histograms_numeric.png;Outliers seem to be a problem in the dataset.;True. The presence of outliers in multiple variables suggests that they may affect the distribution and analysis of the dataset, indicating that outliers could be a problem in the dataset.;T
+Titanic_histograms_numeric.png;Variable Age shows a high number of outlier values.;True. The variable Age is classified as having outliers (Outliers:T) in the given dictionary.;T
+Titanic_histograms_numeric.png;Variable Fare doesn’t have any outliers.;False. According to the given dictionary, the variable Fare does have outliers.;F
+Titanic_histograms_numeric.png;Variable Parch presents some outliers.;True. According to the information provided in the chart, the variable Parch is reported to have outliers.;T
+Titanic_histograms_numeric.png;At least 60% of the variables present outliers.;True. Out of the 5 variables listed, 3 of them (Age, SibSp, Parch, and Fare) have outliers. Since there are 5 variables in total and 3 of them have outliers, that means at least 60% of the variables have outliers.;T
+Titanic_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;True;T
+Titanic_histograms_numeric.png;Considering the common semantics for Age and Pclass variables, dummification if applied would increase the risk of facing the curse of dimensionality.;"True. 
+
+Dummification involves converting categorical variables into dummy/indicator variables to be used in the analysis. In this case, Pclass is identified as ordinal, which suggests that there is a natural order to the values (e.g., 1st class, 2nd class, 3rd class). If we were to convert Pclass into dummy variables, we would introduce unnecessary dimensions and potentially increase the risk of the curse of dimensionality.
+
+On the other hand, Age is not identified as ordinal, so dummification would not be suitable for this variable. In general, for ordinal variables, dummification should be carefully considered to avoid adding unnecessary dimensions that could lead to the curse of dimensionality.";F
+Titanic_histograms_numeric.png;Considering the common semantics for SibSp variable, dummification would be the most adequate encoding.;True;F
+Titanic_histograms_numeric.png;The variable Pclass can be coded as ordinal without losing information.;True. The variable Pclass can be coded as ordinal without losing information, as indicated by the dictionary mentioning that Pclass is ordinal.;T
+Titanic_histograms_numeric.png;Feature generation based on variable Parch seems to be promising.;False.;F
+Titanic_histograms_numeric.png;Feature generation based on the use of variable Age wouldn’t be useful, but the use of Pclass seems to be promising.;False. The sentence is false. According to the information given in the dictionary, the variable Age has outliers, while Pclass does not. Outliers in Age may impact the usefulness of feature generation based on that variable, while Pclass, being free of outliers, seems more promising for feature generation.;F
+Titanic_histograms_numeric.png;Given the usual semantics of Age variable, dummification would have been a better codification.;"False. 
+
+In this case, the Age variable is not classified as ordinal in the dictionary provided. Since Age is not ordinal and has outliers, it is not suitable for dummy coding. Dummy coding is typically used for categorical variables that do not have a natural ordering.";F
+Titanic_histograms_numeric.png;Not knowing the semantics of SibSp variable, dummification could have been a more adequate codification.;True. Since the SibSp variable is identified as ordinal, dummification may not be the most appropriate method of encoding the variable. Dummification is usually used for categorical variables, so in this case, it might be better to consider other encoding methods suitable for ordinal variables.;F
+apple_quality_decision_tree.png;The variable Crunchiness discriminates between the target values, as shown in the decision tree.;True.;T
+apple_quality_decision_tree.png;Variable Juiciness is one of the most relevant variables.;False;T
+apple_quality_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 8%.;The sentence is false. When applying post-pruning in decision tree classification, the opposite usually occurs: a larger tree would be delivered, as nodes are removed to reduce overfitting and improve generalization. This typically results in a larger, simpler tree.;T
+apple_quality_decision_tree.png;As reported in the tree, the number of False Positive is smaller than the number of False Negatives, consider good as the positive class and bad as the negative class.;"To determine if the sentence is true or false, we need to check the values in the decision tree for the classes 'good' and 'bad' for True and False branches.
+
+From the given decision tree:
+- For the 'good' class:
+    - False Positive (FP) is the number of bad samples classified as good: 213 (from 'False' branch of the first condition)
+    - False Negative (FN) is the number of good samples classified as bad: 297 (from 'True' branch of the first condition)
+
+Since 213 (FP) is smaller than 297 (FN), the statement ""the number of False Positive is smaller than the number of False Negatives"" is true.
+
+Therefore, the sentence is true.";F
+apple_quality_decision_tree.png;The recall for the presented tree is higher than 75%, consider good as the positive class and bad as the negative class.;"To determine the recall for the presented decision tree, we need to look at the true positive (TP), false negative (FN), false positive (FP), and true negative (TN) values for the positive class (good) based on the given configuration.
+
+From the decision tree configuration, we can see:
+- True Positives (TP) = 64
+- False Negatives (FN) = 84
+- False Positives (FP) = 297
+- True Negatives (TN) = 213
+
+Recall, also known as true positive rate, is calculated as:  
+Recall = TP / (TP + FN)
+
+In this case:
+Recall = 64 / (64 + 84) = 64 / 148 ≈ 0.432 (approximately 43.24%)
+
+Therefore, the statement ""The recall for the presented tree is higher than 75%, consider good as the positive class and bad as the negative class."" is **false**.";T
+apple_quality_decision_tree.png;The number of True Positives is higher than the number of False Negatives for the presented tree, consider good as the positive class and bad as the negative class.;"To determine whether the statement is true or false, let's first understand the meaning of True Positives and False Negatives in the context of a decision tree.
+
+True Positives (TP) in this context refer to the instances where the classifier correctly predicts the positive class (good) as positive.
+
+False Negatives (FN) refer to the instances where the classifier incorrectly predicts the negative class (bad) as negative, which is a misclassification of the positive class (good) as negative.
+
+Looking at the decision tree and considering 'good' as the positive class and 'bad' as the negative class:
+- TP corresponds to the cases where the class is predicted as 'good' and it is actually 'good'.
+- FN corresponds to the cases where the class is predicted as 'bad' but it is actually 'good'.
+
+In the given decision tree, the number of True Positives (1397 + 84 = 1481) is higher than the number of False Negatives (297 + 571 = 868).
+
+Therefore, the statement ""The number of True Positives is higher than the number of False Negatives for the presented tree, consider good as the positive class and bad as the negative class."" is TRUE.";T
+apple_quality_decision_tree.png;The number of False Positives is higher than the number of True Positives for the presented tree, consider good as the positive class and bad as the negative class.;"To determine the number of False Positives and True Positives, we need to identify which nodes in the decision tree represent each of the classes.
+
+In the provided decision tree configuration, the class 'good' is considered as the positive class and 'bad' as the negative class.
+
+Looking at the nodes, we can see the following:
+- True Positive cases:
+  - The leaf node with samples [64, 84] and class 'good'.
+  - The leaf node with samples [734, 891] and class 'good'.
+  - The leaf node with samples [28, 215] and class 'good'.
+  
+- False Positive cases:
+  - The leaf node with samples [571, 213] and class 'bad'.
+
+Given this information, we can see that there are fewer False Positives than True Positives in the presented tree. Therefore, the statement ""The number of False Positives is higher than the number of True Positives for the presented tree, consider good as the positive class and bad as the negative class."" is False.";F
+apple_quality_decision_tree.png;The specificity for the presented tree is higher than 90%, consider good as the positive class and bad as the negative class.;"To calculate the specificity for the presented decision tree, we need to use the following formula:
+
+Specificity = TN / (TN + FP)
+
+In the given decision tree configuration, we can see the following values for the False branch of the second level:
+
+- For the first sub-branch (Juiciness <= -0.3 and Crunchiness > 2.25):  
+    - TN (True Negatives) = 571  
+    - FP (False Positives) = 213
+
+Therefore, specificity for this sub-branch would be:
+
+Specificity = 571 / (571 + 213)  
+Specificity = 571 / 784 ≈ 72.74%
+
+Since the specificity for this sub-branch is about 72.74%, it is not higher than 90%.  
+So, the statement ""The specificity for the presented tree is higher than 90%, consider good as the positive class and bad as the negative class."" is FALSE.";F
+apple_quality_decision_tree.png;Considering that A=True<=>[Juiciness <= -0.3] and B=True<=>[Crunchiness <= 2.25], the Decision Tree presented classifies (not A, not B) as bad.;True.;F
+apple_quality_decision_tree.png;Considering that A=True<=>[Juiciness <= -0.3] and B=True<=>[Crunchiness <= 2.25], it is possible to state that KNN algorithm classifies (not A, not B) as bad for any k ≤ 1625.;"False. The given decision tree does not provide information about how the KNN algorithm would classify instances that do not fall into the specified conditions of ""Juiciness <= -0.3"" and ""Crunchiness <= 2.25"". Therefore, it is not possible to make any conclusions about how KNN would classify instances that do not meet these conditions.";F
+apple_quality_decision_tree.png;Considering that A=True<=>[Juiciness <= -0.3] and B=True<=>[Crunchiness <= 2.25], it is possible to state that Naive Bayes algorithm classifies (not A, not B), as good.;False;T
+apple_quality_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.;False;F
+apple_quality_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 1502 estimators.;False;F
+apple_quality_overfitting_rf.png;Results for Random Forests identified as 3, may be explained by its estimators being in overfitting.;False;F
+apple_quality_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;False. The underfitting and test accuracy staying at 80% in the random forest model can be due to other factors such as the number of estimators or the complexity of the model, rather than the number of features considered.;F
+apple_quality_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 1502 estimators.;False;F
+apple_quality_overfitting_knn.png;KNN is in overfitting for k larger than 17.;False;F
+apple_quality_overfitting_knn.png;KNN with 7 neighbour is in overfitting.;False.;T
+apple_quality_overfitting_knn.png;KNN with more than 17 neighbours is in overfitting.;False.;F
+apple_quality_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 3 neighbors.;False;T
+apple_quality_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 16 nodes of depth is in overfitting.;False.;F
+apple_quality_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 5.;True;F
+apple_quality_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 6.;False.;F
+apple_quality_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 2 nodes of depth.;False. The sentence is false. Overfitting is a common issue with decision tree models, especially when the tree becomes too complex or deep, but the number of nodes alone does not determine the presence of overfitting. Other factors such as the amount of training data, the complexity of the data, and the regularization techniques applied play a significant role in determining whether overfitting occurs.;F
+apple_quality_overfitting_dt_acc_rec.png;The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.;True.;F
+apple_quality_pca.png;The first 5 principal components are enough for explaining half the data variance.;"To determine if the statement is true or false, we need to calculate the cumulative explained variance ratio up to the fifth principal component.
+
+The explained variance ratios for the first five principal components are:
+0.25 + 0.22 + 0.17 + 0.14 + 0.12 = 0.9
+
+Therefore, the first 5 principal components explain 90% of the data variance, which is more than half. Therefore, the statement ""The first 5 principal components are enough for explaining half the data variance."" is false.";T
+apple_quality_pca.png;Using the first 2 principal components would imply an error between 15 and 20%.;"This statement is false. 
+The explained variance ratio of the first two principal components adds up to 0.25+0.22 = 0.47, meaning that these two components explain 47% of the total variance. Therefore, using the first 2 principal components would imply that the remaining error is between 53% and 100%, not 15% and 20%.";F
+apple_quality_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 2.;False;F
+apple_quality_correlation_heatmap.png;One of the variables Crunchiness or Acidity can be discarded without losing information.;True;F
+apple_quality_correlation_heatmap.png;The variable Ripeness can be discarded without risking losing information.;True.;F
+apple_quality_correlation_heatmap.png;Variables Juiciness and Crunchiness are redundant, but we can’t say the same for the pair Sweetness and Ripeness.;False;F
+apple_quality_correlation_heatmap.png;Variables Juiciness and Crunchiness are redundant.;False;F
+apple_quality_correlation_heatmap.png;Considering that the target variable is Ripeness we can say that from the correlation analysis alone, it is clear that there are relevant variables.;False;F
+apple_quality_correlation_heatmap.png;Considering that the target variable is Ripeness we can say that variable Juiciness seems to be relevant for the majority of mining tasks.;False. The sentence is false. The correlation heatmap can show how features are related to each other, but it does not provide information about the relevance of a feature for mining tasks. To determine the relevance of a feature for mining tasks, further analysis and modeling are required.;F
+apple_quality_correlation_heatmap.png;Considering that the target variable is Ripeness we can say that variables Crunchiness and Weight seem to be useful for classification tasks.;False. Just because Crunchiness and Weight are highly correlated with the target variable Ripeness, it does not necessarily mean they are useful for classification tasks. Correlation does not imply causation, and additional analysis or modeling would be needed to determine the usefulness of these variables for classification tasks.;F
+apple_quality_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;False;F
+apple_quality_correlation_heatmap.png;Removing variable Juiciness might improve the training of decision trees .;True;F
+apple_quality_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable Juiciness previously than variable Ripeness.;False;F
+apple_quality_boxplots.png;Variable Weight is balanced.;True.;T
+apple_quality_boxplots.png;Those boxplots show that the data is not normalized.;"False. The sentence mentions ""boxplots"" which are not the type of chart described in the scenario. The chart described is a bar chart showing the explained variance ratio of each principal component, and the sentence is making an incorrect statement about the data normalization based on a different type of chart.";F
+apple_quality_boxplots.png;It is clear that variable Sweetness shows some outliers, but we can’t be sure of the same for variable Crunchiness.;True.;F
+apple_quality_boxplots.png;Outliers seem to be a problem in the dataset.;True;T
+apple_quality_boxplots.png;Variable Ripeness shows a high number of outlier values.;"False. The sentence is false. The chart shows that the variable ""Ripeness"" has balanced values, not outlier values.";F
+apple_quality_boxplots.png;Variable Acidity doesn’t have any outliers.;False. The sentence is false. The data indicates that the variable Acidity has outliers.;F
+apple_quality_boxplots.png;Variable Juiciness presents some outliers.;True;T
+apple_quality_boxplots.png;At least 75% of the variables present outliers.;True;T
+apple_quality_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;True. The sentence is true because the presence of outliers can affect the results of principal component analysis and other data analysis techniques, impacting the interpretation and reliability of the insights gained from the data.;T
+apple_quality_boxplots.png;A scaling transformation is mandatory, in order to improve the Naive Bayes performance in this dataset.;False. The sentence is false because the statement about the need for a scaling transformation to improve Naive Bayes performance is not directly related to the explained variance ratio of principal components. The requirement for scaling transformation would depend on the data itself, the specific characteristics of the features, and the assumptions of the Naive Bayes algorithm rather than the principal components or their variance ratios.;F
+apple_quality_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;False;F
+apple_quality_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;False. Normalization of the dataset could have an impact on a KNN classifier. KNN is sensitive to the scale of the features, so normalizing the data can help improve the performance of the algorithm.;T
+apple_quality_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;True. Scaling the dataset would be mandatory to improve the results with distance-based methods, especially when using PCA (Principal Component Analysis) as it involves calculating distances between data points. Scaling helps in ensuring that all features contribute equally to the analysis and prevents features with larger scales from dominating the results.;F
+apple_quality_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;False. Since the dataset only contains two values, there is no need to balance the dataset as it is already very small. Balancing datasets typically refers to ensuring that there is an equal distribution of samples across different categories or classes in a dataset, which is not relevant in this case.;F
+apple_quality_nr_records_nr_variables.png;Given the number of records and that some variables are binary, we might be facing the curse of dimensionality.;False. The curse of dimensionality refers to the challenges that arise when dealing with a high number of dimensions or variables, particularly in machine learning and data analysis. In this case, the bar chart only has two values ([4000,8]), so it does not fall under the curse of dimensionality.;F
+apple_quality_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;"False.
+
+The curse of dimensionality typically refers to the challenges that arise when training models with high-dimensional data, where the number of features or dimensions is much larger than the number of samples. In this case, the dataset consists of only two values, which suggests low dimensionality rather than the curse of dimensionality.";F
+apple_quality_histograms_numeric.png;All variables should be dealt with as numeric.;False;T
+apple_quality_histograms_numeric.png;The variable Acidity can be seen as ordinal.;False;F
+apple_quality_histograms_numeric.png;The variable Size can be seen as ordinal without losing information.;False;F
+apple_quality_histograms_numeric.png;Variable Juiciness is balanced.;False;T
+apple_quality_histograms_numeric.png;It is clear that variable Weight shows some outliers, but we can’t be sure of the same for variable Sweetness.;True.;F
+apple_quality_histograms_numeric.png;Outliers seem to be a problem in the dataset.;False.;F
+apple_quality_histograms_numeric.png;Variable Juiciness shows a high number of outlier values.;True;F
+apple_quality_histograms_numeric.png;Variable Size doesn’t have any outliers.;"The statement ""Variable Size doesn’t have any outliers."" is false. According to the information in the dictionary, it indicates that the variable Size has outliers (Outliers:T).";F
+apple_quality_histograms_numeric.png;Variable Weight presents some outliers.;True.;T
+apple_quality_histograms_numeric.png;At least 50% of the variables present outliers.;True. Based on the provided dictionary, all variables have outliers, which means that at least 50% of the variables present outliers.;T
+apple_quality_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;True;T
+apple_quality_histograms_numeric.png;Considering the common semantics for Crunchiness and Size variables, dummification if applied would increase the risk of facing the curse of dimensionality.;True;T
+apple_quality_histograms_numeric.png;Considering the common semantics for Sweetness variable, dummification would be the most adequate encoding.;False;F
+apple_quality_histograms_numeric.png;The variable Juiciness can be coded as ordinal without losing information.;False;F
+apple_quality_histograms_numeric.png;Feature generation based on variable Acidity seems to be promising.;"False. The sentence ""Feature generation based on variable Acidity seems to be promising."" is false. Based on the information provided in the dictionary, the variable Acidity has outliers, is balanced, and is not ordinal. Outliers in data can affect the reliability and interpretability of any feature generated from that variable. It is important to address the outliers in the data before using the variable for feature generation.";F
+apple_quality_histograms_numeric.png;Feature generation based on the use of variable Acidity wouldn’t be useful, but the use of Size seems to be promising.;False;F
+apple_quality_histograms_numeric.png;Given the usual semantics of Acidity variable, dummification would have been a better codification.;False.;F
+apple_quality_histograms_numeric.png;Not knowing the semantics of Acidity variable, dummification could have been a more adequate codification.;True;F
+Employee_decision_tree.png;The variable JoiningYear discriminates between the target values, as shown in the decision tree.;True.;T
+Employee_decision_tree.png;Variable ExperienceInCurrentDomain is one of the most relevant variables.;True. The decision tree shows that the variable ExperienceInCurrentDomain is used early in the splitting process, indicating that it is considered one of the most relevant variables for making classification decisions.;T
+Employee_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 8%.;False.;T
+Employee_decision_tree.png;As reported in the tree, the number of False Positive is smaller than the number of False Negatives, consider 1 as the positive class and 0 as the negative class.;"Let's examine the information provided in the decision tree. The nodes in the tree refer to the numbers of samples and values for each class.
+
+The information related to False Positive and False Negative in the tree is as follows:
+
+- False Positive: 
+  - For the node 'ExperienceInCurrentDomain <= 3.5' where 'JoiningYear' is less than or equal to 2017.5, the number of False Positives is 308.
+  - For the node 'ExperienceInCurrentDomain <= 3.5' where 'JoiningYear' is greater than 2017.5, the number of False Positives is 258.
+  
+- False Negative:
+  - For the node 'ExperienceInCurrentDomain <= 3.5' where 'JoiningYear' is less than or equal to 2017.5, the number of False Negatives is 554.
+  - For the node 'ExperienceInCurrentDomain <= 3.5' where 'JoiningYear' is greater than 2017.5, the number of False Negatives is 44.
+
+Comparing the numbers mentioned above, we can see that the statement ""As reported in the tree, the number of False Positive is smaller than the number of False Negatives"" is **false**. In both cases, the number of False Positives is larger than the number of False Negatives.";T
+Employee_decision_tree.png;The recall for the presented tree is lower than 60%, consider 1 as the positive class and 0 as the negative class.;"To determine the recall for the presented decision tree, we need to calculate the true positive and false negative values. 
+
+From the given decision tree:
+- For class 1 (positive class), there are 44 true positives and 258 false negatives.
+- Recall is calculated as true positives / (true positives + false negatives) = 44 / (44 + 258) ~= 0.145.
+
+Since the recall is approximately 0.145 or 14.5%, it is indeed lower than 60%. Hence, the statement about the recall being lower than 60% for the presented tree (with 1 as the positive class and 0 as the negative class) is **true**.";F
+Employee_decision_tree.png;The number of False Positives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class.;"To determine whether the statement is true or false, we need to analyze the provided decision tree and identify the relevant values for False Positives and False Negatives.
+
+Given the tree structure:
+
+- For the ""False"" branch of the root node ('JoiningYear <= 2017.5' is False), we have a split based on 'ExperienceInCurrentDomain <= 3.5'.
+  - In this branch, the samples are 261, and the count of true class (1) is 3, which means False Negatives = 3.
+  - There are also 258 instances predicted as the negative class (0), which are True Negatives.
+
+- For the ""True"" branch of the root node, and the ""False"" branch of the subsequent node ('ExperienceInCurrentDomain <= 3.5' is False), we also observe the positive class (1) cases, which are correctly classified as 44 instances, making them True Positives.
+
+Since the statement specifically asks about False Positives and False Negatives, and based on the analysis of the decision tree, we find:
+- False Positives = 0 (as there are no instances in the tree's structure that are incorrectly classified as positive when they are actually negative).
+- False Negatives = 3 (as there are 3 instances that are incorrectly classified as negative when they are actually positive).
+
+Therefore, the statement ""The number of False Positives is higher than the number of False Negatives for the presented tree"" is FALSE in this case, as the number of False Positives is 0, which is indeed lower than the number of False Negatives (3).";F
+Employee_decision_tree.png;The number of False Positives is higher than the number of True Positives for the presented tree, consider 1 as the positive class and 0 as the negative class.;"To determine whether the statement is true or false, we need to look at the values of True Positives (TP), False Positives (FP), True Negatives (TN), and False Negatives (FN) for the positive class (1) and negative class (0). 
+
+From the provided decision tree configuration, we can see that:
+- For the positive class (1), we have TP = 44 and FP = 3.
+- For the negative class (0), we have TN = 2134 and FN = 1120.
+
+Since the statement considers class 1 as the positive class and class 0 as the negative class, we can say that the number of False Positives (FP = 3) is indeed lower than the number of True Positives (TP = 44) for the presented tree.
+
+Therefore, the statement ""The number of False Positives is higher than the number of True Positives for the presented tree, consider 1 as the positive class and 0 as the negative class."" is False. The number of False Positives is lower than the number of True Positives based on the given decision tree configuration.";F
+Employee_decision_tree.png;The number of True Negatives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class.;"To determine if the statement is true or false, let's first understand the terms:
+
+- True Negatives (TN): The instances that were predicted as negative (0) class correctly.
+- False Negatives (FN): The instances that were predicted as negative (0) class incorrectly as positive (1) class.
+
+From the given decision tree configuration, we can see that:
+- TN: 2134 (in the 'True' node of 'ExperienceInCurrentDomain <= 3.5')
+- FN: 3 (in the 'False' node of 'ExperienceInCurrentDomain <= 3.5')
+
+Since 2134 is higher than 3, the number of True Negatives is indeed higher than the number of False Negatives for the presented tree when considering 1 as the positive class and 0 as the negative class.
+
+Therefore, the statement is TRUE.";T
+Employee_decision_tree.png;Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], it is possible to state that KNN algorithm classifies (A,B) as 0 for any k ≤ 44.;"False. The decision tree chart provided does not directly mention any k-value for a KNN algorithm. The chart provides conditions based on two features ""JoiningYear"" and ""ExperienceInCurrentDomain"" and their respective thresholds for classifying samples as 0 or 1. The KNN algorithm and its k-value are not explicitly related to the decision tree chart mentioned.";T
+Employee_decision_tree.png;Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], the Decision Tree presented classifies (not A, B) as 1.;"False.
+
+Since A is true (JoiningYear <= 2017.5) and B is true (ExperienceInCurrentDomain <= 3.5), the Decision Tree classifies the condition (A=True, B=True) as a class '0', not as class '1'.";T
+Employee_decision_tree.png;Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], the Decision Tree presented classifies (A,B) as 0.;True. The sentence is classified as true because A=True corresponds to JoiningYear <= 2017.5 and B=True corresponds to ExperienceInCurrentDomain <= 3.5 according to the given decision tree configuration, and the combination of these two conditions results in the classification as 0.;T
+Employee_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.;False.;F
+Employee_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.;True, we can often identify the existence of overfitting for gradient boosting models with an excessive number of estimators, such as more than 502, by looking at a multi-line chart that does not suffer from overfitting.;F
+Employee_overfitting_rf.png;Results for Random Forests identified as 2, may be explained by its estimators being in underfitting.;True;T
+Employee_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;False. The statement mentions that the random forest is underfitting until 502 estimators and does not enter overfitting, suggesting that the number of features considered is not the primary factor influencing the model's performance in this case.;F
+Employee_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.;False.;F
+Employee_overfitting_knn.png;KNN is in overfitting for k less than 13.;True.;F
+Employee_overfitting_knn.png;KNN with 7 neighbour is in overfitting.;True;F
+Employee_overfitting_knn.png;KNN with more than 15 neighbours is in overfitting.;False.;F
+Employee_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 2 neighbors.;False;T
+Employee_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 9 nodes of depth is in overfitting.;True;T
+Employee_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 9.;True.;T
+Employee_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 4.;True.;F
+Employee_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 2 nodes of depth.;"True
+
+Explanation: The sentence is true because it states that overfitting occurs after a certain depth (8 in this case) for decision tree models, which indicates that with more than 2 nodes of depth, overfitting can be observed.";F
+Employee_overfitting_dt_acc_rec.png;The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.;True.;F
+Employee_pca.png;The first 3 principal components are enough for explaining half the data variance.;"To determine if the statement is true or false, we need to calculate the total variance explained by the first 3 principal components.
+
+Total variance explained by the first 3 principal components = 0.79 + 0.12 + 0.08 = 0.99
+
+So, the first 3 principal components explain 99% of the data variance, which is more than half the data variance. Therefore, the statement is true.";T
+Employee_pca.png;Using the first 3 principal components would imply an error between 15 and 25%.;"The first 3 principal components explain a total variance of 0.79 + 0.12 + 0.08 = 0.99 or 99%. 
+
+Therefore, the statement ""Using the first 3 principal components would imply an error between 15 and 25%."" is false.";F
+Employee_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 2.;False;F
+Employee_correlation_heatmap.png;One of the variables PaymentTier or JoiningYear can be discarded without losing information.;True.;F
+Employee_correlation_heatmap.png;The variable JoiningYear can be discarded without risking losing information.;True.;F
+Employee_correlation_heatmap.png;Variables Age and PaymentTier are redundant, but we can’t say the same for the pair ExperienceInCurrentDomain and JoiningYear.;False. The sentence is false. The variables Age and PaymentTier are not redundant, while the pair ExperienceInCurrentDomain and JoiningYear are the redundant pairs.;F
+Employee_correlation_heatmap.png;Variables PaymentTier and JoiningYear are redundant.;False.;F
+Employee_correlation_heatmap.png;Considering that the target variable is PaymentTier we can say that from the correlation analysis alone, it is clear that there are relevant variables.;False;F
+Employee_correlation_heatmap.png;Considering that the target variable is PaymentTier we can say that variable JoiningYear seems to be relevant for the majority of mining tasks.;False;F
+Employee_correlation_heatmap.png;Considering that the target variable is PaymentTier we can say that variables Age and ExperienceInCurrentDomain seem to be useful for classification tasks.;False;F
+Employee_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;True. Since there are no redundant pairs in the features, applying non-supervised feature selection based on redundancy would not increase the performance of the generality of the training algorithms in this dataset.;F
+Employee_correlation_heatmap.png;Removing variable PaymentTier might improve the training of decision trees .;False;F
+Employee_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable ExperienceInCurrentDomain previously than variable PaymentTier.;False.;F
+Employee_boxplots.png;Variable ExperienceInCurrentDomain is balanced.;False.;F
+Employee_boxplots.png;Those boxplots show that the data is not normalized.;False;T
+Employee_boxplots.png;It is clear that variable PaymentTier shows some outliers, but we can’t be sure of the same for variable Age.;True. According to the chart, the variable PaymentTier is labeled as having outliers, while the variable Age is labeled as not having outliers.;F
+Employee_boxplots.png;Outliers seem to be a problem in the dataset.;False;T
+Employee_boxplots.png;Variable JoiningYear shows a high number of outlier values.;"The sentence ""Variable JoiningYear shows a high number of outlier values"" is classified as false based on the provided information. The chart shows that the JoiningYear variable has Outliers labeled as ""F"", which means that it does not have a high number of outlier values.";F
+Employee_boxplots.png;Variable JoiningYear doesn’t have any outliers.;"The sentence ""Variable JoiningYear doesn’t have any outliers."" is classified as False based on the given data.";T
+Employee_boxplots.png;Variable PaymentTier presents some outliers.;False. According to the chart, the variable PaymentTier does not have outliers (Outliers:F).;T
+Employee_boxplots.png;At least 60% of the variables present outliers.;False. According to the sentence provided, only Age has outliers, while the other variables do not have outliers.;T
+Employee_boxplots.png;The boxplots presented show a large number of outliers for most of the numeric variables.;False;F
+Employee_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;True;T
+Employee_boxplots.png;A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.;False. KNN performance can be impacted by the scale of the data, but it is not always mandatory to perform scaling transformation. It depends on the specific dataset and the characteristics of the data. In some cases, scaling may improve KNN performance, but it is not a strict requirement.;T
+Employee_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;False;F
+Employee_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;False. Normalization of the dataset can have an impact on a KNN classifier, as KNN is sensitive to the scale of the variables. Normalizing the data could potentially improve the KNN classifier's performance by ensuring that all variables are on a similar scale and therefore contribute equally to the distance calculations.;F
+Employee_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;True. Scaling the dataset would be mandatory to improve the results with distance-based methods because distance-based methods are sensitive to the scale of the features. By scaling the dataset, the features will have a similar scale, which can lead to better performance when using distance-based methods.;T
+Employee_histograms_symbolic.png;All variables should be dealt with as date.;False. Not all variables should be dealt with as date. The variables Education, City, Gender, and EverBenched are categorical variables and should be treated as such, not as date variables.;F
+Employee_histograms_symbolic.png;The variable Gender can be seen as ordinal.;False. The variable Gender is categorical, not ordinal. Ordinal variables have a definite order or rank associated with them, such as education level (e.g., Bachelors < Masters < PhD). Gender, on the other hand, does not have a natural order or rank.;T
+Employee_histograms_symbolic.png;The variable EverBenched can be seen as ordinal without losing information.;True.;T
+Employee_histograms_symbolic.png;Considering the common semantics for Education and City variables, dummification if applied would increase the risk of facing the curse of dimensionality.;True. When applying dummification to the Education and City variables, it would create additional binary columns for each category, potentially leading to a large number of features in the dataset. This increase in dimensionality can lead to the curse of dimensionality, where the model may struggle to find meaningful patterns in the data, leading to overfitting and decreased predictive performance.;F
+Employee_histograms_symbolic.png;Considering the common semantics for City variable, dummification would be the most adequate encoding.;"True.
+
+""Dummification"" refers to the process of converting categorical variables into binary variables by creating dummy variables. In the case of the ""City"" variable, since there is no inherent order or numerical relationship between the different cities (Bangalore, Pune, New Delhi), dummification would be the most appropriate encoding method. This would involve creating binary variables for each city (e.g., Bangalore: 0 or 1, Pune: 0 or 1, New Delhi: 0 or 1) to represent the different categories in the City variable.";T
+Employee_histograms_symbolic.png;The variable City can be coded as ordinal without losing information.;False. The variable City cannot be coded as ordinal without losing information because it represents different categories or levels of a city, and there is no intrinsic order or ranking among them.;F
+Employee_histograms_symbolic.png;Feature generation based on variable City seems to be promising.;False.;F
+Employee_histograms_symbolic.png;Feature generation based on the use of variable EverBenched wouldn’t be useful, but the use of Education seems to be promising.;True.;F
+Employee_histograms_symbolic.png;Given the usual semantics of Gender variable, dummification would have been a better codification.;True. In data analysis, dummification (creating dummy variables) is a common technique used to convert categorical variables like Gender into a format that can be used for analysis. By dummifying the Gender variable, we would create separate binary variables for each category (Male and Female), making it easier to analyze and interpret the data.;F
+Employee_histograms_symbolic.png;Not knowing the semantics of Education variable, dummification could have been a more adequate codification.;True. Dummification would have been useful if the semantics of the Education variable were unknown, as it would convert the categorical variable into binary variables to represent each category separately without assuming any order or relationship between the categories.;T
+Employee_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;This sentence is false. Since the sentence mentions that the data is in the form of a bar chart with the values [3053, 1600], it implies that the dataset has only two data points. Balancing a dataset is more relevant when dealing with larger datasets to avoid biases and ensure fair representation of all classes or groups. In this case, with only two values present, balancing the dataset may not be necessary to improve the results.;T
+Employee_nr_records_nr_variables.png;Given the number of records and that some variables are date, we might be facing the curse of dimensionality.;False. The concept of the curse of dimensionality refers to the challenges that arise when dealing with high-dimensional data, such as increased computational complexity and the sparsity of data points. The sentence in question does not provide information about the dimensionality of the data, so it is not possible to conclude that the curse of dimensionality is a concern based solely on the number of records and the types of variables present.;F
+Employee_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;False;F
+Employee_histograms_numeric.png;All variables should be dealt with as date.;False;F
+Employee_histograms_numeric.png;The variable PaymentTier can be seen as ordinal.;True. According to the given dictionary, the variable PaymentTier is classified as ordinal, meaning that it has a clear order or ranking.;T
+Employee_histograms_numeric.png;The variable Age can be seen as ordinal without losing information.;False;F
+Employee_histograms_numeric.png;Variable Age is balanced.;False;F
+Employee_histograms_numeric.png;It is clear that variable PaymentTier shows some outliers, but we can’t be sure of the same for variable Age.;True.;F
+Employee_histograms_numeric.png;Outliers seem to be a problem in the dataset.;False;F
+Employee_histograms_numeric.png;Variable JoiningYear shows some outlier values.;False. According to the information provided in the dictionary, the variable JoiningYear does not have outliers (Outliers:F).;F
+Employee_histograms_numeric.png;Variable ExperienceInCurrentDomain doesn’t have any outliers.;"Based on the information provided in the dictionary, the statement ""Variable ExperienceInCurrentDomain doesn’t have any outliers."" is classified as true, as indicated by ""{Outliers:F}"" for the variable ExperienceInCurrentDomain.";T
+Employee_histograms_numeric.png;Variable PaymentTier presents some outliers.;False;F
+Employee_histograms_numeric.png;At least 50% of the variables present outliers.;False. According to the given dictionary, only 3 variables out of 4 have been evaluated for outliers, and none of them present outliers.;F
+Employee_histograms_numeric.png;The histograms presented show a large number of outliers for most of the numeric variables.;False;F
+Employee_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;True;F
+Employee_histograms_numeric.png;Considering the common semantics for JoiningYear and PaymentTier variables, dummification if applied would increase the risk of facing the curse of dimensionality.;True. Dummification of ordinal variables like JoiningYear and PaymentTier could increase the risk of the curse of dimensionality since it would create additional binary variables for each category, leading to a higher dimensionality of the dataset.;F
+Employee_histograms_numeric.png;Considering the common semantics for PaymentTier variable, dummification would be the most adequate encoding.;True.;F
+Employee_histograms_numeric.png;The variable PaymentTier can be coded as ordinal without losing information.;True. The variable PaymentTier can be coded as ordinal without losing information according to the given classification information.;T
+Employee_histograms_numeric.png;Feature generation based on variable PaymentTier seems to be promising.;"True. 
+Assuming that the variable PaymentTier does not have outliers, is balanced, and is ordinal, it seems to be a promising feature for feature generation. Features that are ordinal and well-behaved are often good candidates for building predictive models.";F
+Employee_histograms_numeric.png;Feature generation based on the use of variable ExperienceInCurrentDomain wouldn’t be useful, but the use of JoiningYear seems to be promising.;True. The sentence is true because the variable ExperienceInCurrentDomain does not have outliers and is ordinal, indicating that it may not provide much additional information when generating features. On the other hand, the variable JoiningYear is also ordinal and has no outliers, suggesting that it could be promising for feature generation.;F
+Employee_histograms_numeric.png;Given the usual semantics of PaymentTier variable, dummification would have been a better codification.;True;T
+Employee_histograms_numeric.png;Not knowing the semantics of Age variable, dummification could have been a more adequate codification.;True;F

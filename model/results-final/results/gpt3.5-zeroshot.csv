@@ -1,0 +1,95 @@
+Id,Image,Prediction
+188,smoking_drinking_decision_tree.png,The number of False Positives is higher than the number of False Negatives for the presented tree.
+189,smoking_drinking_overfitting_mlp.png,Overfitting occurs when the training accuracy continues to increase while the validation accuracy starts to decrease.
+190,smoking_drinking_overfitting_gb.png,Overfitting occurs in gradient boosting models when the number of estimators increases beyond a certain threshold.
+191,smoking_drinking_overfitting_rf.png,The overfitting of the random forest model is observable as the number of estimators increases.
+192,smoking_drinking_overfitting_knn.png,KNN with more than 13 neighbors is in overfitting.
+193,smoking_drinking_overfitting_decision_tree.png,The overfitting in the decision tree chart increases with depth.
+194,smoking_drinking_overfitting_dt_acc_rec.png,The difference between accuracy and recall increases as the max depth of the decision tree increases due to overfitting.
+195,smoking_drinking_pca.png,The first two principal components explain more variance than the last two principal components.
+196,smoking_drinking_correlation_heatmap.png,The variable weight and BLDS are redundant in this dataset.
+197,smoking_drinking_boxplots.png,Variable waistline is balanced.
+198,smoking_drinking_histograms_symbolic.png,The variable 'sex' can be seen as binary for this data chart description.
+199,smoking_drinking_class_histogram.png,The bar chart displays frequency counts of the categories in the variable DRK_YN.
+200,smoking_drinking_nr_records_nr_variables.png,The bar chart displays the count of records and variables in the dataset.
+201,smoking_drinking_histograms_numeric.png,'The variable LDL_chole shows some outlier values.'
+202,BankNoteAuthentication_decision_tree.png,"The condition ""skewness <= 5.16"" is used as the first decision in the decision tree."
+203,BankNoteAuthentication_overfitting_mlp.png,"The accuracy of the MLP model decreases as the number of iterations increases, indicating overfitting."
+204,BankNoteAuthentication_overfitting_gb.png,"In the chart, the accuracy decreases as the number of estimators increases, indicating overfitting."
+205,BankNoteAuthentication_overfitting_rf.png,"When the number of estimators in a random forest model increases, the accuracy tends to decrease due to overfitting."
+206,BankNoteAuthentication_overfitting_knn.png,'Overfitting in KNN models typically occurs when the number of neighbors is low.'
+207,BankNoteAuthentication_overfitting_decision_tree.png,The decision tree starts overfitting for depths above 20.
+208,BankNoteAuthentication_overfitting_dt_acc_rec.png,The accuracy increases as the maximum depth of the decision tree model increases.
+209,BankNoteAuthentication_pca.png,The sum of the explained variance ratios of the 4 principal components is equal to 1.
+210,BankNoteAuthentication_correlation_heatmap.png,"'Variables entropy and curtosis are redundant, but we can’t say the same for the pair variance and skewness.'"
+211,BankNoteAuthentication_boxplots.png,The boxplots suggest that variable curtosis has outliers.
+212,BankNoteAuthentication_class_histogram.png,The bar chart is used to visualize categorical data.
+213,BankNoteAuthentication_nr_records_nr_variables.png,The number of records in the dataset is visualized using a bar chart.
+214,BankNoteAuthentication_histograms_numeric.png,The variable skewness doesn't have any outliers.
+215,Iris_decision_tree.png,"The data chart ""nan"" contains missing values."
+216,Iris_overfitting_mlp.png,Overfitting in the MLP model worsens as the number of iterations increases past a certain point.
+217,Iris_overfitting_gb.png,"The accuracy decreases as the number of estimators in the gradient boosting model increases, indicating overfitting."
+218,Iris_overfitting_rf.png,"The chart shows that as the number of estimators increases, the accuracy also increases, indicating a typical case of overfitting."
+219,Iris_overfitting_knn.png,KNN with more than 23 neighbors is in overfitting.
+220,Iris_overfitting_decision_tree.png,"According to the chart, as the decision tree depth increases, the accuracy also increases."
+221,Iris_pca.png,The sum of the explained variance ratios of the 4 principal components should be equal to 1.
+222,Iris_correlation_heatmap.png,'The variable PetalWidthCm can be discarded without risking losing information.'
+223,Iris_boxplots.png,'Those boxplots show that the data is not normalized.'
+224,Iris_class_histogram.png,A bar chart is a suitable visualization to represent categorical data like Species distribution.
+225,Iris_nr_records_nr_variables.png,The bar chart would display two bars representing the number of records and variables.
+226,Iris_histograms_numeric.png,The variable PetalWidthCm can be seen as ordinal.
+227,phone_decision_tree.png,The number of True Negatives is higher than the number of True Positives for the presented tree.
+228,phone_overfitting_mlp.png,It is possible to observe overfitting in MLP models after a large number of iterations.
+229,phone_overfitting_gb.png,"As the number of estimators increases, the accuracy of the model decreases due to overfitting."
+230,phone_overfitting_rf.png,"The accuracy of the random forest model decreases as the number of estimators increases, indicating potential overfitting."
+231,phone_overfitting_knn.png,KNN is in overfitting for k less than 13.
+232,phone_overfitting_decision_tree.png,The chart illustrates that the decision tree begins to overfit at a max depth of 10.
+233,phone_pca.png,The second principal component explains more data variance than the fourth principal component.
+234,phone_correlation_heatmap.png,The variable 'ram' has a high correlation with 'battery_power'.
+235,phone_boxplots.png,Variable px_height shows some outlier values.
+236,phone_histograms_symbolic.png,The variable 'wifi' can be seen as ordinal without losing information.
+237,phone_class_histogram.png,The data chart displays the frequency of different price ranges in the dataset.
+238,phone_nr_records_nr_variables.png,The number of variables in the dataset is greater than the number of records.
+239,phone_histograms_numeric.png,The histograms presented show a large number of outliers for most of the numeric variables.
+240,Titanic_decision_tree.png,"The variable Parch discriminates between the target values, as shown in the decision tree."
+241,Titanic_overfitting_mlp.png,Overfitting occurs in the MLP model as the number of iterations increases beyond a certain point.
+242,Titanic_overfitting_gb.png,The accuracy of the gradient boosting model decreases as the number of estimators increases from 2 to 2002.
+243,Titanic_overfitting_rf.png,The overfitting of random forests increases with the number of estimators.
+244,Titanic_overfitting_knn.png,KNN is in overfitting for k larger than 13.
+245,Titanic_overfitting_decision_tree.png,"""The chart shows that the decision tree accuracy continues to increase as the max depth increases."""
+246,Titanic_overfitting_dt_acc_rec.png,"The accuracy typically increases as the max depth of the decision tree increases, while the recall may decrease."
+247,Titanic_pca.png,The bar chart will display the relative importance of each principal component in explaining the total variance in the data.
+248,Titanic_correlation_heatmap.png,Variables Fare and Age seem to be useful for classification tasks.
+249,Titanic_boxplots.png,Variable Age is balanced.
+250,Titanic_histograms_symbolic.png,"The variable 'Embarked' is categorical, so it should be encoded using one-hot encoding."
+251,Titanic_mv.png,Removing all records with missing values for 'Embarked' variable would result in losing more information than removing the variable itself.
+252,Titanic_class_histogram.png,The bar chart visualizes the distribution of the target variable Survived.
+253,Titanic_nr_records_nr_variables.png,The number of records in the dataset is represented by the bars in the chart.
+254,Titanic_histograms_numeric.png,The variable Fare can be seen as ordinal without losing information.
+255,apple_quality_decision_tree.png,'The condition Juiciness <= -0.3 is used as the first split in the decision tree.'
+256,apple_quality_overfitting_mlp.png,The overfitting on the MLP model is visible on the chart.
+257,apple_quality_overfitting_gb.png,"The higher the number of estimators in gradient boosting, the more likely overfitting will occur."
+258,apple_quality_overfitting_rf.png,The overfitting of random forest models increases as the number of estimators increases from 2 to 2002.
+259,apple_quality_overfitting_knn.png,"In the chart, KNN is in overfitting for k larger than 17."
+260,apple_quality_overfitting_decision_tree.png,"In the multi-line chart showing the overfitting of a decision tree, the accuracy increases continuously as the max depth of the tree increases."
+261,apple_quality_overfitting_dt_acc_rec.png,"Increasing the maximum depth of a decision tree can lead to overfitting, causing both accuracy and recall to decrease."
+262,apple_quality_pca.png,The total explained variance ratio of the 7 principal components is equal to 1.
+263,apple_quality_correlation_heatmap.png,"'Variables Juiciness and Crunchiness are redundant, but we can’t say the same for the pair Sweetness and Ripeness.'"
+264,apple_quality_boxplots.png,The boxplots provide insights into the distribution of the variables.
+265,apple_quality_class_histogram.png,The bar chart provides visual representation of the distribution of the target variable Quality.
+266,apple_quality_nr_records_nr_variables.png,The dataset has a count of both records and variables.
+267,apple_quality_histograms_numeric.png,The variable Size can be seen as ordinal without losing information.
+268,Employee_decision_tree.png,The number of False Positives is higher than the number of False Negatives for the presented tree.
+269,Employee_overfitting_mlp.png,Overfitting is observed in the multi-line chart for MLP models as the number of iterations increases.
+270,Employee_overfitting_gb.png,The accuracy decreases as the number of estimators increases in the overfitting of gradient boosting model.
+271,Employee_overfitting_rf.png,The random forest model with a small number of estimators is less likely to overfit.
+272,Employee_overfitting_knn.png,KNN with 1 neighbor is in overfitting.
+273,Employee_overfitting_decision_tree.png,The chart illustrates that the decision tree starts overfitting after a depth of 10.
+274,Employee_overfitting_dt_acc_rec.png,The accuracy increases with the depth while the recall decreases due to overfitting.
+275,Employee_pca.png,The sum of the explained variance ratios of the 4 principal components is equal to 1.
+276,Employee_correlation_heatmap.png,The variable 'Age' has a strong positive correlation with 'ExperienceInCurrentDomain'.
+277,Employee_boxplots.png,"Variable Age shows a high number of outlier values, based on the boxplots."
+278,Employee_histograms_symbolic.png,The variable 'Gender' can be seen as ordinal.
+279,Employee_class_histogram.png,A bar chart can visually represent the frequency or count of different categories within the target variable LeaveOrNot.
+280,Employee_nr_records_nr_variables.png,The number of variables in the dataset is represented by the height of the bars in the chart.
+281,Employee_histograms_numeric.png,The variable PaymentTier can be seen as ordinal.

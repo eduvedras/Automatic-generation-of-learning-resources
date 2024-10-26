@@ -1,7 +1,7 @@
 from pandas import DataFrame, Index, read_csv
 from matplotlib.pyplot import figure, savefig, show
 from matplotlib.pyplot import gca
-from dslabs_functions import (
+from model.dslabs_functions import (
     select_low_variance_variables,
     study_variance_for_feature_selection,
     apply_feature_selection,
@@ -78,7 +78,7 @@ dataset: DataFrame = train.drop(vars2drop, axis=1, inplace=False)
 from sklearn.decomposition import PCA
 from pandas import Series, Index
 from matplotlib.axes import Axes
-from dslabs_functions import plot_bar_chart
+from model.dslabs_functions import plot_bar_chart
 
 import itertools
 def get_combinations(lst): # creating a user-defined method

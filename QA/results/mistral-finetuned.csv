@@ -1,0 +1,95 @@
+Id,Image,Prediction
+282,smoking_drinking_decision_tree.png, The decision tree can be pruned with a depth of 3.
+283,smoking_drinking_overfitting_mlp.png, The model begins to underfit after 800 iterations.
+284,smoking_drinking_overfitting_gb.png, Gradient boosting with 1003 estimators is not overfitting the data.
+285,smoking_drinking_overfitting_rf.png, Random forest is not affected by overfitting when using 2 estimators.
+286,smoking_drinking_overfitting_knn.png, The accuracy is always above 95% when k-nearest neighbors is applied.
+287,smoking_drinking_overfitting_decision_tree.png, The decision tree performs better when max depth is greater than 15.
+288,smoking_drinking_overfitting_dt_acc_rec.png, The decision tree with a max depth of 15 shows better recall than the one with a max depth of 13.
+289,smoking_drinking_pca.png, A component with an explained variance ratio of 0.5 has a greater explanatory power than the first principal component.
+290,smoking_drinking_correlation_heatmap.png,Hemoglobin and waistline present a negative correlation.
+291,smoking_drinking_boxplots.png, Age and waistline have identical distributions.
+292,smoking_drinking_histograms_symbolic.png, The difference between the mean of hear\_right for Male and Female is statistically significant.
+293,smoking_drinking_class_histogram.png, The mean value of DRK_YN is greater than 0.5.
+294,smoking_drinking_nr_records_nr_variables.png, The dataset contains more variables than records.
+295,smoking_drinking_histograms_numeric.png, Height and weight have similar distributions.
+296,BankNoteAuthentication_decision_tree.png, The decision tree has a depth greater than 2.
+297,BankNoteAuthentication_overfitting_mlp.png, The model starts to overfit after 600 iterations.
+298,BankNoteAuthentication_overfitting_gb.png, Gradient boosting models with more than 250 estimators reach a plateau in terms of accuracy.
+299,BankNoteAuthentication_overfitting_rf.png, Random forest starts overfitting at approximately 250 estimators.
+300,BankNoteAuthentication_overfitting_knn.png, The chart indicates that overfitting occurs with k-nearest neighbors starting from 10 neighbors.
+301,BankNoteAuthentication_overfitting_decision_tree.png, The decision tree model reaches its optimal accuracy for max depth equal to 11.
+302,BankNoteAuthentication_overfitting_dt_acc_rec.png,Max depth of 10 is best for both accuracy and recall.
+303,BankNoteAuthentication_pca.png, The second principal component explains less variance than the third principal component.
+304,BankNoteAuthentication_correlation_heatmap.png, Variance and entropy have a negative correlation.
+305,BankNoteAuthentication_boxplots.png, Entropy is more variables have negative values.
+306,BankNoteAuthentication_class_histogram.png, There are more instances of class 1 than class 0.
+307,BankNoteAuthentication_nr_records_nr_variables.png, The number of variables is always smaller than the number of records.
+308,BankNoteAuthentication_histograms_numeric.png, Skewness of 'variance' is positive.
+309,Iris_decision_tree.png,Could not generate the sentence.
+310,Iris_overfitting_mlp.png,The MLP model is not overfitting when 300 iterations are reached.
+311,Iris_overfitting_gb.png, The accuracy is decreasing after a certain number of estimators.
+312,Iris_overfitting_rf.png, The random forest model with 201 estimators underfits the data.
+313,Iris_overfitting_knn.png, The accuracy starts to decrease when the number of neighbors is greater than 12.
+314,Iris_overfitting_decision_tree.png, The decision tree starts to overfit from a depth of 15.
+315,Iris_pca.png, The first principal component explains more than 50% of the variance.
+316,Iris_correlation_heatmap.png, The correlation between PetalWidthCm and SepalLengthCm is negative.
+317,Iris_boxplots.png, Petal length varies more between Species than Petal width.
+318,Iris_class_histogram.png, The number of samples for Iris-virginica is higher than for Iris-syringium.
+319,Iris_nr_records_nr_variables.png, The number of variables is always greater than the number of records.
+320,Iris_histograms_numeric.png, The petal width of Iris-versicolor is greater than the sepal length of Iris-setosa.
+321,phone_decision_tree.png, Int memory is the only feature used in the second split.
+322,phone_overfitting_mlp.png, The model starts to underfit at around 750 iterations.
+323,phone_overfitting_gb.png, The model is underfitting when 50 estimators are used.
+324,phone_overfitting_rf.png, Random forest with 100 estimators is an overfitting model.
+325,phone_overfitting_knn.png, The accuracy will increase when the number of neighbors is greater than 13.
+326,phone_overfitting_decision_tree.png,The decision tree with max depth 12 shows the best performance.
+327,phone_pca.png, The explained variance ratios of the first five principal components are higher than those of the last five principal components.
+328,phone_correlation_heatmap.png, Talk time has a negative correlation with battery power.
+329,phone_boxplots.png, FC is more variable than battery_power.
+330,phone_histograms_symbolic.png, Four-G is more prevalent than Wifi.
+331,phone_class_histogram.png," The price range ""Low price"" is the most frequent."
+332,phone_nr_records_nr_variables.png, The dataset has more variables than records.
+333,phone_histograms_numeric.png, Talk time has greater variance than mobile wt.
+334,Titanic_decision_tree.png, A passenger with Parch > 0.5 is never classified in this decision tree as survival.
+335,Titanic_overfitting_mlp.png, The accuracy is high with less than 300 iterations.
+336,Titanic_overfitting_gb.png, The model starts overfitting around 100 estimators.
+337,Titanic_overfitting_rf.png, Overfitting begins to occur with around 10 estimators.
+338,Titanic_overfitting_knn.png, The accuracy of k-nearest neighbors can reach up to 99% with 11 neighbors.
+339,Titanic_overfitting_decision_tree.png, The decision tree with a max depth of 17 outperforms the one with a max depth of 23.
+340,Titanic_overfitting_dt_acc_rec.png, The accuracy and recall values are always greater than 0.5.
+341,Titanic_pca.png, The fourth principal component explains 15% of the variance.
+342,Titanic_correlation_heatmap.png, Age is negatively correlated with Pclass.
+343,Titanic_boxplots.png, The mean of SibSp is greater than the mean of Parch.
+344,Titanic_histograms_symbolic.png,The number of female passengers did not differ much between the embarkation ports.
+345,Titanic_mv.png, The variable 'Pclass' does not have missing values.
+346,Titanic_class_histogram.png, First passenger survived more than third class.
+347,Titanic_nr_records_nr_variables.png, The number of variables is always greater than the number of records.
+348,Titanic_histograms_numeric.png, The mean of 'Age' is higher than the mean of 'SibSp'.
+349,apple_quality_decision_tree.png, Decision trees with depth = 2 have at most one node at the depth of 3.
+350,apple_quality_overfitting_mlp.png, The overfitting of the mlp starts around iteration 700.
+351,apple_quality_overfitting_gb.png, The number of estimators for which the model obtains the lowest accuracy is 385.
+352,apple_quality_overfitting_rf.png, The random forest accuracy tends to increase and then decrease as the number of estimators grows.
+353,apple_quality_overfitting_knn.png, The chart indicates that the accuracy of k-nearest neighbors model decreases when the number of neighbors exceeds 16.
+354,apple_quality_overfitting_decision_tree.png, The decision tree with a max depth of 10 is not overfitting the data.
+355,apple_quality_overfitting_dt_acc_rec.png, The decision tree with a max depth of 15 has the same performance as the decision tree with a max depth of 16.
+356,apple_quality_pca.png, The first principal component explains more than 80% of the variance.
+357,apple_quality_correlation_heatmap.png, Size and Ripeness are negatively correlated.
+358,apple_quality_boxplots.png,Size has more outliers than other variables.
+359,apple_quality_class_histogram.png,The highest percentage of low quality samples appears in the 60-70 range.
+360,apple_quality_nr_records_nr_variables.png, The dataset contains only numerical variables.
+361,apple_quality_histograms_numeric.png, The average Size is greater than the average Weight.
+362,Employee_decision_tree.png, The decision tree's second split is not based on JoiningYear.
+363,Employee_overfitting_mlp.png, The overfitting of the MLP starts after 600 iterations.
+364,Employee_overfitting_gb.png, The model becomes underfitting after 850 estimators.
+365,Employee_overfitting_rf.png, The random forest model with 706 estimators has the best accuracy.
+366,Employee_overfitting_knn.png, The accuracy is higher when k = 17 than when k = 13.
+367,Employee_overfitting_decision_tree.png, Overfitting starts between a max depth of 15 to 20.
+368,Employee_overfitting_dt_acc_rec.png, The decision tree model starts overfitting at a max depth of 7.
+369,Employee_pca.png, Principal component 3 explains more variance than principal component 4.
+370,Employee_correlation_heatmap.png, PaymentTier is correlated with JoiningYear.
+371,Employee_boxplots.png, There's no outlier on 'Age' variable.
+372,Employee_histograms_symbolic.png, Women tend to bench press more than men in this dataset.
+373,Employee_class_histogram.png, More than half of the employees leave the company.
+374,Employee_nr_records_nr_variables.png, The number of variables is more than the number of records.
+375,Employee_histograms_numeric.png, Age is the only variable with a normal distribution.

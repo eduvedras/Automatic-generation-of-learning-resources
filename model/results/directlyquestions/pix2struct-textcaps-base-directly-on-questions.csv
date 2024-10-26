@@ -1,0 +1,17 @@
+Image,Prediction
+Titanic_decision_tree.png,The number of False Positives reported in the same tree is 10.
+Titanic_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 1002 episodes.
+Titanic_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 102 estimators.
+Titanic_overfitting_rf.png,We are able to identify the existence of overfitting for random forest models with more than 103 estimators.
+Titanic_overfitting_knn.png,KNN with 4 neighbour is in overfitting.
+Titanic_overfitting_decision_tree.png,The decision tree is in overfitting for depths above 6.
+Titanic_overfitting_dt_acc_rec.png,The decision tree is in overfitting for depths above 6.
+Titanic_pca.png,Using the first 3 principal components would imply an error between 15 and 20%.
+Titanic_correlation_heatmap.png,One of the variables Age or Age can be discarded without losing information.
+Titanic_boxplots.png,"It is clear that variable Age shows some outliers, but we can’t be sure of the same for variable Age."
+Titanic_histograms.png,The variable Age can be seen as ordinal without losing information.
+Titanic_mv.png,Discarding variables age and capital-gain would be better than discarding all the records with missing values for those variables.
+Titanic_class_histogram.png,The number of False Positives reported in the same tree is 342.
+Titanic_nr_records_nr_variables.png,The number of records is lower than the number of records.
+Titanic_scatter-plots.png,"It is clear that variable PR AXISRECTANGULAR shows some outliers, but we can’t be sure of the same for variable target."
+Titanic_histograms_numeric.png,"It is clear that variable Age shows some outliers, but we can’t be sure of the same for variable Age."

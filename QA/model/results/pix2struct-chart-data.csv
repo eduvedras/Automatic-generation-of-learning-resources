@@ -1,0 +1,43 @@
+Chart;Prediction;Reference
+Titanic_decision_tree.png;{'Pclass <= 2.5': {'samples': 498, 'value': [297,201], 'class': '0', 'True': {'Parch <= 0.5': {'samples': 253, 'value': [115,138], 'class': '1', 'True': {'samples': 181, 'value': [94,87], 'class': '0'}, 'False': {'samples': 72, 'value': [21,51], 'class': '1'}}}, 'False': {'Parch <= 0.5': {'samples': 245, 'value': [182,63], 'class': '0', 'True': {'samples': 188, 'value': [144,44], 'class': '0'}, 'False': {'samples': 38, 'value': [38,19], 'class': '0'}}}}};{'Pclass <= 2.5': {'samples': 498, 'value': [297,201], 'class': '0', 'True': {'Parch <= 0.5': {'samples': 253, 'value': [115,138], 'class': '1', 'True': {'samples': 181, 'value': [94,87], 'class': '0'}, 'False': {'samples': 72, 'value': [21,51], 'class': '1'}}}, 'False': {'Parch <= 0.5': {'samples': 245, 'value': [182,63], 'class': '0', 'True': {'samples': 188, 'value': [144,44], 'class': '0'}, 'False': {'samples': 57, 'value': [38,19], 'class': '0'}}}}}
+Titanic_overfitting_mlp.png;overfitting after 100;no
+Titanic_overfitting_gb.png;overfitting after 502;overfitting after 502
+Titanic_overfitting_rf.png;overfitting after 502;underfitting until 502,no overfitting,acc=0.8
+Titanic_overfitting_knn.png;overfitting after 19;overfitting until 5
+Titanic_overfitting_decision_tree.png;overfitting after 3;overfitting after 10
+Titanic_overfitting_dt_acc_rec.png;acc_rec;acc_rec
+Titanic_pca.png;[0.93,0.07,0.00,0.00,0.00];[0.93,0.07,0.00,0.00,0.00]
+Titanic_correlation_heatmap.png;{4,[]};{5,[]}
+Titanic_boxplots.png;[F,{Pclass:{Outliers:F,Balanced:F},Age:{Outliers:F,Balanced:F},SibSp:{Outliers:F,Balanced:F},Parch:{Outliers:F,Balanced:F},Fare:{Outliers:F,Balanced:F}}];[F,{Pclass:{Outliers:F,Balanced:T},Age:{Outliers:T,Balanced:F},SibSp:{Outliers:F,Balanced:F},Parch:{Outliers:F,Balanced:F},Fare:{Outliers:T,Balanced:F}}]
+Titanic_histograms_symbolic.png;{'Bar chart for Embarked': 644, '168': 77, '0.8': 0.4': 0.6': 1.0': 0.8': 1.0': 0.8': 1.0': 0.8': 0.8': 1.0': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0.8': 0;{Embarked:['S', 'C', 'Q'],Sex:['male', 'female']}
+Titanic_mv.png;{'Age': 175, 'Employed': 2};{'Age': 177, 'Embarked': 2}
+Titanic_class_histogram.png;[549,342];[549,342]
+Titanic_nr_records_nr_variables.png;[891,8];[891,8]
+Titanic_histograms_numeric.png;{Pclass:['M', 'L', 'H'],Age:['M', 'L', 'H'],SibSp:['M', 'L']};{Pclass:{Outliers:F,Balanced:F,Ordinal:T},Age:{Outliers:T,Balanced:F,Ordinal:F},SibSp:{Outliers:T,Balanced:F,Ordinal:T},Parch:{Outliers:T,Balanced:F,Ordinal:F},Fare:{Outliers:T,Balanced:F,Ordinal:F}}
+apple_quality_decision_tree.png;{'Juiciness <= -0.3': {'samples': 2800, 'value': [1397,1403], 'class': 'good', 'True': {'Crunchness <= 2.25': {'samples': 932, 'value': [635,297], 'class': 'bad', 'True': {'samples': 148, 'value': [64,84], 'class': 'good'}, 'False': {'samples': 784, 'value': [571,213], 'class': 'good'}}}, 'False': {'Crunchness <= 2.25': {'samples': 1868, 'value': [762,1106], 'class': 'good', 'True': {'samples': 243, 'value': [28,215], 'class': 'good'}}}}};{'Juiciness <= -0.3': {'samples': 2800, 'value': [1397,1403], 'class': 'good', 'True': {'Crunchiness <= 2.25': {'samples': 932, 'value': [635,297], 'class': 'bad', 'True': {'samples': 148, 'value': [64,84], 'class': 'good'}, 'False': {'samples': 784, 'value': [571,213], 'class': 'bad'}}}, 'False': {'Crunchiness <= 2.25': {'samples': 1868, 'value': [762,1106], 'class': 'good', 'True': {'samples': 1625, 'value': [734,891], 'class': 'good'}, 'False': {'samples': 243, 'value': [28,215], 'class': 'good'}}}}}
+apple_quality_overfitting_mlp.png;overfitting after 2;no
+apple_quality_overfitting_gb.png;overfitting after 502;overfitting after 502
+apple_quality_overfitting_rf.png;overfitting after 502;underfitting until 502,no overfitting,acc>0.8
+apple_quality_overfitting_knn.png;overfitting after 5;overfitting until 9
+apple_quality_overfitting_decision_tree.png;overfitting after 3;no
+apple_quality_overfitting_dt_acc_rec.png;acc_rec;acc_rec
+apple_quality_pca.png;[0.8,0.25,0.22,0.17,0.14,0.12,0.07,0.04];[0.25,0.22,0.17,0.14,0.12,0.07,0.04]
+apple_quality_correlation_heatmap.png;{6,[]};{7,[]}
+apple_quality_boxplots.png;[F,{Size:{Outliers:F,Balanced:F},Weight:{Outliers:T,Balanced:F},Sweetness:{Outliers:T,Balanced:F},Crunchness:{Outliers:T,Balanced:F},Juiciness:{Outliers:T,Balanced:F},Ripeness:{Outliers:T,Balanced:F},Acidity:{Outliers:T,Balanced:F}}];[F,{Size:{Outliers:T,Balanced:T},Weight:{Outliers:T,Balanced:T},Sweetness:{Outliers:T,Balanced:T},Crunchiness:{Outliers:T,Balanced:T},Juiciness:{Outliers:T,Balanced:T},Ripeness:{Outliers:T,Balanced:T},Acidity:{Outliers:T,Balanced:T}}]
+apple_quality_class_histogram.png;[2004,1996];[2004,1996]
+apple_quality_nr_records_nr_variables.png;[4000,8];[4000,8]
+apple_quality_histograms_numeric.png;{Size:{Outliers:F,Balanced:F,Ordinal:F},Weight:{Outliers:T,Balanced:F,Ordinal:F},Sweetness:{Outliers:T,Balanced:F,Ordinal:F},Acidity:{Outliers:T,Balanced:F,Ordinal:F}};{Size:{Outliers:T,Balanced:T,Ordinal:F},Weight:{Outliers:T,Balanced:T,Ordinal:F},Sweetness:{Outliers:T,Balanced:T,Ordinal:F},Crunchiness:{Outliers:T,Balanced:T,Ordinal:F},Juiciness:{Outliers:T,Balanced:T,Ordinal:F},Ripeness:{Outliers:T,Balanced:T,Ordinal:F},Acidity:{Outliers:T,Balanced:T,Ordinal:F}}
+Employee_decision_tree.png;{'JoiningYear <= 2017.5': {'samples': 3257, 'value': [2137,1120], 'class': '0', 'True': {'ExperienceInCurrentDomain <= 3.5': {'samples': 2996, 'value': [3134,802], 'class': '0', 'True': {'samples': 1215, 'value': [1227,354], 'class': '0'}, 'False': {'samples': 44, 'value': [317,314], 'class': '1'}}}, 'False': {'ExperienceInCurrentDomain <= 3.5': {'samples': 261, 'value': [3,3,8], 'class': '1', 'True': {'samples': 217, 'value': [3,114], 'class': '1'}, 'False': {'samples': 174, 'value': [3,114], 'class': '1'}}}}};{'JoiningYear <= 2017.5': {'samples': 3257, 'value': [2137,1120], 'class': '0', 'True': {'ExperienceInCurrentDomain <= 3.5': {'samples': 2996, 'value': [2134,862], 'class': '0', 'True': {'samples': 1781, 'value': [1227,554], 'class': '0'}, 'False': {'samples': 1215, 'value': [907,308], 'class': '0'}}}, 'False': {'ExperienceInCurrentDomain <= 3.5': {'samples': 261, 'value': [3,258], 'class': '1', 'True': {'samples': 44, 'value': [0,44], 'class': '1'}, 'False': {'samples': 217, 'value': [3,214], 'class': '1'}}}}}
+Employee_overfitting_mlp.png;overfitting after 100;no
+Employee_overfitting_gb.png;overfitting after 502;no
+Employee_overfitting_rf.png;overfitting after 502;underfitting until 502,no overfitting,acc>0.8
+Employee_overfitting_knn.png;overfitting after 19;overfitting until 9
+Employee_overfitting_decision_tree.png;overfitting after 3;overfitting after 8
+Employee_overfitting_dt_acc_rec.png;acc_rec;acc_rec
+Employee_pca.png;[0.79,0.12,0.08,0.01];[0.79,0.12,0.08,0.01]
+Employee_correlation_heatmap.png;{5,[]};{4,[]}
+Employee_boxplots.png;[2014,0.00,0.4,0.6,0.8,0.0,0.2,0.4,0.4,0.6];[F,{JoiningYear:{Outliers:F,Balanced:T},PaymentTier:{Outliers:F,Balanced:F},Age:{Outliers:F,Balanced:F},ExperienceInCurrentDomain:{Outliers:F,Balanced:F}}]
+Employee_histograms_symbolic.png;{Education:['Bachelors', 'Masters', 'Doctorate', '5th', '1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th', '9th', '1st', '1st', '2nd', '3rd', '4th', '5th', '1st', 'Preschool'],City:['Capital', 'State', 'Province', 'Town', 'State', 'Province', 'Country', 'State', 'Province', 'Country', 'State'],Gender:['Female', 'Male'],EverBenched:[0, 1]};{Education:['Bachelors', 'Masters', 'PHD'],City:['Bangalore', 'Pune', 'New Delhi'],Gender:['Male', 'Female'],EverBenched:['No', 'Yes']}
+Employee_class_histogram.png;[3053,1600];[3053,1600]
+Employee_nr_records_nr_variables.png;[4653,9];[4653,9]
+Employee_histograms_numeric.png;{'Histopram for JoiningYear': 3500, 'PaymentTier': 2500, 'Histopram for Age': 400, 'ExperienceInCurrentDomain': 0.8', '0.2': 1.00, '0.2': 1.50, '0.0': 2.55, '0.8': 1.00, '0.4': 0.4', '0.5': 1.00, '0.4': 0.4', '0.6': 1.00};{JoiningYear:{Outliers:F,Balanced:F,Ordinal:T},PaymentTier:{Outliers:F,Balanced:F,Ordinal:T},Age:{Outliers:F,Balanced:F,Ordinal:F},ExperienceInCurrentDomain:{Outliers:F,Balanced:F,Ordinal:T}}

@@ -1,0 +1,324 @@
+Image;Question;Prediction;Reference
+phone_decision_tree.png;The variable mobile_wt discriminates between the target values, as shown in the decision tree.;T;T
+phone_decision_tree.png;Variable mobile_wt is one of the most relevant variables.;T;T
+phone_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 6%.;T;T
+phone_decision_tree.png;Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], it is possible to state that KNN algorithm classifies (A,B) as 2 for any k ≤ 636.;F;F
+phone_decision_tree.png;Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], the Decision Tree presented classifies (not A, B) as 1.;F;F
+phone_decision_tree.png;Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], the Decision Tree presented classifies (A, not B) as 0.;F;T
+phone_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 300 episodes.;F;F
+phone_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.;F;F
+phone_overfitting_rf.png;Results for Random Forests identified as 10, may be explained by its estimators being in underfitting.;T;T
+phone_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;T;F
+phone_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.;F;F
+phone_overfitting_knn.png;KNN is in overfitting for k less than 13.;F;T
+phone_overfitting_knn.png;KNN with 5 neighbour is in overfitting.;T;T
+phone_overfitting_knn.png;KNN with more than 15 neighbours is in overfitting.;F;T
+phone_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 5 neighbors.;T;T
+phone_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 9 nodes of depth is in overfitting.;F;F
+phone_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 5.;F;F
+phone_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 4.;F;F
+phone_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 5 nodes of depth.;F;F
+phone_pca.png;The first 8 principal components are enough for explaining half the data variance.;T;T
+phone_pca.png;Using the first 11 principal components would imply an error between 10 and 25%.;F;F
+phone_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 11.;F;F
+phone_correlation_heatmap.png;One of the variables px_height or battery_power can be discarded without losing information.;F;F
+phone_correlation_heatmap.png;The variable battery_power can be discarded without risking losing information.;F;F
+phone_correlation_heatmap.png;Variables ram and px_width are redundant, but we can’t say the same for the pair mobile_wt and sc_h.;F;F
+phone_correlation_heatmap.png;Variables px_height and sc_w are redundant.;F;F
+phone_correlation_heatmap.png;Considering that the target variable is px_width we can say that from the correlation analysis alone, it is clear that there are relevant variables.;F;F
+phone_correlation_heatmap.png;Considering that the target variable is px_width we can say that variable n_cores seems to be relevant for the majority of mining tasks.;F;F
+phone_correlation_heatmap.png;Considering that the target variable is px_width we can say that variables sc_h and fc seem to be useful for classification tasks.;F;F
+phone_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;T;T
+phone_correlation_heatmap.png;Removing variable sc_h might improve the training of decision trees .;F;F
+phone_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable px_height previously than variable px_width.;F;F
+phone_boxplots.png;Variable n_cores is balanced.;F;F
+phone_boxplots.png;Those boxplots show that the data is not normalized.;T;T
+phone_boxplots.png;It is clear that variable talk_time shows some outliers, but we can’t be sure of the same for variable px_width.;F;F
+phone_boxplots.png;Outliers seem to be a problem in the dataset.;F;F
+phone_boxplots.png;Variable px_height shows some outlier values.;F;F
+phone_boxplots.png;Variable sc_w doesn’t have any outliers.;T;F
+phone_boxplots.png;Variable pc presents some outliers.;F;F
+phone_boxplots.png;At least 50% of the variables present outliers.;F;F
+phone_boxplots.png;The histograms presented show a large number of outliers for most of the numeric variables.;F;F
+phone_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;F;T
+phone_boxplots.png;A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.;T;T
+phone_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;F;F
+phone_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;F;F
+phone_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;T;T
+phone_histograms_symbolic.png;All variables should be dealt with as date.;F;F
+phone_histograms_symbolic.png;The variable four_g can be seen as ordinal.;T;T
+phone_histograms_symbolic.png;The variable wifi can be seen as ordinal without losing information.;T;T
+phone_histograms_symbolic.png;Considering the common semantics for touch_screen and blue variables, dummification if applied would increase the risk of facing the curse of dimensionality.;F;F
+phone_histograms_symbolic.png;Considering the common semantics for three_g variable, dummification would be the most adequate encoding.;F;F
+phone_histograms_symbolic.png;The variable three_g can be coded as ordinal without losing information.;T;T
+phone_histograms_symbolic.png;Feature generation based on variable four_g seems to be promising.;F;F
+phone_histograms_symbolic.png;Feature generation based on the use of variable three_g wouldn’t be useful, but the use of blue seems to be promising.;F;F
+phone_histograms_symbolic.png;Given the usual semantics of three_g variable, dummification would have been a better codification.;F;F
+phone_histograms_symbolic.png;Not knowing the semantics of four_g variable, dummification could have been a more adequate codification.;F;F
+phone_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;F;F
+phone_nr_records_nr_variables.png;Given the number of records and that some variables are binary, we might be facing the curse of dimensionality.;F;F
+phone_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;F;F
+phone_histograms_numeric.png;All variables should be dealt with as binary.;F;F
+phone_histograms_numeric.png;The variable int_memory can be seen as ordinal.;F;F
+phone_histograms_numeric.png;The variable fc can be seen as ordinal without losing information.;F;F
+phone_histograms_numeric.png;Variable sc_h is balanced.;F;F
+phone_histograms_numeric.png;It is clear that variable sc_w shows some outliers, but we can’t be sure of the same for variable sc_h.;F;F
+phone_histograms_numeric.png;Outliers seem to be a problem in the dataset.;F;F
+phone_histograms_numeric.png;Variable pc shows a high number of outlier values.;F;F
+phone_histograms_numeric.png;Variable ram doesn’t have any outliers.;T;T
+phone_histograms_numeric.png;Variable fc presents some outliers.;T;T
+phone_histograms_numeric.png;At least 60% of the variables present outliers.;F;F
+phone_histograms_numeric.png;The histograms presented show a large number of outliers for most of the numeric variables.;F;F
+phone_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;F;T
+phone_histograms_numeric.png;Considering the common semantics for px_height and battery_power variables, dummification if applied would increase the risk of facing the curse of dimensionality.;T;T
+phone_histograms_numeric.png;Considering the common semantics for px_height variable, dummification would be the most adequate encoding.;F;F
+phone_histograms_numeric.png;The variable battery_power can be coded as ordinal without losing information.;F;F
+phone_histograms_numeric.png;Feature generation based on variable mobile_wt seems to be promising.;F;F
+phone_histograms_numeric.png;Feature generation based on the use of variable sc_h wouldn’t be useful, but the use of battery_power seems to be promising.;F;F
+phone_histograms_numeric.png;Given the usual semantics of mobile_wt variable, dummification would have been a better codification.;F;F
+phone_histograms_numeric.png;Not knowing the semantics of talk_time variable, dummification could have been a more adequate codification.;F;F
+Titanic_decision_tree.png;The variable Parch discriminates between the target values, as shown in the decision tree.;T;T
+Titanic_decision_tree.png;Variable Parch is one of the most relevant variables.;T;T
+Titanic_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 5%.;T;T
+Titanic_decision_tree.png;As reported in the tree, the number of False Positive is bigger than the number of False Negatives, consider 1 as the positive class and 0 as the negative class.;F;F
+Titanic_decision_tree.png;The accuracy for the presented tree is lower than 75%.;T;T
+Titanic_decision_tree.png;The number of True Negatives is lower than the number of False Positives for the presented tree, consider 1 as the positive class and 0 as the negative class.;F;F
+Titanic_decision_tree.png;The number of True Negatives is higher than the number of False Positives for the presented tree, consider 1 as the positive class and 0 as the negative class.;T;T
+Titanic_decision_tree.png;The number of True Positives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class.;T;F
+Titanic_decision_tree.png;Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], it is possible to state that KNN algorithm classifies (not A, B) as 1 for any k ≤ 181.;F;F
+Titanic_decision_tree.png;Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], it is possible to state that Naive Bayes algorithm classifies (A,B), as 1.;F;F
+Titanic_decision_tree.png;Considering that A=True<=>[Pclass <= 2.5] and B=True<=>[Parch <= 0.5], it is possible to state that Naive Bayes algorithm classifies (A, not B), as 0.;T;F
+Titanic_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.;F;F
+Titanic_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 1502 estimators.;T;T
+Titanic_overfitting_rf.png;Results for Random Forests identified as 10, may be explained by its estimators being in overfitting.;F;F
+Titanic_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;T;F
+Titanic_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 502 estimators.;F;F
+Titanic_overfitting_knn.png;KNN is in overfitting for k larger than 13.;F;F
+Titanic_overfitting_knn.png;KNN with 11 neighbour is in overfitting.;F;F
+Titanic_overfitting_knn.png;KNN with less than 7 neighbours is in overfitting.;F;F
+Titanic_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 3 neighbors.;T;T
+Titanic_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 20 nodes of depth is in overfitting.;T;T
+Titanic_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 9.;F;F
+Titanic_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 5.;F;F
+Titanic_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 6 nodes of depth.;F;F
+Titanic_overfitting_dt_acc_rec.png;The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.;F;F
+Titanic_pca.png;The first 4 principal components are enough for explaining half the data variance.;T;T
+Titanic_pca.png;Using the first 2 principal components would imply an error between 15 and 20%.;F;F
+Titanic_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 4.;F;F
+Titanic_correlation_heatmap.png;One of the variables SibSp or Parch can be discarded without losing information.;F;F
+Titanic_correlation_heatmap.png;The variable Parch can be discarded without risking losing information.;F;F
+Titanic_correlation_heatmap.png;Variables Fare and Age seem to be useful for classification tasks.;F;F
+Titanic_correlation_heatmap.png;Variables Age and Fare are redundant.;F;F
+Titanic_correlation_heatmap.png;Considering that the target variable is Pclass we can say that from the correlation analysis alone, it is clear that there are relevant variables.;F;F
+Titanic_correlation_heatmap.png;Considering that the target variable is Parch we can say that variable Pclass seems to be relevant for the majority of mining tasks.;F;F
+Titanic_correlation_heatmap.png;Considering that the target variable is Pclass we can say that variables Parch and SibSp seem to be useful for classification tasks.;F;F
+Titanic_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;T;T
+Titanic_correlation_heatmap.png;Removing variable SibSp might improve the training of decision trees .;F;F
+Titanic_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable Fare previously than variable Age.;F;F
+Titanic_boxplots.png;Variable Age is balanced.;F;F
+Titanic_boxplots.png;Those boxplots show that the data is not normalized.;T;T
+Titanic_boxplots.png;It is clear that variable Pclass shows some outliers, but we can’t be sure of the same for variable Fare.;F;F
+Titanic_boxplots.png;Outliers seem to be a problem in the dataset.;F;T
+Titanic_boxplots.png;Variable Fare shows a high number of outlier values.;T;F
+Titanic_boxplots.png;Variable Fare doesn’t have any outliers.;F;F
+Titanic_boxplots.png;Variable Parch presents some outliers.;F;F
+Titanic_boxplots.png;At least 50% of the variables present outliers.;F;F
+Titanic_boxplots.png;The boxplots presented show a large number of outliers for most of the numeric variables.;F;T
+Titanic_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;T;T
+Titanic_boxplots.png;A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.;T;T
+Titanic_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;F;F
+Titanic_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;F;F
+Titanic_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;T;T
+Titanic_histograms_symbolic.png;All variables should be dealt with as date.;F;F
+Titanic_histograms_symbolic.png;The variable Sex can be seen as ordinal.;T;T
+Titanic_histograms_symbolic.png;The variable Sex can be seen as ordinal without losing information.;T;F
+Titanic_histograms_symbolic.png;Considering the common semantics for Sex and Embarked variables, dummification if applied would increase the risk of facing the curse of dimensionality.;F;F
+Titanic_histograms_symbolic.png;Considering the common semantics for Embarked variable, dummification would be the most adequate encoding.;F;T
+Titanic_histograms_symbolic.png;The variable Embarked can be coded as ordinal without losing information.;T;F
+Titanic_histograms_symbolic.png;Feature generation based on variable Sex seems to be promising.;F;F
+Titanic_histograms_symbolic.png;Feature generation based on the use of variable Sex wouldn’t be useful, but the use of Embarked seems to be promising.;F;F
+Titanic_histograms_symbolic.png;Given the usual semantics of Sex variable, dummification would have been a better codification.;F;F
+Titanic_histograms_symbolic.png;Not knowing the semantics of Embarked variable, dummification could have been a more adequate codification.;T;T
+Titanic_mv.png;Considering that the dataset has 200 records, discarding variable Embarked would be better than discarding all the records with missing values for that variable.;F;F
+Titanic_mv.png;Considering that the dataset has 200 records, dropping all records with missing values would be better than to drop the variables with missing values.;T;F
+Titanic_mv.png;Considering that the dataset has 200 records, dropping all rows with missing values can lead to a dataset with less than 25% of the original data.;T;T
+Titanic_mv.png;There is no reason to believe that discarding records showing missing values is safer than discarding the corresponding variables in this case.;T;T
+Titanic_mv.png;Feature generation based on variable Embarked seems to be promising.;F;F
+Titanic_mv.png;Considering that the dataset has 200 records, it is better to drop the variable Age than removing all records with missing values.;F;T
+Titanic_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;T;T
+Titanic_nr_records_nr_variables.png;Given the number of records and that some variables are date, we might be facing the curse of dimensionality.;F;F
+Titanic_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;F;F
+Titanic_histograms_numeric.png;All variables should be dealt with as symbolic.;F;F
+Titanic_histograms_numeric.png;The variable Parch can be seen as ordinal.;F;T
+Titanic_histograms_numeric.png;The variable Fare can be seen as ordinal without losing information.;F;F
+Titanic_histograms_numeric.png;Variable Pclass is balanced.;T;F
+Titanic_histograms_numeric.png;It is clear that variable Parch shows some outliers, but we can’t be sure of the same for variable SibSp.;F;F
+Titanic_histograms_numeric.png;Outliers seem to be a problem in the dataset.;T;T
+Titanic_histograms_numeric.png;Variable Age shows a high number of outlier values.;F;T
+Titanic_histograms_numeric.png;Variable Fare doesn’t have any outliers.;F;F
+Titanic_histograms_numeric.png;Variable Parch presents some outliers.;T;T
+Titanic_histograms_numeric.png;At least 60% of the variables present outliers.;F;T
+Titanic_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;T;T
+Titanic_histograms_numeric.png;Considering the common semantics for Age and Pclass variables, dummification if applied would increase the risk of facing the curse of dimensionality.;T;F
+Titanic_histograms_numeric.png;Considering the common semantics for SibSp variable, dummification would be the most adequate encoding.;F;F
+Titanic_histograms_numeric.png;The variable Pclass can be coded as ordinal without losing information.;T;T
+Titanic_histograms_numeric.png;Feature generation based on variable Parch seems to be promising.;F;F
+Titanic_histograms_numeric.png;Feature generation based on the use of variable Age wouldn’t be useful, but the use of Pclass seems to be promising.;F;F
+Titanic_histograms_numeric.png;Given the usual semantics of Age variable, dummification would have been a better codification.;F;F
+Titanic_histograms_numeric.png;Not knowing the semantics of SibSp variable, dummification could have been a more adequate codification.;F;F
+apple_quality_decision_tree.png;The variable Crunchiness discriminates between the target values, as shown in the decision tree.;T;T
+apple_quality_decision_tree.png;Variable Juiciness is one of the most relevant variables.;T;T
+apple_quality_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 8%.;T;T
+apple_quality_decision_tree.png;As reported in the tree, the number of False Positive is smaller than the number of False Negatives, consider good as the positive class and bad as the negative class.;T;F
+apple_quality_decision_tree.png;The recall for the presented tree is higher than 75%, consider good as the positive class and bad as the negative class.;T;T
+apple_quality_decision_tree.png;The number of True Positives is higher than the number of False Negatives for the presented tree, consider good as the positive class and bad as the negative class.;T;T
+apple_quality_decision_tree.png;The number of False Positives is higher than the number of True Positives for the presented tree, consider good as the positive class and bad as the negative class.;F;F
+apple_quality_decision_tree.png;The specificity for the presented tree is higher than 90%, consider good as the positive class and bad as the negative class.;T;F
+apple_quality_decision_tree.png;Considering that A=True<=>[Juiciness <= -0.3] and B=True<=>[Crunchiness <= 2.25], the Decision Tree presented classifies (not A, not B) as bad.;F;F
+apple_quality_decision_tree.png;Considering that A=True<=>[Juiciness <= -0.3] and B=True<=>[Crunchiness <= 2.25], it is possible to state that KNN algorithm classifies (not A, not B) as bad for any k ≤ 1625.;F;F
+apple_quality_decision_tree.png;Considering that A=True<=>[Juiciness <= -0.3] and B=True<=>[Crunchiness <= 2.25], it is possible to state that Naive Bayes algorithm classifies (not A, not B), as good.;T;T
+apple_quality_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.;F;F
+apple_quality_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 1502 estimators.;T;F
+apple_quality_overfitting_rf.png;Results for Random Forests identified as 3, may be explained by its estimators being in overfitting.;F;F
+apple_quality_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;T;F
+apple_quality_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 1502 estimators.;F;F
+apple_quality_overfitting_knn.png;KNN is in overfitting for k larger than 17.;F;F
+apple_quality_overfitting_knn.png;KNN with 7 neighbour is in overfitting.;T;T
+apple_quality_overfitting_knn.png;KNN with more than 17 neighbours is in overfitting.;F;F
+apple_quality_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 3 neighbors.;T;T
+apple_quality_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 16 nodes of depth is in overfitting.;F;F
+apple_quality_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 5.;F;F
+apple_quality_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 6.;F;F
+apple_quality_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 2 nodes of depth.;F;F
+apple_quality_overfitting_dt_acc_rec.png;The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.;F;F
+apple_quality_pca.png;The first 5 principal components are enough for explaining half the data variance.;T;T
+apple_quality_pca.png;Using the first 2 principal components would imply an error between 15 and 20%.;F;F
+apple_quality_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 2.;F;F
+apple_quality_correlation_heatmap.png;One of the variables Crunchiness or Acidity can be discarded without losing information.;F;F
+apple_quality_correlation_heatmap.png;The variable Ripeness can be discarded without risking losing information.;F;F
+apple_quality_correlation_heatmap.png;Variables Juiciness and Crunchiness are redundant, but we can’t say the same for the pair Sweetness and Ripeness.;F;F
+apple_quality_correlation_heatmap.png;Variables Juiciness and Crunchiness are redundant.;F;F
+apple_quality_correlation_heatmap.png;Considering that the target variable is Ripeness we can say that from the correlation analysis alone, it is clear that there are relevant variables.;F;F
+apple_quality_correlation_heatmap.png;Considering that the target variable is Ripeness we can say that variable Juiciness seems to be relevant for the majority of mining tasks.;F;F
+apple_quality_correlation_heatmap.png;Considering that the target variable is Ripeness we can say that variables Crunchiness and Weight seem to be useful for classification tasks.;F;F
+apple_quality_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;T;T
+apple_quality_correlation_heatmap.png;Removing variable Juiciness might improve the training of decision trees .;F;F
+apple_quality_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable Juiciness previously than variable Ripeness.;F;F
+apple_quality_boxplots.png;Variable Weight is balanced.;T;T
+apple_quality_boxplots.png;Those boxplots show that the data is not normalized.;T;F
+apple_quality_boxplots.png;It is clear that variable Sweetness shows some outliers, but we can’t be sure of the same for variable Crunchiness.;F;F
+apple_quality_boxplots.png;Outliers seem to be a problem in the dataset.;T;T
+apple_quality_boxplots.png;Variable Ripeness shows a high number of outlier values.;T;F
+apple_quality_boxplots.png;Variable Acidity doesn’t have any outliers.;F;F
+apple_quality_boxplots.png;Variable Juiciness presents some outliers.;T;T
+apple_quality_boxplots.png;At least 75% of the variables present outliers.;T;T
+apple_quality_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;T;T
+apple_quality_boxplots.png;A scaling transformation is mandatory, in order to improve the Naive Bayes performance in this dataset.;F;F
+apple_quality_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;F;F
+apple_quality_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;F;T
+apple_quality_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;T;F
+apple_quality_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;T;F
+apple_quality_nr_records_nr_variables.png;Given the number of records and that some variables are binary, we might be facing the curse of dimensionality.;F;F
+apple_quality_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;F;F
+apple_quality_histograms_numeric.png;All variables should be dealt with as numeric.;F;T
+apple_quality_histograms_numeric.png;The variable Acidity can be seen as ordinal.;F;F
+apple_quality_histograms_numeric.png;The variable Size can be seen as ordinal without losing information.;F;F
+apple_quality_histograms_numeric.png;Variable Juiciness is balanced.;T;T
+apple_quality_histograms_numeric.png;It is clear that variable Weight shows some outliers, but we can’t be sure of the same for variable Sweetness.;F;F
+apple_quality_histograms_numeric.png;Outliers seem to be a problem in the dataset.;T;F
+apple_quality_histograms_numeric.png;Variable Juiciness shows a high number of outlier values.;F;F
+apple_quality_histograms_numeric.png;Variable Size doesn’t have any outliers.;F;F
+apple_quality_histograms_numeric.png;Variable Weight presents some outliers.;T;T
+apple_quality_histograms_numeric.png;At least 50% of the variables present outliers.;T;T
+apple_quality_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;T;T
+apple_quality_histograms_numeric.png;Considering the common semantics for Crunchiness and Size variables, dummification if applied would increase the risk of facing the curse of dimensionality.;T;T
+apple_quality_histograms_numeric.png;Considering the common semantics for Sweetness variable, dummification would be the most adequate encoding.;F;F
+apple_quality_histograms_numeric.png;The variable Juiciness can be coded as ordinal without losing information.;F;F
+apple_quality_histograms_numeric.png;Feature generation based on variable Acidity seems to be promising.;F;F
+apple_quality_histograms_numeric.png;Feature generation based on the use of variable Acidity wouldn’t be useful, but the use of Size seems to be promising.;F;F
+apple_quality_histograms_numeric.png;Given the usual semantics of Acidity variable, dummification would have been a better codification.;F;F
+apple_quality_histograms_numeric.png;Not knowing the semantics of Acidity variable, dummification could have been a more adequate codification.;F;F
+Employee_decision_tree.png;The variable JoiningYear discriminates between the target values, as shown in the decision tree.;T;T
+Employee_decision_tree.png;Variable ExperienceInCurrentDomain is one of the most relevant variables.;T;T
+Employee_decision_tree.png;A smaller tree would be delivered if we would apply post-pruning, accepting an accuracy reduction of 8%.;T;T
+Employee_decision_tree.png;As reported in the tree, the number of False Positive is smaller than the number of False Negatives, consider 1 as the positive class and 0 as the negative class.;T;T
+Employee_decision_tree.png;The recall for the presented tree is lower than 60%, consider 1 as the positive class and 0 as the negative class.;F;F
+Employee_decision_tree.png;The number of False Positives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class.;F;F
+Employee_decision_tree.png;The number of False Positives is higher than the number of True Positives for the presented tree, consider 1 as the positive class and 0 as the negative class.;F;F
+Employee_decision_tree.png;The number of True Negatives is higher than the number of False Negatives for the presented tree, consider 1 as the positive class and 0 as the negative class.;T;T
+Employee_decision_tree.png;Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], it is possible to state that KNN algorithm classifies (A,B) as 0 for any k ≤ 44.;F;T
+Employee_decision_tree.png;Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], the Decision Tree presented classifies (not A, B) as 1.;F;T
+Employee_decision_tree.png;Considering that A=True<=>[JoiningYear <= 2017.5] and B=True<=>[ExperienceInCurrentDomain <= 3.5], the Decision Tree presented classifies (A,B) as 0.;F;T
+Employee_overfitting_mlp.png;We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.;F;F
+Employee_overfitting_gb.png;We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.;F;F
+Employee_overfitting_rf.png;Results for Random Forests identified as 2, may be explained by its estimators being in underfitting.;T;T
+Employee_overfitting_rf.png;The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.;T;F
+Employee_overfitting_rf.png;We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.;F;F
+Employee_overfitting_knn.png;KNN is in overfitting for k less than 13.;F;F
+Employee_overfitting_knn.png;KNN with 7 neighbour is in overfitting.;T;F
+Employee_overfitting_knn.png;KNN with more than 15 neighbours is in overfitting.;F;F
+Employee_overfitting_knn.png;We are able to identify the existence of overfitting for KNN models with less than 2 neighbors.;T;T
+Employee_overfitting_decision_tree.png;According to the decision tree overfitting chart, the tree with 9 nodes of depth is in overfitting.;T;T
+Employee_overfitting_decision_tree.png;The chart reporting the accuracy for different trees shows that the model enters in overfitting for models with depth higher than 9.;T;T
+Employee_overfitting_decision_tree.png;The decision tree is in overfitting for depths above 4.;F;F
+Employee_overfitting_decision_tree.png;We are able to identify the existence of overfitting for decision tree models with more than 2 nodes of depth.;F;F
+Employee_overfitting_dt_acc_rec.png;The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.;F;F
+Employee_pca.png;The first 3 principal components are enough for explaining half the data variance.;T;T
+Employee_pca.png;Using the first 3 principal components would imply an error between 15 and 25%.;F;F
+Employee_correlation_heatmap.png;The intrinsic dimensionality of this dataset is 2.;F;F
+Employee_correlation_heatmap.png;One of the variables PaymentTier or JoiningYear can be discarded without losing information.;F;F
+Employee_correlation_heatmap.png;The variable JoiningYear can be discarded without risking losing information.;F;F
+Employee_correlation_heatmap.png;Variables Age and PaymentTier are redundant, but we can’t say the same for the pair ExperienceInCurrentDomain and JoiningYear.;F;F
+Employee_correlation_heatmap.png;Variables PaymentTier and JoiningYear are redundant.;F;F
+Employee_correlation_heatmap.png;Considering that the target variable is PaymentTier we can say that from the correlation analysis alone, it is clear that there are relevant variables.;F;F
+Employee_correlation_heatmap.png;Considering that the target variable is PaymentTier we can say that variable JoiningYear seems to be relevant for the majority of mining tasks.;F;F
+Employee_correlation_heatmap.png;Considering that the target variable is PaymentTier we can say that variables Age and ExperienceInCurrentDomain seem to be useful for classification tasks.;F;F
+Employee_correlation_heatmap.png;Applying a non-supervised feature selection based on the redundancy, would not increase the performance of the generality of the training algorithms in this dataset.;T;T
+Employee_correlation_heatmap.png;Removing variable PaymentTier might improve the training of decision trees .;F;F
+Employee_correlation_heatmap.png;There is evidence in favour for sequential backward selection to select variable ExperienceInCurrentDomain previously than variable PaymentTier.;F;F
+Employee_boxplots.png;Variable ExperienceInCurrentDomain is balanced.;F;F
+Employee_boxplots.png;Those boxplots show that the data is not normalized.;T;T
+Employee_boxplots.png;It is clear that variable PaymentTier shows some outliers, but we can’t be sure of the same for variable Age.;F;F
+Employee_boxplots.png;Outliers seem to be a problem in the dataset.;F;T
+Employee_boxplots.png;Variable JoiningYear shows a high number of outlier values.;F;F
+Employee_boxplots.png;Variable JoiningYear doesn’t have any outliers.;T;T
+Employee_boxplots.png;Variable PaymentTier presents some outliers.;F;T
+Employee_boxplots.png;At least 60% of the variables present outliers.;F;T
+Employee_boxplots.png;The boxplots presented show a large number of outliers for most of the numeric variables.;F;F
+Employee_boxplots.png;The existence of outliers is one of the problems to tackle in this dataset.;F;T
+Employee_boxplots.png;A scaling transformation is mandatory, in order to improve the  KNN performance in this dataset.;T;T
+Employee_boxplots.png;Multiplying ratio and Boolean variables by 100, and variables with a range between 0 and 10 by 10, would have an impact similar to other scaling transformations.;F;F
+Employee_boxplots.png;Normalization of this dataset could not have impact on a KNN classifier.;F;F
+Employee_boxplots.png;Scaling this dataset would be mandatory to improve the results with distance-based methods.;T;T
+Employee_histograms_symbolic.png;All variables should be dealt with as date.;F;F
+Employee_histograms_symbolic.png;The variable Gender can be seen as ordinal.;T;T
+Employee_histograms_symbolic.png;The variable EverBenched can be seen as ordinal without losing information.;T;T
+Employee_histograms_symbolic.png;Considering the common semantics for Education and City variables, dummification if applied would increase the risk of facing the curse of dimensionality.;F;F
+Employee_histograms_symbolic.png;Considering the common semantics for City variable, dummification would be the most adequate encoding.;F;T
+Employee_histograms_symbolic.png;The variable City can be coded as ordinal without losing information.;T;F
+Employee_histograms_symbolic.png;Feature generation based on variable City seems to be promising.;F;F
+Employee_histograms_symbolic.png;Feature generation based on the use of variable EverBenched wouldn’t be useful, but the use of Education seems to be promising.;F;F
+Employee_histograms_symbolic.png;Given the usual semantics of Gender variable, dummification would have been a better codification.;F;F
+Employee_histograms_symbolic.png;Not knowing the semantics of Education variable, dummification could have been a more adequate codification.;F;T
+Employee_class_histogram.png;Balancing this dataset would be mandatory to improve the results.;T;T
+Employee_nr_records_nr_variables.png;Given the number of records and that some variables are date, we might be facing the curse of dimensionality.;F;F
+Employee_nr_records_nr_variables.png;We face the curse of dimensionality when training a classifier with this dataset.;F;F
+Employee_histograms_numeric.png;All variables should be dealt with as date.;F;F
+Employee_histograms_numeric.png;The variable PaymentTier can be seen as ordinal.;T;T
+Employee_histograms_numeric.png;The variable Age can be seen as ordinal without losing information.;F;F
+Employee_histograms_numeric.png;Variable Age is balanced.;F;F
+Employee_histograms_numeric.png;It is clear that variable PaymentTier shows some outliers, but we can’t be sure of the same for variable Age.;F;F
+Employee_histograms_numeric.png;Outliers seem to be a problem in the dataset.;F;F
+Employee_histograms_numeric.png;Variable JoiningYear shows some outlier values.;F;F
+Employee_histograms_numeric.png;Variable ExperienceInCurrentDomain doesn’t have any outliers.;T;T
+Employee_histograms_numeric.png;Variable PaymentTier presents some outliers.;F;F
+Employee_histograms_numeric.png;At least 50% of the variables present outliers.;F;F
+Employee_histograms_numeric.png;The histograms presented show a large number of outliers for most of the numeric variables.;F;F
+Employee_histograms_numeric.png;The existence of outliers is one of the problems to tackle in this dataset.;F;F
+Employee_histograms_numeric.png;Considering the common semantics for JoiningYear and PaymentTier variables, dummification if applied would increase the risk of facing the curse of dimensionality.;T;F
+Employee_histograms_numeric.png;Considering the common semantics for PaymentTier variable, dummification would be the most adequate encoding.;F;F
+Employee_histograms_numeric.png;The variable PaymentTier can be coded as ordinal without losing information.;T;T
+Employee_histograms_numeric.png;Feature generation based on variable PaymentTier seems to be promising.;F;F
+Employee_histograms_numeric.png;Feature generation based on the use of variable ExperienceInCurrentDomain wouldn’t be useful, but the use of JoiningYear seems to be promising.;F;F
+Employee_histograms_numeric.png;Given the usual semantics of PaymentTier variable, dummification would have been a better codification.;F;T
+Employee_histograms_numeric.png;Not knowing the semantics of Age variable, dummification could have been a more adequate codification.;F;F

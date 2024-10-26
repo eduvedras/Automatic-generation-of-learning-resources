@@ -1,0 +1,95 @@
+Image,Prediction
+smoking_drinking_decision_tree.png,"Considering that A=True<=>[MK_stat<2.5] and B=True<=>[cp_cd>1.5], the Decision Tree presented classifies (not A, B) as Healthy."
+smoking_drinking_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.
+smoking_drinking_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.
+smoking_drinking_overfitting_rf.png,The random forests results shown can be explained by the fact that they are in overfitting.
+smoking_drinking_overfitting_knn.png,The chart reporting the recall for KNN would be more helpful than the chart reporting the accuracy for the same algorithm.
+smoking_drinking_overfitting_decision_tree.png,The chart reporting the recall for different trees shows that the model enters in overfitting for models with depth higher than 6.
+smoking_drinking_overfitting_dt_acc_rec.png,The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.
+smoking_drinking_pca.png,The first 4 principal components are enough for explaining half the data variance.
+smoking_drinking_correlation_heatmap.png,Variable SMK_stat_type_cd seems to be relevant for the majority of mining tasks.
+smoking_drinking_boxplots.png,Scaling this dataset would be mandatory to improve the results with distance-based methods.
+smoking_drinking_histograms_symbolic.png,It is clear that variable sex shows some rare classes.
+smoking_drinking_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+smoking_drinking_nr_records_nr_variables.png,Balancing this dataset by SMOTE would most probably be preferable over undersampling.
+smoking_drinking_histograms_numeric.png,At least 50 of the variables present outliers.
+BankNoteAuthentication_decision_tree.png,"Considering that A=True<=>[skewness <= 5.16] and B=True<=>[curtosis <= 0.19], it is possible to verify that KNN algorithm classifies (not A, B) as 0 for any k ≤ 182."
+BankNoteAuthentication_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.
+BankNoteAuthentication_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.
+BankNoteAuthentication_overfitting_rf.png,"Results for Random Forests identified as 3, can be explained by its estimators being in underfitting."
+BankNoteAuthentication_overfitting_knn.png,KNN with 5 neighbour is in overfitting.
+BankNoteAuthentication_overfitting_decision_tree.png,The decision tree is in overfitting for depths above 7.
+BankNoteAuthentication_overfitting_dt_acc_rec.png,The difference between recall and accuracy becomes smaller with the depth due to the overfitting phenomenon.
+BankNoteAuthentication_pca.png,The first 2 principal components are enough for explaining half the data variance.
+BankNoteAuthentication_correlation_heatmap.png,Variable skewness seems to be relevant for the majority of mining tasks.
+BankNoteAuthentication_boxplots.png,Variable skewness is balanced.
+BankNoteAuthentication_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+BankNoteAuthentication_nr_records_nr_variables.png,Balancing this dataset by SMOTE would most probably be preferable over Undersampling.
+BankNoteAuthentication_histograms_numeric.png,The variable skewness doesn’t have any outliers.
+Iris_decision_tree.png,"Considering that A=True<=>[PetalWidthCm <= 1.75] and B=True<=>[PetalWidthCm <= -2.0], it is possible to state that KNN algorithm classifies (not A, not B) as 2 (KNN with K = 3)."
+Iris_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.
+Iris_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 500 estimators.
+Iris_overfitting_rf.png,The random forests results shown can be explained by the absence of balance in the training set.
+Iris_overfitting_knn.png,KNN with more than 17 neighbours is in overfitting.
+Iris_overfitting_decision_tree.png,We are able to identify the existence of overfitting for decision tree models with more than 4 nodes of depth.
+Iris_pca.png,The first 2 principal components are enough for explaining half the data variance.
+Iris_correlation_heatmap.png,The intrinsic dimensionality of this dataset is 2.
+Iris_boxplots.png,The existence of outliers is one of the problems to tackle in this dataset.
+Iris_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+Iris_nr_records_nr_variables.png,"Given the number of records and that some variables are numeric, we might be facing the curse of dimensionality."
+Iris_histograms_numeric.png,At least 85 of the variables present outliers.
+phone_decision_tree.png,"Considering that A=True<=>[int_memory <= 30.5] and B=True<=>[mobile_wt <= 91.5], it is possible to state that KNN algorithm classifies (not A, not B) as 3 ."
+phone_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 500 episodes.
+phone_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.
+phone_overfitting_rf.png,The random forests results shown can be explained by the lack of diversity resulting from the number of features considered.
+phone_overfitting_knn.png,KNN with more than 15 neighbours is in overfitting.
+phone_overfitting_decision_tree.png,The decision tree is in overfitting for depths above 6.
+phone_pca.png,The first 8 principal components are enough for explaining half the data variance.
+phone_correlation_heatmap.png,The intrinsic dimensionality of this dataset is 4.
+phone_boxplots.png,Scaling this dataset would be mandatory to improve the results with distance-based methods.
+phone_histograms_symbolic.png,The variable three_g can be seen as ordinal.
+phone_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+phone_nr_records_nr_variables.png,We face the curse of dimensionality with this dataset.
+phone_histograms_numeric.png,"It is clear that variable px_width shows some outliers, but we can’t be sure of the same for variable sc_w."
+Titanic_decision_tree.png,"As reported in the tree, the number of False Positive is smaller than the number of False Negatives."
+Titanic_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 300 episodes.
+Titanic_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 1002 estimators.
+Titanic_overfitting_rf.png,We are able to identify the existence of overfitting for random forest models with more than 1502 estimators.
+Titanic_overfitting_knn.png,KNN is in overfitting for k larger than 17.
+Titanic_overfitting_decision_tree.png,We are able to identify the existence of overfitting for decision tree models with more than 3 nodes of depth.
+Titanic_overfitting_dt_acc_rec.png,We are able to identify the existence of overfitting for decision tree models with more than 5 nodes of depth.
+Titanic_pca.png,The first 2 principal components are enough for explaining half the data variance.
+Titanic_correlation_heatmap.png,Removing variable SibSp might improve the training of decision trees .
+Titanic_boxplots.png,The variable Age doesn’t have any outliers.
+Titanic_histograms_symbolic.png,The variable Sex can be seen as ordinal.
+Titanic_mv.png,Feature generation based on variable AG_Employed seems to be promising.
+Titanic_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+Titanic_nr_records_nr_variables.png,We face the curse of dimensionality when training a classifier with this dataset.
+Titanic_histograms_numeric.png,Outliers seem to be a problem in the dataset.
+apple_quality_decision_tree.png,"The variable Juiciness discriminates between the target values, as shown in the decision tree."
+apple_quality_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.
+apple_quality_overfitting_gb.png,Results for Gradient Boosting up to 1502 estimators can be explained by overfitting.
+apple_quality_overfitting_rf.png,"Results for Random Forest identified as 3, may be explained by its estimators being in underfitting."
+apple_quality_overfitting_knn.png,KNN with 5 neighbour is in overfitting.
+apple_quality_overfitting_decision_tree.png,The decision tree is in overfitting for depths above 8.
+apple_quality_overfitting_dt_acc_rec.png,The difference between recall and accuracy grows with the depth due to the overfitting phenomenon.
+apple_quality_pca.png,Using the first 2 principal components would imply an error between 5 and 20%.
+apple_quality_correlation_heatmap.png,The variable Ripeness can be discarded without risking losing information.
+apple_quality_boxplots.png,The histograms presented show a large number of outliers for most of the numeric variables.
+apple_quality_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+apple_quality_nr_records_nr_variables.png,"Given the number of records and that some variables are date, we might be facing the curse of dimensionality."
+apple_quality_histograms_numeric.png,"Given the usual semantics of Ripeness variable, dummification would have been a better codification."
+Employee_decision_tree.png,Variable JoiningYear is one of the most relevant variables.
+Employee_overfitting_mlp.png,We are able to identify the existence of overfitting for MLP models trained longer than 700 episodes.
+Employee_overfitting_gb.png,We are able to identify the existence of overfitting for gradient boosting models with more than 502 estimators.
+Employee_overfitting_rf.png,We are able to identify the existence of overfitting for random forest models with more than 1002 estimators.
+Employee_overfitting_knn.png,KNN with less than 9 neighbours is in overfitting.
+Employee_overfitting_decision_tree.png,The chart reporting the recall of a KNN model for different values of K shows that it enters in overfitting for K above 30.
+Employee_overfitting_dt_acc_rec.png,We are able to identify the existence of overfitting for decision tree models with more than 8 nodes of depth.
+Employee_pca.png,The first 3 principal components are enough for explaining half the data variance.
+Employee_correlation_heatmap.png,It is clear that variable Age and variable JoiningYear are redundant.
+Employee_boxplots.png,The existence of outliers is one of the problems to tackle in this dataset.
+Employee_histograms_symbolic.png,The variable Gender can be seen as ordinal.
+Employee_class_histogram.png,Balancing this dataset would be mandatory to improve the results.
+Employee_nr_records_nr_variables.png,We face the curse of dimensionality when training a classifier with this dataset.
+Employee_histograms_numeric.png,"It is clear that variable ExperienceInCurrentDomain shows some outliers, but we can’t be sure of the same for variable Age."

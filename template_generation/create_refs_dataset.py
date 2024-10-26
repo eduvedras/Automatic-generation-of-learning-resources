@@ -48,7 +48,7 @@ for index,row in tqdm(df.iterrows()):
                 for indexq,rowq in questions.iterrows():
                     if rowq['Chart'] == row['Chart'] and fst in rowq['Question'] and lst in rowq['Question']:
                         possible_questions.append(rowq['Question'])
-                
+                #print(possible_questions)
                 random_number = random.randint(0, len(possible_questions) - 1)
                 item = possible_questions[random_number]
                 q_list.append(item)
