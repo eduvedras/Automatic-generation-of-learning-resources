@@ -6,6 +6,7 @@
 -   [Chart Caption Dataset](https://huggingface.co/datasets/eduvedras/ChartCaptionDataset)
 -   [Caption Templates Dataset](https://huggingface.co/datasets/eduvedras/CaptionTemplatesDataset)
 -   [Chart Variables Dataset](https://huggingface.co/datasets/eduvedras/ChartVariablesDataset)
+-   [Chart Data Dataset](https://huggingface.co/datasets/eduvedras/ChartDataDataset)
 
 ## Links to the finetuned models
 
